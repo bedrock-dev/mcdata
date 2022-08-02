@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>lconv;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 282 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>linger</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478103 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">linger</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">l_onoff</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">l_linger</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>link_map</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486209 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">link_map</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Elf64_Addr</span><span class="w"> </span><span class="n">l_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">l_name</span><span class="p">;</span><span class="w"></span>
+<span class="n">Elf64_Dyn_0</span><span class="w"> </span><span class="o">*</span><span class="n">l_ld</span><span class="p">;</span><span class="w"></span>
+<span class="n">link_map</span><span class="w"> </span><span class="o">*</span><span class="n">l_next</span><span class="p">;</span><span class="w"></span>
+<span class="n">link_map</span><span class="w"> </span><span class="o">*</span><span class="n">l_prev</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>linkedlist_data_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485435 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">linkedlist_data_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">linkedlist_datablock_internal</span><span class="w"> </span><span class="o">*</span><span class="n">first_block</span><span class="p">;</span><span class="w"></span>
+<span class="n">linkedlist_datablock_internal</span><span class="w"> </span><span class="o">*</span><span class="n">last_block</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>linkedlist_datablock_internal_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485437 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">linkedlist_datablock_internal_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">linkedlist_datablock_internal_s</span><span class="w"> </span><span class="o">*</span><span class="n">next_datablock</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">avail_in_this_block</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">filled_in_this_block</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">unused</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">4080</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>lldiv_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 236 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">lldiv_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="n">quot</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="n">rem</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>lconv;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 282 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">lconv</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>linger</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478103 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">linger</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">l_onoff</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">l_linger</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>link_map</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486209 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">link_map</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Elf64_Addr</span><span class="w"> </span><span class="n">l_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">l_name</span><span class="p">;</span><span class="w"></span>
+<span class="n">Elf64_Dyn_0</span><span class="w"> </span><span class="o">*</span><span class="n">l_ld</span><span class="p">;</span><span class="w"></span>
+<span class="n">link_map</span><span class="w"> </span><span class="o">*</span><span class="n">l_next</span><span class="p">;</span><span class="w"></span>
+<span class="n">link_map</span><span class="w"> </span><span class="o">*</span><span class="n">l_prev</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>linkedlist_data_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485435 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">linkedlist_data_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">linkedlist_datablock_internal</span><span class="w"> </span><span class="o">*</span><span class="n">first_block</span><span class="p">;</span><span class="w"></span>
+<span class="n">linkedlist_datablock_internal</span><span class="w"> </span><span class="o">*</span><span class="n">last_block</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>linkedlist_datablock_internal_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485437 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">linkedlist_datablock_internal_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">linkedlist_datablock_internal_s</span><span class="w"> </span><span class="o">*</span><span class="n">next_datablock</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">avail_in_this_block</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">filled_in_this_block</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">unused</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="mi">4080</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>lldiv_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 236 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">lldiv_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="n">quot</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="n">rem</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>NameAction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 89189 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NameAction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNameFilters</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnNamed</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NameableComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 54594 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NameableComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAllowNameTagRenaming</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAlwaysShow</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NavigationComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 56707 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NavigationComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidDamageBlocks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidPortals</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidSun</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanBreach</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanFloat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanJump</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanOpenDoors</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanPassDoors</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanSink</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsAmphibious</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsFollowingRivers</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHasEndPathRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHasDestination</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTick</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTickTimeout</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mLastStuckCheck</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mEndPathRadiusSqr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTerminationThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mLastStuckCheckPosition</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mTargetOffset</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">PathNavigation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNavigation</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPath</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NbtIo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 61751 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NbtIo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetEventCallback</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63003 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetEventCallback</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetEventCallback</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetherBiomeSurface;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198713 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetherBiomeSurface</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetherGenerator::ThreadData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 36222 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetherGenerator</span><span class="o">::</span><span class="n">ThreadData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Random</span><span class="w"> </span><span class="n">random</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="mi">32768</span><span class="o">&gt;</span><span class="w"> </span><span class="n">blockBuffer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkChangeObserver;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6912 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkChangeObserver</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkChunkPublisher</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 88549 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkChunkPublisher</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetworkChunkPublisher</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">Level</span><span class="w"> </span><span class="o">*</span><span class="n">mLevel</span><span class="p">;</span><span class="w"></span>
+<span class="n">NetworkHandler</span><span class="w"> </span><span class="o">*</span><span class="n">mNetworkHandler</span><span class="p">;</span><span class="w"></span>
+<span class="n">NetworkIdentifier</span><span class="w"> </span><span class="n">mOwner</span><span class="p">;</span><span class="w"></span>
+<span class="n">ClientBlobCache</span><span class="o">::</span><span class="n">Server</span><span class="o">::</span><span class="n">ActiveTransfersManager</span><span class="w"> </span><span class="o">*</span><span class="n">mClientCache</span><span class="p">;</span><span class="w"></span>
+<span class="n">SubClientId</span><span class="w"> </span><span class="n">mSubClientId</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mLastChunkUpdatePosition</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mLastChunkUpdateRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHandleForChunkBuildOrderUpdates</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mChunksSentSinceStart</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ChunkViewSource</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSource</span><span class="p">;</span><span class="w"></span>
+<span class="n">GridArea</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">LevelChunk</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">AddCallback</span><span class="w"> </span><span class="n">mAddCallback</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mCacheSerializeBuffer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">LevelChunk</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mQueuedChunks</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79612 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">EntityNetId</span><span class="w"> </span><span class="n">mEntityNetId</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkDebugManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 64309 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkDebugManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">NetworkDebugManager</span><span class="o">::</span><span class="n">Tracker</span><span class="p">,</span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTrackers</span><span class="p">;</span><span class="w"></span>
+<span class="n">TrackerType</span><span class="w"> </span><span class="n">mRenderGraphMode</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">NetworkStatistics</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mStatistics</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkHandler::Connection</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8335 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkHandler</span><span class="o">::</span><span class="n">Connection</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NetworkIdentifier</span><span class="w"> </span><span class="n">mId</span><span class="p">;</span><span class="w"></span>
+<span class="n">NetworkHandler</span><span class="o">::</span><span class="n">Connection</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">NetworkPacketRecorder</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNetworkPacketRecorder</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">EncryptedNetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEncryptedPeer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">BatchedNetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mBatchedPeer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">NetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPeer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">_V2</span><span class="o">::</span><span class="n">steady_clock</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000000000</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mLastPacketTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">_V2</span><span class="o">::</span><span class="n">steady_clock</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000000000</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mClosedTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mShouldCloseConnection</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mDisconnected</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPausedChannels</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mResumedPackets</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">,</span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPausedPackets</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkHandler::IncomingPacketQueue</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63002 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkHandler</span><span class="o">::</span><span class="n">IncomingPacketQueue</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NetEventCallback</span><span class="w"> </span><span class="o">*</span><span class="n">mCallbacksObj</span><span class="p">;</span><span class="w"></span>
+<span class="n">Bedrock</span><span class="o">::</span><span class="n">Threading</span><span class="o">::</span><span class="n">Mutex</span><span class="w"> </span><span class="n">mMutex</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPacketEventListener</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63038 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPacketEventListener</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetworkPacketEventListener</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPacketRecorder;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8222 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPacketRecorder</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPeer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8247 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPeer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetworkPeer</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">NetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPeer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPeer::NetworkStatus</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8630 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPeer</span><span class="o">::</span><span class="n">NetworkStatus</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NetworkPeer</span><span class="o">::</span><span class="n">NetworkLoad</span><span class="w"> </span><span class="n">mLoad</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCurrentPing</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAveragePing</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mApproximateMaxBps</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCurrentPacketLoss</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAveragePacketLoss</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mTotalBytesReceived</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mTotalBytesSent</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkSettingOptions</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 72561 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkSettingOptions</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mCompressionThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkStatistics::OverviewStats</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63800 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkStatistics</span><span class="o">::</span><span class="n">OverviewStats</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentBytesUnpacked</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentBytesPacked</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedBytesUnpacked</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedBytesPacked</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkStatistics::PacketStats</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63835 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkStatistics</span><span class="o">::</span><span class="n">PacketStats</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentNum</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentBytes</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedNum</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedBytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NewType<int></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13185 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NewType</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NewType</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">Raw</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NewType<long></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45313 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NewType</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NewType</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">Raw</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NewType<unsigned short></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13216 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NewType</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NewType</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">&gt;::</span><span class="n">Raw</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NibblePair</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35026 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NibblePair</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NoiseBasedColorPalette;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198718 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NoiseBasedColorPalette</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NoiseBasedTemperatureAttributes</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 191330 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NoiseBasedTemperatureAttributes</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">TemperatureCategory</span><span class="w"> </span><span class="n">mTemperatureCategory</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NoteBlock::triggerEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 459573 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NoteBlock</span><span class="o">::</span><span class="n">triggerEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NpcAction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45374 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NpcAction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NpcAction</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">NpcActionType</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcActionMode</span><span class="w"> </span><span class="n">mMode</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mButtonName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mEvaluatedButtonName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mText</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEvaluatedText</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NpcComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 44884 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NpcComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCurrentSkin</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcGUIOffset</span><span class="w"> </span><span class="n">mPortraitOffsets</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcGUIOffset</span><span class="w"> </span><span class="n">mPickerOffsets</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SkinData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNPCSkins</span><span class="p">;</span><span class="w"></span>
+<span class="n">Json</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="n">mNPCData</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcActions</span><span class="w"> </span><span class="n">mActions</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mInteractText</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcComponent</span><span class="o">::</span><span class="n">TextFilter</span><span class="w"> </span><span class="n">mInteractTextFilter</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NpcGUIOffset</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 44885 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NpcGUIOffset</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mTranslation</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mRotation</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mScale</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NullSoundPlayer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 86996 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NullSoundPlayer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NameAction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 89189 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NameAction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNameFilters</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnNamed</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NameableComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 54594 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NameableComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAllowNameTagRenaming</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAlwaysShow</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NavigationComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 56707 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NavigationComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidDamageBlocks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidPortals</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidSun</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanBreach</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanFloat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanJump</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanOpenDoors</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanPassDoors</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanSink</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsAmphibious</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsFollowingRivers</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHasEndPathRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHasDestination</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTick</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTickTimeout</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mLastStuckCheck</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mEndPathRadiusSqr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTerminationThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mLastStuckCheckPosition</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mTargetOffset</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">PathNavigation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNavigation</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPath</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NbtIo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 61751 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NbtIo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetEventCallback</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63003 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetEventCallback</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetEventCallback</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetherBiomeSurface;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198713 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetherBiomeSurface</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetherGenerator::ThreadData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 36222 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetherGenerator</span><span class="o">::</span><span class="n">ThreadData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Random</span><span class="w"> </span><span class="n">random</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="mi">32768</span><span class="o">&gt;</span><span class="w"> </span><span class="n">blockBuffer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkChangeObserver;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6912 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkChangeObserver</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkChunkPublisher</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 88549 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkChunkPublisher</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetworkChunkPublisher</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">Level</span><span class="w"> </span><span class="o">*</span><span class="n">mLevel</span><span class="p">;</span><span class="w"></span>
+<span class="n">NetworkHandler</span><span class="w"> </span><span class="o">*</span><span class="n">mNetworkHandler</span><span class="p">;</span><span class="w"></span>
+<span class="n">NetworkIdentifier</span><span class="w"> </span><span class="n">mOwner</span><span class="p">;</span><span class="w"></span>
+<span class="n">ClientBlobCache</span><span class="o">::</span><span class="n">Server</span><span class="o">::</span><span class="n">ActiveTransfersManager</span><span class="w"> </span><span class="o">*</span><span class="n">mClientCache</span><span class="p">;</span><span class="w"></span>
+<span class="n">SubClientId</span><span class="w"> </span><span class="n">mSubClientId</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mLastChunkUpdatePosition</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mLastChunkUpdateRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHandleForChunkBuildOrderUpdates</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mChunksSentSinceStart</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ChunkViewSource</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSource</span><span class="p">;</span><span class="w"></span>
+<span class="n">GridArea</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">LevelChunk</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">AddCallback</span><span class="w"> </span><span class="n">mAddCallback</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mCacheSerializeBuffer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">LevelChunk</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mQueuedChunks</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79612 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">EntityNetId</span><span class="w"> </span><span class="n">mEntityNetId</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkDebugManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 64309 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkDebugManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">NetworkDebugManager</span><span class="o">::</span><span class="n">Tracker</span><span class="p">,</span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTrackers</span><span class="p">;</span><span class="w"></span>
+<span class="n">TrackerType</span><span class="w"> </span><span class="n">mRenderGraphMode</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">NetworkStatistics</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mStatistics</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkHandler::Connection</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8335 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkHandler</span><span class="o">::</span><span class="n">Connection</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NetworkIdentifier</span><span class="w"> </span><span class="n">mId</span><span class="p">;</span><span class="w"></span>
+<span class="n">NetworkHandler</span><span class="o">::</span><span class="n">Connection</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">NetworkPacketRecorder</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNetworkPacketRecorder</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">EncryptedNetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEncryptedPeer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">BatchedNetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mBatchedPeer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">NetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPeer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">_V2</span><span class="o">::</span><span class="n">steady_clock</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000000000</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mLastPacketTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">_V2</span><span class="o">::</span><span class="n">steady_clock</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration</span><span class="o">&lt;</span><span class="kt">long</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">ratio</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000000000</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mClosedTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mShouldCloseConnection</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mDisconnected</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">bitset</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPausedChannels</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mResumedPackets</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">,</span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPausedPackets</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkHandler::IncomingPacketQueue</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63002 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkHandler</span><span class="o">::</span><span class="n">IncomingPacketQueue</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NetEventCallback</span><span class="w"> </span><span class="o">*</span><span class="n">mCallbacksObj</span><span class="p">;</span><span class="w"></span>
+<span class="n">Bedrock</span><span class="o">::</span><span class="n">Threading</span><span class="o">::</span><span class="n">Mutex</span><span class="w"> </span><span class="n">mMutex</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPacketEventListener</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63038 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPacketEventListener</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetworkPacketEventListener</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPacketRecorder;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8222 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPacketRecorder</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPeer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8247 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPeer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NetworkPeer</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">NetworkPeer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPeer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkPeer::NetworkStatus</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8630 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkPeer</span><span class="o">::</span><span class="n">NetworkStatus</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NetworkPeer</span><span class="o">::</span><span class="n">NetworkLoad</span><span class="w"> </span><span class="n">mLoad</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCurrentPing</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAveragePing</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mApproximateMaxBps</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCurrentPacketLoss</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAveragePacketLoss</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mTotalBytesReceived</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mTotalBytesSent</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkSettingOptions</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 72561 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkSettingOptions</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mCompressionThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkStatistics::OverviewStats</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63800 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkStatistics</span><span class="o">::</span><span class="n">OverviewStats</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentBytesUnpacked</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentBytesPacked</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedBytesUnpacked</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedBytesPacked</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NetworkStatistics::PacketStats</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 63835 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NetworkStatistics</span><span class="o">::</span><span class="n">PacketStats</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentNum</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sentBytes</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedNum</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">receivedBytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NewType<int></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13185 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NewType</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NewType</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">Raw</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NewType<long></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45313 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NewType</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NewType</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">Raw</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NewType<unsigned short></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13216 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NewType</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">NewType</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">&gt;::</span><span class="n">Raw</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NibblePair</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35026 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NibblePair</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NoiseBasedColorPalette;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198718 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NoiseBasedColorPalette</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NoiseBasedTemperatureAttributes</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 191330 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NoiseBasedTemperatureAttributes</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">TemperatureCategory</span><span class="w"> </span><span class="n">mTemperatureCategory</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NoteBlock::triggerEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 459573 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NoteBlock</span><span class="o">::</span><span class="n">triggerEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NpcAction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45374 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NpcAction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$NpcAction</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">NpcActionType</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcActionMode</span><span class="w"> </span><span class="n">mMode</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mButtonName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mEvaluatedButtonName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mText</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEvaluatedText</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NpcComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 44884 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NpcComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCurrentSkin</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcGUIOffset</span><span class="w"> </span><span class="n">mPortraitOffsets</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcGUIOffset</span><span class="w"> </span><span class="n">mPickerOffsets</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SkinData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNPCSkins</span><span class="p">;</span><span class="w"></span>
+<span class="n">Json</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="n">mNPCData</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcActions</span><span class="w"> </span><span class="n">mActions</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mInteractText</span><span class="p">;</span><span class="w"></span>
+<span class="n">NpcComponent</span><span class="o">::</span><span class="n">TextFilter</span><span class="w"> </span><span class="n">mInteractTextFilter</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NpcGUIOffset</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 44885 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NpcGUIOffset</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mTranslation</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mRotation</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mScale</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>NullSoundPlayer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 86996 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">NullSoundPlayer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

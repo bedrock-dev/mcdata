@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>HardcodedSpawnAreaRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 36692 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HardcodedSpawnAreaRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">HardcodedSpawnAreaType</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MobSpawnerData</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HashedString::StringHasher<const char *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484062 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HashedString</span><span class="o">::</span><span class="n">StringHasher</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HealableDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55143 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HealableDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FeedItem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mHealItems</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mForceUse</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mFilter</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HeavyBlock::animateTick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 226412 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HeavyBlock</span><span class="o">::</span><span class="n">animateTick</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HideComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115810 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HideComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsInRaid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mReactToBell</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HillsTransformation;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198715 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HillsTransformation</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HomeComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107453 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HomeComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mHomePos</span><span class="p">;</span><span class="w"></span>
+<span class="n">DimensionType</span><span class="w"> </span><span class="n">mDimensionId</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HomeDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107827 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HomeDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Hopper</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55946 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Hopper</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCooldownTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mTransferedFromChestMinecart</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsEntity</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMoveItemSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HopperDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 388816 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HopperDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HuffmanEncodingTreeNode</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478112 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HuffmanEncodingTreeNode</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span><span class="w"></span>
+<span class="n">HuffmanEncodingTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">;</span><span class="w"></span>
+<span class="n">HuffmanEncodingTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span><span class="w"></span>
+<span class="n">HuffmanEncodingTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">parent</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HurtOnConditionDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 56177 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HurtOnConditionDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">DamageConditionList</span><span class="w"> </span><span class="n">mDamageConditions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HurtOnConditionDefinition::deserializeData::$B7C8591B4983496A0E79D8038F2BDAD9</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 472671 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HurtOnConditionDefinition</span><span class="o">::</span><span class="n">deserializeData</span><span class="o">::</span><span class="n">$B7C8591B4983496A0E79D8038F2BDAD9</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">HurtOnConditionDefinition</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HardcodedSpawnAreaRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 36692 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HardcodedSpawnAreaRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">HardcodedSpawnAreaType</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MobSpawnerData</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HashedString::StringHasher<const char *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484062 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HashedString</span><span class="o">::</span><span class="n">StringHasher</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HealableDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55143 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HealableDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FeedItem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mHealItems</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mForceUse</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mFilter</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HeavyBlock::animateTick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 226412 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HeavyBlock</span><span class="o">::</span><span class="n">animateTick</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HideComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115810 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HideComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsInRaid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mReactToBell</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HillsTransformation;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198715 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HillsTransformation</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HomeComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107453 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HomeComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mHomePos</span><span class="p">;</span><span class="w"></span>
+<span class="n">DimensionType</span><span class="w"> </span><span class="n">mDimensionId</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HomeDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107827 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HomeDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Hopper</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55946 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Hopper</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCooldownTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mTransferedFromChestMinecart</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsEntity</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMoveItemSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HopperDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 388816 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HopperDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HuffmanEncodingTreeNode</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478112 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HuffmanEncodingTreeNode</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span><span class="w"></span>
+<span class="n">HuffmanEncodingTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">;</span><span class="w"></span>
+<span class="n">HuffmanEncodingTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span><span class="w"></span>
+<span class="n">HuffmanEncodingTreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">parent</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HurtOnConditionDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 56177 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HurtOnConditionDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">DamageConditionList</span><span class="w"> </span><span class="n">mDamageConditions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>HurtOnConditionDefinition::deserializeData::$B7C8591B4983496A0E79D8038F2BDAD9</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 472671 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">HurtOnConditionDefinition</span><span class="o">::</span><span class="n">deserializeData</span><span class="o">::</span><span class="n">$B7C8591B4983496A0E79D8038F2BDAD9</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">HurtOnConditionDefinition</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

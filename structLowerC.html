@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>census_context;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7965 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">census_context</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>cg::ImageBuffer;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35041 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cg</span><span class="o">::</span><span class="n">ImageBuffer</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>cg::ImageDescription</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 457060 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cg</span><span class="o">::</span><span class="n">ImageDescription</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">TextureFormat</span><span class="w"> </span><span class="n">mTextureFormat</span><span class="p">;</span><span class="w"></span>
+<span class="n">cg</span><span class="o">::</span><span class="n">ColorSpace</span><span class="w"> </span><span class="n">mColorSpace</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsCubemap</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mArraySize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>child_call;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486749 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">child_call</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>cmsghdr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485738 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cmsghdr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">cmsg_len</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cmsg_level</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cmsg_type</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">__cmsg_data</span><span class="p">[];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::Commands</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7928 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Commands</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8773 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Commands</span><span class="o">::</span><span class="n">StubInterface</span><span class="o">::</span><span class="n">experimental_async_interface</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$experimental_async_interface</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::EmptyDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486547 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">EmptyDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Empty</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::LevelFileAndSizeDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486571 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">LevelFileAndSizeDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">LevelFileAndSize</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MessageDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486550 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MessageDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Message</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReport</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7630 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">InternalMetadataWithArena</span><span class="w"> </span><span class="n">_internal_metadata_</span><span class="p">;</span><span class="w"></span>
+<span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport</span><span class="o">::</span><span class="n">MetricUnion</span><span class="w"> </span><span class="n">metric_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">CachedSize</span><span class="w"> </span><span class="n">_cached_size_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">uint32</span><span class="w"> </span><span class="n">_oneof_case_</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReportDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486586 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReportDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_BandwithMetric</span><span class="w"> </span><span class="o">*</span><span class="n">bandwith_</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_LatencyMetric</span><span class="w"> </span><span class="o">*</span><span class="n">latency_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">int64</span><span class="w"> </span><span class="n">ticktime_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReport_BandwithMetricDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486580 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_BandwithMetricDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_BandwithMetric</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReport_LatencyMetricDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486583 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_LatencyMetricDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_LatencyMetric</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerAndMessageDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486565 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerAndMessageDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerAndMessage</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7933 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">InternalMetadataWithArena</span><span class="w"> </span><span class="n">_internal_metadata_</span><span class="p">;</span><span class="w"></span>
+<span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Xuid</span><span class="w"> </span><span class="o">*</span><span class="n">xuid_</span><span class="p">;</span><span class="w"></span>
+<span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerName</span><span class="w"> </span><span class="o">*</span><span class="n">name_</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">playertype_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">CachedSize</span><span class="w"> </span><span class="n">_cached_size_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerInfoDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486559 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerInfoDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerListDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486562 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerListDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerList</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerNameDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486556 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerNameDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerName</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SaveQueryResultDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486574 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveQueryResultDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveQueryResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SaveStateResult</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7932 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveStateResult</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">InternalMetadataWithArena</span><span class="w"> </span><span class="n">_internal_metadata_</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">savestate_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">CachedSize</span><span class="w"> </span><span class="n">_cached_size_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SaveStateResultDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486577 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveStateResultDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveStateResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SettingsDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486568 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SettingsDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Settings</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">difficultysetting_</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cheatssetting_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::XuidDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486553 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">XuidDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Xuid</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>commands::Postfix</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 428725 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">commands</span><span class="o">::</span><span class="n">Postfix</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">postfix</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>commands::SoftEnum</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 426876 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">commands</span><span class="o">::</span><span class="n">SoftEnum</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>createUniqueRakPeer::$0DB58CF58EC7BF1F4DDADE930FB66FD4;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77651 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">createUniqueRakPeer</span><span class="o">::</span><span class="n">$0DB58CF58EC7BF1F4DDADE930FB66FD4</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>curfile64_info</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485438 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">curfile64_info</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">z_stream</span><span class="w"> </span><span class="n">stream</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">stream_initialised</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">pos_in_buffered_data</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_local_header</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">central_header</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_centralExtra</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_centralheader</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_centralExtraFree</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">method</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">raw</span><span class="p">;</span><span class="w"></span>
+<span class="n">Byte</span><span class="w"> </span><span class="n">buffered_data</span><span class="p">[</span><span class="mi">65536</span><span class="p">];</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">dosDate</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">crc32</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">encrypt</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">zip64</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_zip64extrainfo</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">totalCompressedData</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">totalUncompressedData</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>curl_httppost;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485602 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">curl_httppost</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>curl_slist;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485603 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">curl_slist</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>census_context;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7965 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">census_context</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>cg::ImageBuffer;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35041 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cg</span><span class="o">::</span><span class="n">ImageBuffer</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>cg::ImageDescription</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 457060 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cg</span><span class="o">::</span><span class="n">ImageDescription</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">TextureFormat</span><span class="w"> </span><span class="n">mTextureFormat</span><span class="p">;</span><span class="w"></span>
+<span class="n">cg</span><span class="o">::</span><span class="n">ColorSpace</span><span class="w"> </span><span class="n">mColorSpace</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsCubemap</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mArraySize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>child_call;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486749 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">child_call</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>cmsghdr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485738 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cmsghdr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">cmsg_len</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cmsg_level</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cmsg_type</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">__cmsg_data</span><span class="p">[];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::Commands</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7928 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Commands</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::Commands::StubInterface::experimental_async_interface</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8773 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Commands</span><span class="o">::</span><span class="n">StubInterface</span><span class="o">::</span><span class="n">experimental_async_interface</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$experimental_async_interface</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::EmptyDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486547 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">EmptyDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Empty</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::LevelFileAndSizeDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486571 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">LevelFileAndSizeDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">LevelFileAndSize</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MessageDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486550 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MessageDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Message</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReport</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7630 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">InternalMetadataWithArena</span><span class="w"> </span><span class="n">_internal_metadata_</span><span class="p">;</span><span class="w"></span>
+<span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport</span><span class="o">::</span><span class="n">MetricUnion</span><span class="w"> </span><span class="n">metric_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">CachedSize</span><span class="w"> </span><span class="n">_cached_size_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">uint32</span><span class="w"> </span><span class="n">_oneof_case_</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReportDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486586 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReportDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_BandwithMetric</span><span class="w"> </span><span class="o">*</span><span class="n">bandwith_</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_LatencyMetric</span><span class="w"> </span><span class="o">*</span><span class="n">latency_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">int64</span><span class="w"> </span><span class="n">ticktime_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReport_BandwithMetricDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486580 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_BandwithMetricDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_BandwithMetric</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::MetricReport_LatencyMetricDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486583 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_LatencyMetricDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">MetricReport_LatencyMetric</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerAndMessageDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486565 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerAndMessageDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerAndMessage</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7933 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">InternalMetadataWithArena</span><span class="w"> </span><span class="n">_internal_metadata_</span><span class="p">;</span><span class="w"></span>
+<span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Xuid</span><span class="w"> </span><span class="o">*</span><span class="n">xuid_</span><span class="p">;</span><span class="w"></span>
+<span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerName</span><span class="w"> </span><span class="o">*</span><span class="n">name_</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">playertype_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">CachedSize</span><span class="w"> </span><span class="n">_cached_size_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerInfoDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486559 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerInfoDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerListDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486562 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerListDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerList</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::PlayerNameDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486556 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerNameDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">PlayerName</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SaveQueryResultDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486574 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveQueryResultDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveQueryResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SaveStateResult</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7932 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveStateResult</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">baseclass_0</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">InternalMetadataWithArena</span><span class="w"> </span><span class="n">_internal_metadata_</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">savestate_</span><span class="p">;</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">CachedSize</span><span class="w"> </span><span class="n">_cached_size_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SaveStateResultDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486577 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveStateResultDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SaveStateResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::SettingsDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486568 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">SettingsDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Settings</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">difficultysetting_</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cheatssetting_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>com::mojang::clacks::protocol::XuidDefaultTypeInternal</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486553 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">XuidDefaultTypeInternal</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">ExplicitlyConstructed</span><span class="o">&lt;</span><span class="n">com</span><span class="o">::</span><span class="n">mojang</span><span class="o">::</span><span class="n">clacks</span><span class="o">::</span><span class="n">protocol</span><span class="o">::</span><span class="n">Xuid</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_instance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>commands::Postfix</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 428725 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">commands</span><span class="o">::</span><span class="n">Postfix</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">postfix</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>commands::SoftEnum</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 426876 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">commands</span><span class="o">::</span><span class="n">SoftEnum</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>createUniqueRakPeer::$0DB58CF58EC7BF1F4DDADE930FB66FD4;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77651 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">createUniqueRakPeer</span><span class="o">::</span><span class="n">$0DB58CF58EC7BF1F4DDADE930FB66FD4</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>curfile64_info</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485438 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">curfile64_info</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">z_stream</span><span class="w"> </span><span class="n">stream</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">stream_initialised</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">pos_in_buffered_data</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_local_header</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">central_header</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_centralExtra</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_centralheader</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_centralExtraFree</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">method</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">raw</span><span class="p">;</span><span class="w"></span>
+<span class="n">Byte</span><span class="w"> </span><span class="n">buffered_data</span><span class="p">[</span><span class="mi">65536</span><span class="p">];</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">dosDate</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">crc32</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">encrypt</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">zip64</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_zip64extrainfo</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">totalCompressedData</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">totalUncompressedData</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>curl_httppost;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485602 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">curl_httppost</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>curl_slist;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485603 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">curl_slist</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

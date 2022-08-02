@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>ifaddrs</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478104 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifaddrs</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ifaddrs</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_next</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_name</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ifa_flags</span><span class="p">;</span><span class="w"></span>
+<span class="n">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_addr</span><span class="p">;</span><span class="w"></span>
+<span class="n">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_netmask</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifaddrs</span><span class="o">::</span><span class="n">$84E426BE247030D232EE932B77F5CBF6</span><span class="w"> </span><span class="n">ifa_ifu</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_data</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ifconf</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294343 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifconf</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ifc_len</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifconf</span><span class="o">::</span><span class="n">$CB4E2310AA03783056CB5D3719B31C2A</span><span class="w"> </span><span class="n">ifc_ifcu</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ifreq</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294346 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifreq</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ifreq</span><span class="o">::</span><span class="n">$EC3FB77B1F5CBB3C6B6AB4B4CE5B261D</span><span class="w"> </span><span class="n">ifr_ifrn</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifreq</span><span class="o">::</span><span class="n">$3766CEB1D20AE6FB37CD7F05C4AF9C4E</span><span class="w"> </span><span class="n">ifr_ifru</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>in6_addr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4273 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">in6_addr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="o">::</span><span class="n">$FA2BBAF2C6BC03A9E0081A5D902744A5</span><span class="w"> </span><span class="n">__in6_u</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>in_addr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4276 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">in_addr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in_addr_t</span><span class="w"> </span><span class="n">s_addr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>internal_state;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 479217 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">internal_state</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>iovec</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486228 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">iovec</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">iov_base</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">iov_len</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ipv6_mreq</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478153 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ipv6_mreq</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="w"> </span><span class="n">ipv6mr_multiaddr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ipv6mr_interface</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ifaddrs</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478104 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifaddrs</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ifaddrs</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_next</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_name</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ifa_flags</span><span class="p">;</span><span class="w"></span>
+<span class="n">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_addr</span><span class="p">;</span><span class="w"></span>
+<span class="n">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_netmask</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifaddrs</span><span class="o">::</span><span class="n">$84E426BE247030D232EE932B77F5CBF6</span><span class="w"> </span><span class="n">ifa_ifu</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_data</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ifconf</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294343 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifconf</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ifc_len</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifconf</span><span class="o">::</span><span class="n">$CB4E2310AA03783056CB5D3719B31C2A</span><span class="w"> </span><span class="n">ifc_ifcu</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ifreq</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294346 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifreq</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ifreq</span><span class="o">::</span><span class="n">$EC3FB77B1F5CBB3C6B6AB4B4CE5B261D</span><span class="w"> </span><span class="n">ifr_ifrn</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifreq</span><span class="o">::</span><span class="n">$3766CEB1D20AE6FB37CD7F05C4AF9C4E</span><span class="w"> </span><span class="n">ifr_ifru</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>in6_addr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4273 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">in6_addr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="o">::</span><span class="n">$FA2BBAF2C6BC03A9E0081A5D902744A5</span><span class="w"> </span><span class="n">__in6_u</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>in_addr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4276 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">in_addr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in_addr_t</span><span class="w"> </span><span class="n">s_addr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>internal_state;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 479217 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">internal_state</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>iovec</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486228 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">iovec</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">iov_base</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">iov_len</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ipv6_mreq</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478153 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ipv6_mreq</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="w"> </span><span class="n">ipv6mr_multiaddr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ipv6mr_interface</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

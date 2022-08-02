@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>GUIDGenerator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486272 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GUIDGenerator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameCallbacks</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 76900 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameCallbacks</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$GameCallbacks</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRule</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 945 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRule</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mShouldSave</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAllowUseInCommand</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsDefaultSet</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRequiresCheats</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">TagDataNotFoundCallback</span><span class="w"> </span><span class="n">mTagNotFoundCallback</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">ValidateValueCallback</span><span class="w"> </span><span class="n">mValidateValueCallback</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRule::ValidationError</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 954 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRule</span><span class="o">::</span><span class="n">ValidationError</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mSuccess</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mErrorDescription</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mErrorParameters</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRuleCommand::InitProxy</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 425707 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRuleCommand</span><span class="o">::</span><span class="n">InitProxy</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">GameRules</span><span class="w"> </span><span class="o">*</span><span class="n">mGameRules</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRules</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5695 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRules</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">GameRules</span><span class="o">::</span><span class="n">GameRuleMap</span><span class="w"> </span><span class="n">mGameRules</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRules::_registerRules::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 290596 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRules</span><span class="o">::</span><span class="n">_registerRules</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRulesChangedPacketData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5698 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRulesChangedPacketData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GameRule</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRules</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameVersion</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5654 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameVersion</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mDigit</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mString</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 109107 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mAlleleRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GeneticVariant</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mGeneticVariants</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticVariant</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 109108 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticVariant</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mainAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">hiddenAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">eitherAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">bothAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">onBorn</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticsComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107795 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticsComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GeneticsComponent</span><span class="o">::</span><span class="n">Gene</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mGenes</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">GeneticsDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mGeneticsDescription</span><span class="p">;</span><span class="w"></span>
+<span class="n">Random</span><span class="w"> </span><span class="o">*</span><span class="n">mRandom</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticsComponent::Gene</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 105778 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticsComponent</span><span class="o">::</span><span class="n">Gene</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mainAllele</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">hiddenAllele</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticsDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107770 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticsDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMutationRate</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GeneDefinition</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mGeneDefinitions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Ghast::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 170977 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Ghast</span><span class="o">::</span><span class="n">updateEntitySpecificMolangVariables</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GiveableComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 54774 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GiveableComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCoolDownTimeStamps</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GiveableDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 367783 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GiveableDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GiveableTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 47660 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPriority</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRequiredControlFlags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mScanInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPersistTargetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithinDefault</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxFlee</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWalkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSprintSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbabilityPerStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSneakSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorType</span><span class="w"> </span><span class="n">mEntityType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MobDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mMobDescriptions</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreVisibility</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarAttackTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mKnockbackFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mDamageFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnRoarEnd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStalkSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxStalkDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPounceMaxDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStrikeDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStuckTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mBlockFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewX</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewY</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbability</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mTargetFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinimumRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mBroadcast</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBroadcastRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mWithinRadiusEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mHurtByTargetEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPercentChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorCategory</span><span class="w"> </span><span class="n">mAttackTypes</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomStopInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mReachMultiplier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMeleeFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAttackOnce</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRequireCompletePath</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnAttack</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mHitDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">LevelSoundEvent</span><span class="w"> </span><span class="n">mDelayedAttackSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mDelayBeforeEating</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWaitTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mExploreDist</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnHomeTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnFailedTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnLayEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnWorkArrivalEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mGoalRadius</span><span class="p">;</span><span class="w"></span>
+<span class="n">GoalDefinition</span><span class="o">::</span><span class="n">$A96817768A54EC800FE0CCD12036E025</span><span class="w"> </span><span class="n">mMoveToBlockGoalData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreMobDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mForceUse</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookAhead</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCenteredGap</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMoveSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEntityCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mXZDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mYDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanLandOnTrees</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRangedFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeChargedTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeShootTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mBurstShots</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBurstInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustSee</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustReach</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCloseDoorAfter</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanGetScared</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mOnlyAtNight</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustBeOnGround</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mTrackTarget</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mAlertSameType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mReselectTargets</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHurtOwner</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMustSeeForgetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ItemDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mItemList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanTemptVertically</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxToEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mFullDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInitialEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mBlockList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFloatHeightOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRandomReselect</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mFloatDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mHoverHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mRadiusRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRadiusChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mAboveTargetRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mHeightOffsetRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mHeightChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mDelayRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SummonSpellData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSummonSpellData</span><span class="p">;</span><span class="w"></span>
+<span class="n">POIType</span><span class="w"> </span><span class="n">mPOIType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mGoalCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mActiveTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanWorkInRain</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWorkInRainTolerance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFollowDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SendEventData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSendEventData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mStartDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxFailedAttempts</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mPreferWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mTargetNeeded</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMountDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DrinkPotionData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mDrinkPotionData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDrinkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDropItemChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDropAttemptEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mOfferingDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mLootTable</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mTimeOfDayRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopSnackingChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingTimeMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mPrepareSound</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPrepareTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mAggroSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDefendEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mCanNapFilters</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mWakeMobExceptionFilters</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRemoveItemTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCarriedItemSwitchTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownTimeoutTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorDefinitionIdentifier</span><span class="w"> </span><span class="n">mDesiredMingleType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMingleDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mJumpInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnCelebrationEndEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mCelebrationSound</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalDefinition_0</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 117054 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalDefinition_0</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPriority</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRequiredControlFlags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mScanInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPersistTargetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithinDefault</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxFlee</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWalkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSprintSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbabilityPerStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSneakSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorType</span><span class="w"> </span><span class="n">mEntityType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MobDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mMobDescriptions</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreVisibility</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarAttackTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mKnockbackFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mDamageFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnRoarEnd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStalkSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxStalkDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPounceMaxDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStrikeDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStuckTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mBlockFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewX</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewY</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbability</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mTargetFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinimumRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mBroadcast</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBroadcastRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mWithinRadiusEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mHurtByTargetEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPercentChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorCategory</span><span class="w"> </span><span class="n">mAttackTypes</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomStopInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mReachMultiplier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMeleeFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAttackOnce</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRequireCompletePath</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnAttack</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mHitDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">LevelSoundEvent</span><span class="w"> </span><span class="n">mDelayedAttackSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mDelayBeforeEating</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWaitTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mExploreDist</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnHomeTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnFailedTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnLayEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnWorkArrivalEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mGoalRadius</span><span class="p">;</span><span class="w"></span>
+<span class="n">GoalDefinition</span><span class="o">::</span><span class="n">$957942B4FBBCA72D92900834D61C4C9E</span><span class="w"> </span><span class="n">mMoveToBlockGoalData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreMobDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mForceUse</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookAhead</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCenteredGap</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMoveSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEntityCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mXZDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mYDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanLandOnTrees</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRangedFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeChargedTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeShootTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mBurstShots</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBurstInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustSee</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustReach</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCloseDoorAfter</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanGetScared</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mOnlyAtNight</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustBeOnGround</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mTrackTarget</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mAlertSameType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mReselectTargets</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHurtOwner</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMustSeeForgetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ItemDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mItemList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanTemptVertically</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxToEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mFullDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInitialEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mBlockList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFloatHeightOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRandomReselect</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mFloatDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mHoverHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mRadiusRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRadiusChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mAboveTargetRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mHeightOffsetRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mHeightChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mDelayRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SummonSpellData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSummonSpellData</span><span class="p">;</span><span class="w"></span>
+<span class="n">POIType</span><span class="w"> </span><span class="n">mPOIType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mGoalCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mActiveTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanWorkInRain</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWorkInRainTolerance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFollowDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SendEventData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSendEventData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mStartDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxFailedAttempts</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mPreferWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mTargetNeeded</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMountDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DrinkPotionData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mDrinkPotionData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDrinkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDropItemChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDropAttemptEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mOfferingDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mLootTable</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mTimeOfDayRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopSnackingChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingTimeMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mPrepareSound</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPrepareTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mAggroSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDefendEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mCanNapFilters</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mWakeMobExceptionFilters</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRemoveItemTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCarriedItemSwitchTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownTimeoutTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorDefinitionIdentifier</span><span class="w"> </span><span class="n">mDesiredMingleType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMingleDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mJumpInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnCelebrationEndEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mCelebrationSound</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalDefinition_0::parse::$77030C46F7368D1C8A31176E7D1C3EB3</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 122519 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalDefinition_0</span><span class="o">::</span><span class="n">parse</span><span class="o">::</span><span class="n">$77030C46F7368D1C8A31176E7D1C3EB3</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">GoalDefinition_0</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalSelectorComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55649 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalSelectorComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PrioritizedGoal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTargetGoals</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PrioritizedGoal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNormalGoals</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GridPos</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 42720 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GridPos</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GrowsCropComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55805 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GrowsCropComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCharges</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mTargetCrop</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mLastGrownCrop</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GrowsCropDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55861 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GrowsCropDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCharges</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GUIDGenerator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486272 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GUIDGenerator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameCallbacks</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 76900 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameCallbacks</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$GameCallbacks</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRule</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 945 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRule</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mShouldSave</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAllowUseInCommand</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsDefaultSet</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRequiresCheats</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">TagDataNotFoundCallback</span><span class="w"> </span><span class="n">mTagNotFoundCallback</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameRule</span><span class="o">::</span><span class="n">ValidateValueCallback</span><span class="w"> </span><span class="n">mValidateValueCallback</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRule::ValidationError</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 954 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRule</span><span class="o">::</span><span class="n">ValidationError</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mSuccess</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mErrorDescription</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mErrorParameters</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRuleCommand::InitProxy</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 425707 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRuleCommand</span><span class="o">::</span><span class="n">InitProxy</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">GameRules</span><span class="w"> </span><span class="o">*</span><span class="n">mGameRules</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRules</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5695 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRules</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">GameRules</span><span class="o">::</span><span class="n">GameRuleMap</span><span class="w"> </span><span class="n">mGameRules</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRules::_registerRules::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 290596 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRules</span><span class="o">::</span><span class="n">_registerRules</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameRulesChangedPacketData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5698 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameRulesChangedPacketData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GameRule</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRules</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GameVersion</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5654 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GameVersion</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mDigit</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mString</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 109107 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mAlleleRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GeneticVariant</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mGeneticVariants</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticVariant</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 109108 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticVariant</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mainAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">hiddenAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">eitherAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">bothAllele</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">onBorn</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticsComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107795 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticsComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GeneticsComponent</span><span class="o">::</span><span class="n">Gene</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mGenes</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">GeneticsDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mGeneticsDescription</span><span class="p">;</span><span class="w"></span>
+<span class="n">Random</span><span class="w"> </span><span class="o">*</span><span class="n">mRandom</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticsComponent::Gene</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 105778 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticsComponent</span><span class="o">::</span><span class="n">Gene</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mainAllele</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">hiddenAllele</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GeneticsDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107770 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GeneticsDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMutationRate</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GeneDefinition</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mGeneDefinitions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Ghast::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 170977 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Ghast</span><span class="o">::</span><span class="n">updateEntitySpecificMolangVariables</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GiveableComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 54774 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GiveableComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCoolDownTimeStamps</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GiveableDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 367783 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GiveableDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GiveableTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 47660 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPriority</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRequiredControlFlags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mScanInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPersistTargetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithinDefault</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxFlee</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWalkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSprintSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbabilityPerStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSneakSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorType</span><span class="w"> </span><span class="n">mEntityType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MobDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mMobDescriptions</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreVisibility</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarAttackTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mKnockbackFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mDamageFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnRoarEnd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStalkSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxStalkDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPounceMaxDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStrikeDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStuckTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mBlockFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewX</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewY</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbability</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mTargetFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinimumRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mBroadcast</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBroadcastRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mWithinRadiusEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mHurtByTargetEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPercentChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorCategory</span><span class="w"> </span><span class="n">mAttackTypes</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomStopInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mReachMultiplier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMeleeFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAttackOnce</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRequireCompletePath</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnAttack</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mHitDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">LevelSoundEvent</span><span class="w"> </span><span class="n">mDelayedAttackSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mDelayBeforeEating</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWaitTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mExploreDist</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnHomeTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnFailedTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnLayEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnWorkArrivalEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mGoalRadius</span><span class="p">;</span><span class="w"></span>
+<span class="n">GoalDefinition</span><span class="o">::</span><span class="n">$A96817768A54EC800FE0CCD12036E025</span><span class="w"> </span><span class="n">mMoveToBlockGoalData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreMobDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mForceUse</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookAhead</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCenteredGap</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMoveSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEntityCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mXZDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mYDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanLandOnTrees</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRangedFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeChargedTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeShootTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mBurstShots</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBurstInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustSee</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustReach</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCloseDoorAfter</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanGetScared</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mOnlyAtNight</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustBeOnGround</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mTrackTarget</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mAlertSameType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mReselectTargets</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHurtOwner</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMustSeeForgetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ItemDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mItemList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanTemptVertically</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxToEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mFullDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInitialEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mBlockList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFloatHeightOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRandomReselect</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mFloatDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mHoverHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mRadiusRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRadiusChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mAboveTargetRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mHeightOffsetRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mHeightChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mDelayRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SummonSpellData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSummonSpellData</span><span class="p">;</span><span class="w"></span>
+<span class="n">POIType</span><span class="w"> </span><span class="n">mPOIType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mGoalCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mActiveTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanWorkInRain</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWorkInRainTolerance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFollowDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SendEventData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSendEventData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mStartDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxFailedAttempts</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mPreferWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mTargetNeeded</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMountDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DrinkPotionData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mDrinkPotionData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDrinkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDropItemChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDropAttemptEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mOfferingDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mLootTable</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mTimeOfDayRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopSnackingChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingTimeMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mPrepareSound</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPrepareTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mAggroSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDefendEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mCanNapFilters</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mWakeMobExceptionFilters</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRemoveItemTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCarriedItemSwitchTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownTimeoutTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorDefinitionIdentifier</span><span class="w"> </span><span class="n">mDesiredMingleType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMingleDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mJumpInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnCelebrationEndEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mCelebrationSound</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalDefinition_0</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 117054 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalDefinition_0</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPriority</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRequiredControlFlags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mScanInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mPersistTargetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithinDefault</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxFlee</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWalkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSprintSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbabilityPerStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSneakSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorType</span><span class="w"> </span><span class="n">mEntityType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MobDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mMobDescriptions</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreVisibility</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarAttackTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarStrength</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRoarRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mKnockbackFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mDamageFilter</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnRoarEnd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStalkSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxStalkDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLeapDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPounceMaxDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStrikeDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStuckTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mBlockFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewX</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAngleOfViewY</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mProbability</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mTargetFilter</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookAroundTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinimumRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mBroadcast</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBroadcastRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mWithinRadiusEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mHurtByTargetEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPercentChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorCategory</span><span class="w"> </span><span class="n">mAttackTypes</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomStopInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mReachMultiplier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMeleeFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAttackOnce</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRequireCompletePath</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnAttack</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mHitDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">LevelSoundEvent</span><span class="w"> </span><span class="n">mDelayedAttackSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mDelayBeforeEating</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWaitTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mExploreDist</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnHomeTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DefinitionTrigger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOnFailedTriggers</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnLayEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnWorkArrivalEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mTargetDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSearchCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mGoalRadius</span><span class="p">;</span><span class="w"></span>
+<span class="n">GoalDefinition</span><span class="o">::</span><span class="n">$957942B4FBBCA72D92900834D61C4C9E</span><span class="w"> </span><span class="n">mMoveToBlockGoalData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mWithin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIgnoreMobDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mForceUse</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLookAhead</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCenteredGap</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMoveSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEntityCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mXZDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mYDist</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanLandOnTrees</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRangedFOV</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAttackIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mAttackRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeChargedTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChargeShootTrigger</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mBurstShots</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBurstInterval</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustSee</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustReach</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCloseDoorAfter</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mCanGetScared</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mOnlyAtNight</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mMustBeOnGround</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mTrackTarget</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mAlertSameType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mReselectTargets</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mHurtOwner</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMustSeeForgetTicks</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ItemDescriptor</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mItemList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanTemptVertically</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxToEat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mFullDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mInitialEatDelay</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mBlockList</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFloatHeightOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRandomReselect</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mFloatDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">IntRange</span><span class="w"> </span><span class="n">mHoverHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mRadiusRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRadiusChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mAboveTargetRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mHeightOffsetRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mHeightChangeChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mDelayRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SummonSpellData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSummonSpellData</span><span class="p">;</span><span class="w"></span>
+<span class="n">POIType</span><span class="w"> </span><span class="n">mPOIType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mGoalCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mActiveTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRandomSoundIntervalMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanWorkInRain</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWorkInRainTolerance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFollowDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SendEventData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSendEventData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mStartDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxFailedAttempts</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mAvoidWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mPreferWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mTargetNeeded</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMountDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DrinkPotionData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mDrinkPotionData</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDrinkSpeedModifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDropItemChance</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDropAttemptEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mOfferingDistance</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mLootTable</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mTimeOfDayRange</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSnackingCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopSnackingChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStopChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mStartChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingTimeMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSittingCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mPrepareSound</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mPrepareTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mAggroSound</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnDefendEvent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepYOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSleepColliderWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDetectMobHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mCanNapFilters</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorFilterGroup</span><span class="w"> </span><span class="n">mWakeMobExceptionFilters</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRemoveItemTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCarriedItemSwitchTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInterestCooldown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCooldownTimeoutTime</span><span class="p">;</span><span class="w"></span>
+<span class="n">ActorDefinitionIdentifier</span><span class="w"> </span><span class="n">mDesiredMingleType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMingleDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMinLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxLookCount</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mSoundInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">FloatRange</span><span class="w"> </span><span class="n">mJumpInterval</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnCelebrationEndEvent</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mCelebrationSound</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalDefinition_0::parse::$77030C46F7368D1C8A31176E7D1C3EB3</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 122519 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalDefinition_0</span><span class="o">::</span><span class="n">parse</span><span class="o">::</span><span class="n">$77030C46F7368D1C8A31176E7D1C3EB3</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">GoalDefinition_0</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GoalSelectorComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55649 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GoalSelectorComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PrioritizedGoal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTargetGoals</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PrioritizedGoal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNormalGoals</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GridPos</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 42720 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GridPos</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GrowsCropComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55805 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GrowsCropComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCharges</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mTargetCrop</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mLastGrownCrop</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>GrowsCropDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55861 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">GrowsCropDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCharges</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mChance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

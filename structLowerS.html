@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>sched_param</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478091 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sched_param</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">sched_priority</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ActorLink></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77828 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ActorLink</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ActorRuntimeID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77659 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ActorRuntimeID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ActorUniqueID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77824 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ActorUniqueID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<BaseGameVersion></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80298 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">BaseGameVersion</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<BlockPos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78541 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">BlockPos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ChunkPos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80004 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<CommandOriginData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78852 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">CommandOriginData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<CompoundTag></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 61748 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">CompoundTag</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<DataItem></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116856 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">DataItem</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<EducationLevelSettings></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79603 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">EducationLevelSettings</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<EducationLevelSettings>::write::$5D3ECE175654F4C4336B6523D3249746</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186612 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">EducationLevelSettings</span><span class="o">&gt;::</span><span class="n">write</span><span class="o">::</span><span class="n">$5D3ECE175654F4C4336B6523D3249746</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">EducationLevelSettings</span><span class="w"> </span><span class="o">*</span><span class="n">val</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<EntityNetId></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79613 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">EntityNetId</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<GameRulesChangedPacketData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79703 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">GameRulesChangedPacketData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<IdentityDefinition::Type></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80475 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">IdentityDefinition</span><span class="o">::</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<InventoryAction></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79922 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">InventoryAction</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<InventorySource></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79923 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">InventorySource</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<InventoryTransaction></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79921 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">InventoryTransaction</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ItemData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80903 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ItemData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ItemInstance></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81107 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ItemInstance</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ItemStack></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81106 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ItemStack</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<LevelSettings></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80902 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">LevelSettings</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MapDecoration></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78790 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MapDecoration</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MapItemTrackedActor::UniqueId></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78788 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MapItemTrackedActor</span><span class="o">::</span><span class="n">UniqueId</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MoveActorAbsoluteData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80023 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MoveActorAbsoluteData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MoveActorDeltaData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80026 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MoveActorDeltaData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<NetworkBlockPosition></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77855 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">NetworkBlockPosition</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<RecipeIngredient></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 184724 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">RecipeIngredient</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ScoreboardId></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80474 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ScoreboardId</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapedChemistryRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79562 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapedChemistryRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapedRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79558 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapedRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapelessChemistryRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79561 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapelessChemistryRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapelessRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79559 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapelessRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShulkerBoxRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79560 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShulkerBoxRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<StructureEditorData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80912 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">StructureEditorData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<StructureSettings></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80913 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">StructureSettings</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<Vec2></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77826 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">Vec2</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<Vec3></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77825 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">Vec3</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<mce::UUID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77840 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">UUID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sigaction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485724 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sigaction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sigaction</span><span class="o">::</span><span class="n">$A264F945D93E77C42166F8517888D535</span><span class="w"> </span><span class="n">__sigaction_handler</span><span class="p">;</span><span class="w"></span>
+<span class="n">__sigset_t</span><span class="w"> </span><span class="n">sa_mask</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">sa_flags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">sa_restorer</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294326 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_signo</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_errno</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_code</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">__pad0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="w"> </span><span class="n">_sifields</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>1083567770C9944ECE9586E3D60D7164</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294333 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$1083567770C9944ECE9586E3D60D7164</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__pid_t</span><span class="w"> </span><span class="n">si_pid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">si_uid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__sigval_t</span><span class="w"> </span><span class="n">si_sigval</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>269BD37B8033F496E0DA26224222815C</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294334 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$269BD37B8033F496E0DA26224222815C</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__pid_t</span><span class="w"> </span><span class="n">si_pid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">si_uid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_status</span><span class="p">;</span><span class="w"></span>
+<span class="n">__clock_t</span><span class="w"> </span><span class="n">si_utime</span><span class="p">;</span><span class="w"></span>
+<span class="n">__clock_t</span><span class="w"> </span><span class="n">si_stime</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>34A68472B6FD99AB74EBE1055AA656AE</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294328 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$34A68472B6FD99AB74EBE1055AA656AE</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__pid_t</span><span class="w"> </span><span class="n">si_pid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">si_uid</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>5BF7061F11A02461448786E25380AC9A</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294339 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$5BF7061F11A02461448786E25380AC9A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">_call_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">_syscall</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_arch</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>9E99AB014780417E3FB416F9C93D05FB</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294335 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$9E99AB014780417E3FB416F9C93D05FB</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">si_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int16</span><span class="w"> </span><span class="n">si_addr_lsb</span><span class="p">;</span><span class="w"></span>
+<span class="kt">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$9E99AB014780417E3FB416F9C93D05FB</span><span class="o">::</span><span class="n">$5BC825E6F32707B864090E1402CAE52B</span><span class="w"> </span><span class="n">_bounds</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>9E99AB014780417E3FB416F9C93D05FB::<span class="math">$5BC825E6F32707B864090E1402CAE52B::$</span>500E99076578AD283C95318D41ACB4BA</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294337 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$9E99AB014780417E3FB416F9C93D05FB</span><span class="o">::</span><span class="n">$5BC825E6F32707B864090E1402CAE52B</span><span class="o">::</span><span class="n">$500E99076578AD283C95318D41ACB4BA</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">_lower</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">_upper</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>CCD53A48A999AABAD7234802D7894EC3</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294330 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$CCD53A48A999AABAD7234802D7894EC3</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_tid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_overrun</span><span class="p">;</span><span class="w"></span>
+<span class="n">__sigval_t</span><span class="w"> </span><span class="n">si_sigval</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sockaddr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 86249 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sa_family_t</span><span class="w"> </span><span class="n">sa_family</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">sa_data</span><span class="p">[</span><span class="mi">14</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sockaddr_in</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4275 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sa_family_t</span><span class="w"> </span><span class="n">sin_family</span><span class="p">;</span><span class="w"></span>
+<span class="n">in_port_t</span><span class="w"> </span><span class="n">sin_port</span><span class="p">;</span><span class="w"></span>
+<span class="n">in_addr</span><span class="w"> </span><span class="n">sin_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">sin_zero</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sockaddr_in6</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4271 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in6</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sa_family_t</span><span class="w"> </span><span class="n">sin6_family</span><span class="p">;</span><span class="w"></span>
+<span class="n">in_port_t</span><span class="w"> </span><span class="n">sin6_port</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">sin6_flowinfo</span><span class="p">;</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="w"> </span><span class="n">sin6_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">sin6_scope_id</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stack_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485606 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stack_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ss_sp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ss_flags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">ss_size</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>start_timer_after_init_state;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486941 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">start_timer_after_init_state</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stat</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483213 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stat</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__dev_t</span><span class="w"> </span><span class="n">st_dev</span><span class="p">;</span><span class="w"></span>
+<span class="n">__ino_t</span><span class="w"> </span><span class="n">st_ino</span><span class="p">;</span><span class="w"></span>
+<span class="n">__nlink_t</span><span class="w"> </span><span class="n">st_nlink</span><span class="p">;</span><span class="w"></span>
+<span class="n">__mode_t</span><span class="w"> </span><span class="n">st_mode</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">st_uid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__gid_t</span><span class="w"> </span><span class="n">st_gid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">__pad0</span><span class="p">;</span><span class="w"></span>
+<span class="n">__dev_t</span><span class="w"> </span><span class="n">st_rdev</span><span class="p">;</span><span class="w"></span>
+<span class="n">__off_t</span><span class="w"> </span><span class="n">st_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">__blksize_t</span><span class="w"> </span><span class="n">st_blksize</span><span class="p">;</span><span class="w"></span>
+<span class="n">__blkcnt_t</span><span class="w"> </span><span class="n">st_blocks</span><span class="p">;</span><span class="w"></span>
+<span class="n">timespec</span><span class="w"> </span><span class="n">st_atim</span><span class="p">;</span><span class="w"></span>
+<span class="n">timespec</span><span class="w"> </span><span class="n">st_mtim</span><span class="p">;</span><span class="w"></span>
+<span class="n">timespec</span><span class="w"> </span><span class="n">st_ctim</span><span class="p">;</span><span class="w"></span>
+<span class="n">__syscall_slong_t</span><span class="w"> </span><span class="n">__glibc_reserved</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<Actor *,1></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186241 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">aligned_storage</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">mArray</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<Actor *,1>::const_iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186243 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">1</span><span class="o">&gt;::</span><span class="n">const_iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<Actor *,1>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186242 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">1</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<const Block *,4096></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 253608 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">4096</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">aligned_storage</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">mArray</span><span class="p">[</span><span class="mi">4096</span><span class="p">];</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<const Block *,4096>::const_iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 253610 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">4096</span><span class="o">&gt;::</span><span class="n">const_iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<const Block *,4096>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 253609 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">4096</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>statvfs</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 42803 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">statvfs</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_bsize</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_frsize</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsblkcnt_t</span><span class="w"> </span><span class="n">f_blocks</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsblkcnt_t</span><span class="w"> </span><span class="n">f_bfree</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsblkcnt_t</span><span class="w"> </span><span class="n">f_bavail</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsfilcnt_t</span><span class="w"> </span><span class="n">f_files</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsfilcnt_t</span><span class="w"> </span><span class="n">f_ffree</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsfilcnt_t</span><span class="w"> </span><span class="n">f_favail</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_fsid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_flag</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_namemax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">__f_spare</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stdext::reference_wrapper<const Localization></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 60810 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stdext</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Localization</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Localization</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stdext::reference_wrapper<int>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5920 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stdext</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sched_param</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478091 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sched_param</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">sched_priority</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ActorLink></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77828 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ActorLink</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ActorRuntimeID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77659 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ActorRuntimeID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ActorUniqueID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77824 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ActorUniqueID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<BaseGameVersion></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80298 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">BaseGameVersion</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<BlockPos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78541 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">BlockPos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ChunkPos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80004 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<CommandOriginData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78852 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">CommandOriginData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<CompoundTag></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 61748 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">CompoundTag</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<DataItem></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116856 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">DataItem</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<EducationLevelSettings></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79603 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">EducationLevelSettings</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<EducationLevelSettings>::write::$5D3ECE175654F4C4336B6523D3249746</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186612 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">EducationLevelSettings</span><span class="o">&gt;::</span><span class="n">write</span><span class="o">::</span><span class="n">$5D3ECE175654F4C4336B6523D3249746</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">EducationLevelSettings</span><span class="w"> </span><span class="o">*</span><span class="n">val</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<EntityNetId></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79613 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">EntityNetId</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<GameRulesChangedPacketData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79703 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">GameRulesChangedPacketData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<IdentityDefinition::Type></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80475 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">IdentityDefinition</span><span class="o">::</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<InventoryAction></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79922 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">InventoryAction</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<InventorySource></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79923 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">InventorySource</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<InventoryTransaction></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79921 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">InventoryTransaction</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ItemData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80903 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ItemData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ItemInstance></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81107 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ItemInstance</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ItemStack></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81106 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ItemStack</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<LevelSettings></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80902 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">LevelSettings</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MapDecoration></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78790 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MapDecoration</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MapItemTrackedActor::UniqueId></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78788 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MapItemTrackedActor</span><span class="o">::</span><span class="n">UniqueId</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MoveActorAbsoluteData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80023 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MoveActorAbsoluteData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<MoveActorDeltaData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80026 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">MoveActorDeltaData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<NetworkBlockPosition></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77855 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">NetworkBlockPosition</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<RecipeIngredient></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 184724 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">RecipeIngredient</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ScoreboardId></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80474 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ScoreboardId</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapedChemistryRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79562 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapedChemistryRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapedRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79558 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapedRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapelessChemistryRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79561 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapelessChemistryRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShapelessRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79559 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShapelessRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<ShulkerBoxRecipe></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 79560 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">ShulkerBoxRecipe</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<StructureEditorData></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80912 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">StructureEditorData</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<StructureSettings></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80913 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">StructureSettings</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<Vec2></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77826 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">Vec2</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<Vec3></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77825 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">Vec3</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>serialize<mce::UUID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77840 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">serialize</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">UUID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sigaction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485724 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sigaction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sigaction</span><span class="o">::</span><span class="n">$A264F945D93E77C42166F8517888D535</span><span class="w"> </span><span class="n">__sigaction_handler</span><span class="p">;</span><span class="w"></span>
+<span class="n">__sigset_t</span><span class="w"> </span><span class="n">sa_mask</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">sa_flags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">sa_restorer</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294326 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_signo</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_errno</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_code</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">__pad0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="w"> </span><span class="n">_sifields</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>1083567770C9944ECE9586E3D60D7164</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294333 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$1083567770C9944ECE9586E3D60D7164</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__pid_t</span><span class="w"> </span><span class="n">si_pid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">si_uid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__sigval_t</span><span class="w"> </span><span class="n">si_sigval</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>269BD37B8033F496E0DA26224222815C</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294334 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$269BD37B8033F496E0DA26224222815C</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__pid_t</span><span class="w"> </span><span class="n">si_pid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">si_uid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_status</span><span class="p">;</span><span class="w"></span>
+<span class="n">__clock_t</span><span class="w"> </span><span class="n">si_utime</span><span class="p">;</span><span class="w"></span>
+<span class="n">__clock_t</span><span class="w"> </span><span class="n">si_stime</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>34A68472B6FD99AB74EBE1055AA656AE</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294328 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$34A68472B6FD99AB74EBE1055AA656AE</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__pid_t</span><span class="w"> </span><span class="n">si_pid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">si_uid</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>5BF7061F11A02461448786E25380AC9A</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294339 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$5BF7061F11A02461448786E25380AC9A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">_call_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">_syscall</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_arch</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>9E99AB014780417E3FB416F9C93D05FB</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294335 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$9E99AB014780417E3FB416F9C93D05FB</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">si_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int16</span><span class="w"> </span><span class="n">si_addr_lsb</span><span class="p">;</span><span class="w"></span>
+<span class="kt">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$9E99AB014780417E3FB416F9C93D05FB</span><span class="o">::</span><span class="n">$5BC825E6F32707B864090E1402CAE52B</span><span class="w"> </span><span class="n">_bounds</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>9E99AB014780417E3FB416F9C93D05FB::<span class="math">$5BC825E6F32707B864090E1402CAE52B::$</span>500E99076578AD283C95318D41ACB4BA</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294337 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$9E99AB014780417E3FB416F9C93D05FB</span><span class="o">::</span><span class="n">$5BC825E6F32707B864090E1402CAE52B</span><span class="o">::</span><span class="n">$500E99076578AD283C95318D41ACB4BA</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">_lower</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">_upper</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>siginfo_t::<span class="math">$9514A1E9F77EB70C94BB89C64268A47A::$</span>CCD53A48A999AABAD7234802D7894EC3</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294330 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">siginfo_t</span><span class="o">::</span><span class="n">$9514A1E9F77EB70C94BB89C64268A47A</span><span class="o">::</span><span class="n">$CCD53A48A999AABAD7234802D7894EC3</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_tid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">si_overrun</span><span class="p">;</span><span class="w"></span>
+<span class="n">__sigval_t</span><span class="w"> </span><span class="n">si_sigval</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sockaddr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 86249 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sa_family_t</span><span class="w"> </span><span class="n">sa_family</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">sa_data</span><span class="p">[</span><span class="mi">14</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sockaddr_in</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4275 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sa_family_t</span><span class="w"> </span><span class="n">sin_family</span><span class="p">;</span><span class="w"></span>
+<span class="n">in_port_t</span><span class="w"> </span><span class="n">sin_port</span><span class="p">;</span><span class="w"></span>
+<span class="n">in_addr</span><span class="w"> </span><span class="n">sin_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int8</span><span class="w"> </span><span class="n">sin_zero</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>sockaddr_in6</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4271 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in6</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">sa_family_t</span><span class="w"> </span><span class="n">sin6_family</span><span class="p">;</span><span class="w"></span>
+<span class="n">in_port_t</span><span class="w"> </span><span class="n">sin6_port</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">sin6_flowinfo</span><span class="p">;</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="w"> </span><span class="n">sin6_addr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">sin6_scope_id</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stack_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485606 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stack_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ss_sp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ss_flags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">ss_size</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>start_timer_after_init_state;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486941 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">start_timer_after_init_state</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stat</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483213 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stat</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__dev_t</span><span class="w"> </span><span class="n">st_dev</span><span class="p">;</span><span class="w"></span>
+<span class="n">__ino_t</span><span class="w"> </span><span class="n">st_ino</span><span class="p">;</span><span class="w"></span>
+<span class="n">__nlink_t</span><span class="w"> </span><span class="n">st_nlink</span><span class="p">;</span><span class="w"></span>
+<span class="n">__mode_t</span><span class="w"> </span><span class="n">st_mode</span><span class="p">;</span><span class="w"></span>
+<span class="n">__uid_t</span><span class="w"> </span><span class="n">st_uid</span><span class="p">;</span><span class="w"></span>
+<span class="n">__gid_t</span><span class="w"> </span><span class="n">st_gid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">__pad0</span><span class="p">;</span><span class="w"></span>
+<span class="n">__dev_t</span><span class="w"> </span><span class="n">st_rdev</span><span class="p">;</span><span class="w"></span>
+<span class="n">__off_t</span><span class="w"> </span><span class="n">st_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">__blksize_t</span><span class="w"> </span><span class="n">st_blksize</span><span class="p">;</span><span class="w"></span>
+<span class="n">__blkcnt_t</span><span class="w"> </span><span class="n">st_blocks</span><span class="p">;</span><span class="w"></span>
+<span class="n">timespec</span><span class="w"> </span><span class="n">st_atim</span><span class="p">;</span><span class="w"></span>
+<span class="n">timespec</span><span class="w"> </span><span class="n">st_mtim</span><span class="p">;</span><span class="w"></span>
+<span class="n">timespec</span><span class="w"> </span><span class="n">st_ctim</span><span class="p">;</span><span class="w"></span>
+<span class="n">__syscall_slong_t</span><span class="w"> </span><span class="n">__glibc_reserved</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<Actor *,1></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186241 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">aligned_storage</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">mArray</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<Actor *,1>::const_iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186243 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">1</span><span class="o">&gt;::</span><span class="n">const_iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<Actor *,1>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186242 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">1</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<const Block *,4096></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 253608 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">4096</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">aligned_storage</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">mArray</span><span class="p">[</span><span class="mi">4096</span><span class="p">];</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<const Block *,4096>::const_iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 253610 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">4096</span><span class="o">&gt;::</span><span class="n">const_iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>static_vector<const Block *,4096>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 253609 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">static_vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="mi">4096</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>statvfs</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 42803 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">statvfs</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_bsize</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_frsize</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsblkcnt_t</span><span class="w"> </span><span class="n">f_blocks</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsblkcnt_t</span><span class="w"> </span><span class="n">f_bfree</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsblkcnt_t</span><span class="w"> </span><span class="n">f_bavail</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsfilcnt_t</span><span class="w"> </span><span class="n">f_files</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsfilcnt_t</span><span class="w"> </span><span class="n">f_ffree</span><span class="p">;</span><span class="w"></span>
+<span class="n">__fsfilcnt_t</span><span class="w"> </span><span class="n">f_favail</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_fsid</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_flag</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">f_namemax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">__f_spare</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stdext::reference_wrapper<const Localization></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 60810 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stdext</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Localization</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Localization</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>stdext::reference_wrapper<int>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5920 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">stdext</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [["$$", "$$"], ['\\[', '\\]']],
+    packages: {
+      '[+]': ['mhchem']
+    }
+  },
+  loader: {
+    load: ['[tex]/mhchem']
+  },
+}
+</script>
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+    </article>
+</body>
+<hr>
+
+
+</html>

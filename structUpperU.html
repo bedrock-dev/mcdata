@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>UIProfanityContext</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 109097 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UIProfanityContext</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$UIProfanityContext</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">ProfanityFilterContext</span><span class="w"> </span><span class="n">mFilterMask</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mProfanityExactMap</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mProfanityContainsSet</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPExternalIPResult</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62646 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPExternalIPResult</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">bUPNPSupported</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">hostIPAddress</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPInterface</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62627 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPInterface</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">UPNPInterface</span><span class="o">::</span><span class="n">ConnectionStateListener</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mConnectionStateListeners</span><span class="p">;</span><span class="w"></span>
+<span class="n">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPPortMappingResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mUPnPPortMappingv4</span><span class="p">;</span><span class="w"></span>
+<span class="n">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPPortMappingResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mUPnPPortMappingv6</span><span class="p">;</span><span class="w"></span>
+<span class="n">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPExternalIPResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mUPnPExternalIP</span><span class="p">;</span><span class="w"></span>
+<span class="n">MPMCQueue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCompletedQueue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPInterface::ConnectionStateListener;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62640 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPInterface</span><span class="o">::</span><span class="n">ConnectionStateListener</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPPortMappingResult</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62642 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPPortMappingResult</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">bUPNPSupported</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">hostIPAddress</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">externalPort</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">internalPort</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPnPResultState<UPNPExternalIPResult></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62645 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPExternalIPResult</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">UPNPExternalIPResult</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="n">UpnpState</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isValid</span><span class="p">;</span><span class="w"></span>
+<span class="n">AsyncTracker</span><span class="w"> </span><span class="n">tracker</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPnPResultState<UPNPPortMappingResult></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62641 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPPortMappingResult</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">UPNPPortMappingResult</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="n">UpnpState</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isValid</span><span class="p">;</span><span class="w"></span>
+<span class="n">AsyncTracker</span><span class="w"> </span><span class="n">tracker</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UnderwaterTorchBlock::animateTick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 460050 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UnderwaterTorchBlock</span><span class="o">::</span><span class="n">animateTick</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UnverifiedCertificate</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7688 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UnverifiedCertificate</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">WebToken</span><span class="w"> </span><span class="n">mRawToken</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">UnverifiedCertificate</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mParentUnverifiedCertificate</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UpdateAttributesPacket::AttributeData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 75559 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UpdateAttributesPacket</span><span class="o">::</span><span class="n">AttributeData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCurrentValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDefaultValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">HashedString</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UpdateAttributesPacket::AttributeData::AttributeData::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80981 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UpdateAttributesPacket</span><span class="o">::</span><span class="n">AttributeData</span><span class="o">::</span><span class="n">AttributeData</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UpdateBlockPropertiesPacket::UpdateBlockPropertiesPacket::$5D452180F6FD32FDE19EF7DE5EC88D21</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81087 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UpdateBlockPropertiesPacket</span><span class="o">::</span><span class="n">UpdateBlockPropertiesPacket</span><span class="o">::</span><span class="n">$5D452180F6FD32FDE19EF7DE5EC88D21</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">CompoundTag</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">defTag</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::CaseInsensitiveCompare</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 103854 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">CaseInsensitiveCompare</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::CaseInsensitiveHash</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 103853 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">CaseInsensitiveHash</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::HashString</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45356 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">HashString</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mText</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mHash</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::HashString::HashFunc</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 46187 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">HashString</span><span class="o">::</span><span class="n">HashFunc</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::LootTableUtils</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 428930 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">LootTableUtils</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::compareNoCase::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485115 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">compareNoCase</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toLower::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485116 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toLower</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toLowerInPlace::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485118 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toLowerInPlace</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toUpper::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485117 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toUpper</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toUpperInPlace::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485119 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toUpperInPlace</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UIProfanityContext</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 109097 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UIProfanityContext</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$UIProfanityContext</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">ProfanityFilterContext</span><span class="w"> </span><span class="n">mFilterMask</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mProfanityExactMap</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mProfanityContainsSet</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPExternalIPResult</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62646 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPExternalIPResult</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">bUPNPSupported</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">hostIPAddress</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPInterface</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62627 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPInterface</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">UPNPInterface</span><span class="o">::</span><span class="n">ConnectionStateListener</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mConnectionStateListeners</span><span class="p">;</span><span class="w"></span>
+<span class="n">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPPortMappingResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mUPnPPortMappingv4</span><span class="p">;</span><span class="w"></span>
+<span class="n">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPPortMappingResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mUPnPPortMappingv6</span><span class="p">;</span><span class="w"></span>
+<span class="n">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPExternalIPResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mUPnPExternalIP</span><span class="p">;</span><span class="w"></span>
+<span class="n">MPMCQueue</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCompletedQueue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPInterface::ConnectionStateListener;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62640 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPInterface</span><span class="o">::</span><span class="n">ConnectionStateListener</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPNPPortMappingResult</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62642 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPNPPortMappingResult</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">bUPNPSupported</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">hostIPAddress</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">externalPort</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">internalPort</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPnPResultState<UPNPExternalIPResult></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62645 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPExternalIPResult</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">UPNPExternalIPResult</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="n">UpnpState</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isValid</span><span class="p">;</span><span class="w"></span>
+<span class="n">AsyncTracker</span><span class="w"> </span><span class="n">tracker</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UPnPResultState<UPNPPortMappingResult></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 62641 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UPnPResultState</span><span class="o">&lt;</span><span class="n">UPNPPortMappingResult</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">UPNPPortMappingResult</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="n">UpnpState</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isValid</span><span class="p">;</span><span class="w"></span>
+<span class="n">AsyncTracker</span><span class="w"> </span><span class="n">tracker</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UnderwaterTorchBlock::animateTick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 460050 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UnderwaterTorchBlock</span><span class="o">::</span><span class="n">animateTick</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UnverifiedCertificate</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7688 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UnverifiedCertificate</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">WebToken</span><span class="w"> </span><span class="n">mRawToken</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">UnverifiedCertificate</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mParentUnverifiedCertificate</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UpdateAttributesPacket::AttributeData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 75559 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UpdateAttributesPacket</span><span class="o">::</span><span class="n">AttributeData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCurrentValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDefaultValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">HashedString</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UpdateAttributesPacket::AttributeData::AttributeData::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80981 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UpdateAttributesPacket</span><span class="o">::</span><span class="n">AttributeData</span><span class="o">::</span><span class="n">AttributeData</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>UpdateBlockPropertiesPacket::UpdateBlockPropertiesPacket::$5D452180F6FD32FDE19EF7DE5EC88D21</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81087 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">UpdateBlockPropertiesPacket</span><span class="o">::</span><span class="n">UpdateBlockPropertiesPacket</span><span class="o">::</span><span class="n">$5D452180F6FD32FDE19EF7DE5EC88D21</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">CompoundTag</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">defTag</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::CaseInsensitiveCompare</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 103854 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">CaseInsensitiveCompare</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::CaseInsensitiveHash</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 103853 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">CaseInsensitiveHash</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::HashString</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45356 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">HashString</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mText</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mHash</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::HashString::HashFunc</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 46187 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">HashString</span><span class="o">::</span><span class="n">HashFunc</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::LootTableUtils</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 428930 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">LootTableUtils</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::compareNoCase::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485115 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">compareNoCase</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toLower::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485116 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toLower</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toLowerInPlace::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485118 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toLowerInPlace</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toUpper::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485117 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toUpper</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Util::toUpperInPlace::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485119 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Util</span><span class="o">::</span><span class="n">toUpperInPlace</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

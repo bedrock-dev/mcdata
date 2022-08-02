@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>ucontext_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485605 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ucontext_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">uc_flags</span><span class="p">;</span><span class="w"></span>
+<span class="n">ucontext_t</span><span class="w"> </span><span class="o">*</span><span class="n">uc_link</span><span class="p">;</span><span class="w"></span>
+<span class="n">stack_t</span><span class="w"> </span><span class="n">uc_stack</span><span class="p">;</span><span class="w"></span>
+<span class="n">mcontext_t</span><span class="w"> </span><span class="n">uc_mcontext</span><span class="p">;</span><span class="w"></span>
+<span class="kt">sigset_t</span><span class="w"> </span><span class="n">uc_sigmask</span><span class="p">;</span><span class="w"></span>
+<span class="n">_libc_fpstate</span><span class="w"> </span><span class="n">__fpregs_mem</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>uint128_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485789 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">uint128_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">high</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">low</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz64_file_pos_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485430 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz64_file_pos_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_in_zip_directory</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">num_of_file</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz64_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485420 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz64_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">zlib_filefunc64_32_def</span><span class="w"> </span><span class="n">z_filefunc</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">is64bitOpenFunction</span><span class="p">;</span><span class="w"></span>
+<span class="n">voidpf</span><span class="w"> </span><span class="n">filestream</span><span class="p">;</span><span class="w"></span>
+<span class="n">unz_global_info64</span><span class="w"> </span><span class="n">gi</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">byte_before_the_zipfile</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">num_file</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_in_central_dir</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">current_file_ok</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">central_pos</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">size_central_dir</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">offset_central_dir</span><span class="p">;</span><span class="w"></span>
+<span class="n">unz_file_info64</span><span class="w"> </span><span class="n">cur_file_info</span><span class="p">;</span><span class="w"></span>
+<span class="n">unz_file_info64_internal</span><span class="w"> </span><span class="n">cur_file_info_internal</span><span class="p">;</span><span class="w"></span>
+<span class="n">file_in_zip64_read_info_s</span><span class="w"> </span><span class="o">*</span><span class="n">pfile_in_zip_read</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">encrypted</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">isZip64</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_info64_internal_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485425 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_info64_internal_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">offset_curfile</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_info64_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485423 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_info64_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version_needed</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">compression_method</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">dosDate</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">crc</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">compressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">uncompressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_filename</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_extra</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_comment</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">disk_num_start</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">internal_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">external_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">tm_unz</span><span class="w"> </span><span class="n">tmu_date</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_info_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482955 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_info_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version_needed</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">compression_method</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">dosDate</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">crc</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">compressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">uncompressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_filename</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_extra</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_comment</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">disk_num_start</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">internal_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">external_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">tm_unz</span><span class="w"> </span><span class="n">tmu_date</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_pos_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485432 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_pos_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">pos_in_zip_directory</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">num_of_file</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_global_info64_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482959 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_global_info64_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">number_entry</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_comment</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_global_info_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483063 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_global_info_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">number_entry</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_comment</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>user_fpregs_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485830 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">user_fpregs_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">cwd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">swd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">ftw</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">fop</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rip</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rdp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mxcsr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mxcr_mask</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">st_space</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">xmm_space</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">padding</span><span class="p">[</span><span class="mi">24</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>user_regs_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485829 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">user_regs_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r15</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r14</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r13</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r12</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rbp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rbx</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r11</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r10</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r9</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r8</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rcx</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rdx</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rsi</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rdi</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">orig_rax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rip</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">cs</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">eflags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rsp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">fs_base</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">gs_base</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">ds</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">es</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">fs</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">gs</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>utf8proc_property_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485136 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">utf8proc_property_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">category</span><span class="p">;</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">combining_class</span><span class="p">;</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">bidi_class</span><span class="p">;</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">decomp_type</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">decomp_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">bidi_mirrored</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">uppercase_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">lowercase_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">titlecase_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">comb1st_index</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">comb2nd_index</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">comp_exclusion</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">ignorable</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">control_boundary</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">extend</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">casefold_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>utimbuf</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483220 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">utimbuf</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">actime</span><span class="p">;</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">modtime</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ucontext_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485605 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ucontext_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">uc_flags</span><span class="p">;</span><span class="w"></span>
+<span class="n">ucontext_t</span><span class="w"> </span><span class="o">*</span><span class="n">uc_link</span><span class="p">;</span><span class="w"></span>
+<span class="n">stack_t</span><span class="w"> </span><span class="n">uc_stack</span><span class="p">;</span><span class="w"></span>
+<span class="n">mcontext_t</span><span class="w"> </span><span class="n">uc_mcontext</span><span class="p">;</span><span class="w"></span>
+<span class="kt">sigset_t</span><span class="w"> </span><span class="n">uc_sigmask</span><span class="p">;</span><span class="w"></span>
+<span class="n">_libc_fpstate</span><span class="w"> </span><span class="n">__fpregs_mem</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>uint128_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485789 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">uint128_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">high</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">low</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz64_file_pos_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485430 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz64_file_pos_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_in_zip_directory</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">num_of_file</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz64_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485420 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz64_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">zlib_filefunc64_32_def</span><span class="w"> </span><span class="n">z_filefunc</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">is64bitOpenFunction</span><span class="p">;</span><span class="w"></span>
+<span class="n">voidpf</span><span class="w"> </span><span class="n">filestream</span><span class="p">;</span><span class="w"></span>
+<span class="n">unz_global_info64</span><span class="w"> </span><span class="n">gi</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">byte_before_the_zipfile</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">num_file</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">pos_in_central_dir</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">current_file_ok</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">central_pos</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">size_central_dir</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">offset_central_dir</span><span class="p">;</span><span class="w"></span>
+<span class="n">unz_file_info64</span><span class="w"> </span><span class="n">cur_file_info</span><span class="p">;</span><span class="w"></span>
+<span class="n">unz_file_info64_internal</span><span class="w"> </span><span class="n">cur_file_info_internal</span><span class="p">;</span><span class="w"></span>
+<span class="n">file_in_zip64_read_info_s</span><span class="w"> </span><span class="o">*</span><span class="n">pfile_in_zip_read</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">encrypted</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">isZip64</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_info64_internal_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485425 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_info64_internal_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">offset_curfile</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_info64_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485423 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_info64_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version_needed</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">compression_method</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">dosDate</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">crc</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">compressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">uncompressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_filename</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_extra</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_comment</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">disk_num_start</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">internal_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">external_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">tm_unz</span><span class="w"> </span><span class="n">tmu_date</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_info_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482955 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_info_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">version_needed</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">compression_method</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">dosDate</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">crc</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">compressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">uncompressed_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_filename</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_extra</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_file_comment</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">disk_num_start</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">internal_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">external_fa</span><span class="p">;</span><span class="w"></span>
+<span class="n">tm_unz</span><span class="w"> </span><span class="n">tmu_date</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_file_pos_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485432 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_file_pos_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">pos_in_zip_directory</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">num_of_file</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_global_info64_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482959 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_global_info64_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ZPOS64_T</span><span class="w"> </span><span class="n">number_entry</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_comment</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>unz_global_info_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483063 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">unz_global_info_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">number_entry</span><span class="p">;</span><span class="w"></span>
+<span class="n">uLong</span><span class="w"> </span><span class="n">size_comment</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>user_fpregs_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485830 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">user_fpregs_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">cwd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">swd</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">ftw</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int16</span><span class="w"> </span><span class="n">fop</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rip</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rdp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mxcsr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mxcr_mask</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">st_space</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">xmm_space</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">padding</span><span class="p">[</span><span class="mi">24</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>user_regs_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485829 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">user_regs_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r15</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r14</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r13</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r12</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rbp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rbx</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r11</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r10</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r9</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">r8</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rcx</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rdx</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rsi</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rdi</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">orig_rax</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rip</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">cs</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">eflags</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">rsp</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">fs_base</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">gs_base</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">ds</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">es</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">fs</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">gs</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>utf8proc_property_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485136 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">utf8proc_property_struct</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">category</span><span class="p">;</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">combining_class</span><span class="p">;</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">bidi_class</span><span class="p">;</span><span class="w"></span>
+<span class="n">utf8proc_propval_t</span><span class="w"> </span><span class="n">decomp_type</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">decomp_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">bidi_mirrored</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">uppercase_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">lowercase_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">titlecase_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">comb1st_index</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int32_t</span><span class="w"> </span><span class="n">comb2nd_index</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">comp_exclusion</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">ignorable</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">control_boundary</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int32</span><span class="w"> </span><span class="n">extend</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">*</span><span class="n">casefold_mapping</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>utimbuf</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483220 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">utimbuf</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">actime</span><span class="p">;</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">modtime</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

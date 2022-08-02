@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>timespec</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5839 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">timespec</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">tv_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">__syscall_slong_t</span><span class="w"> </span><span class="n">tv_nsec</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>timeval</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 477980 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">timeval</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">tv_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">__suseconds_t</span><span class="w"> </span><span class="n">tv_usec</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>tm_unz_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482957 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">tm_unz_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_min</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_hour</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mday</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mon</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_year</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>tm_zip_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483061 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">tm_zip_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_min</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_hour</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mday</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mon</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_year</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_info;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486709 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_info</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef<mce::Degree,float></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116643 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">value_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef<mce::Radian,float></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115605 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">value_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::$256B327EE357AF9FCD813216707B60D5</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116653 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">$256B327EE357AF9FCD813216707B60D5</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::addition<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116649 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">addition</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::addition<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116659 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">addition</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::division<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116652 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">division</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::division<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116662 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">division</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::equality_comparison<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116644 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">equality_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::equality_comparison<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116654 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">equality_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::multiplication<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116651 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">multiplication</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::multiplication<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116661 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">multiplication</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::relational_comparison<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116645 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">relational_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::relational_comparison<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116655 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">relational_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::subtraction<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116650 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">subtraction</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::subtraction<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116660 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">subtraction</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_minus<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116648 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_minus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_minus<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116658 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_minus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_plus<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116647 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_plus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_plus<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116657 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_plus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<CommandRegistry></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 1500 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">CommandRegistry</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<ContextAccessor></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 421007 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">ContextAccessor</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<IDefinitionInstance></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 48664 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">IDefinitionInstance</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<ScriptBinderComponent></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 99878 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">ScriptBinderComponent</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>timespec</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5839 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">timespec</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">tv_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">__syscall_slong_t</span><span class="w"> </span><span class="n">tv_nsec</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>timeval</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 477980 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">timeval</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">__time_t</span><span class="w"> </span><span class="n">tv_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">__suseconds_t</span><span class="w"> </span><span class="n">tv_usec</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>tm_unz_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482957 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">tm_unz_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_min</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_hour</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mday</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mon</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_year</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>tm_zip_s</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483061 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">tm_zip_s</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_sec</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_min</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_hour</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mday</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_mon</span><span class="p">;</span><span class="w"></span>
+<span class="n">uInt</span><span class="w"> </span><span class="n">tm_year</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_info;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486709 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_info</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef<mce::Degree,float></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116643 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">value_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef<mce::Radian,float></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115605 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="p">,</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">value_</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::$256B327EE357AF9FCD813216707B60D5</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116653 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">$256B327EE357AF9FCD813216707B60D5</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::addition<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116649 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">addition</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::addition<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116659 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">addition</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::division<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116652 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">division</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::division<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116662 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">division</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::equality_comparison<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116644 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">equality_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::equality_comparison<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116654 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">equality_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::multiplication<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116651 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">multiplication</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::multiplication<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116661 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">multiplication</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::relational_comparison<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116645 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">relational_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::relational_comparison<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116655 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">relational_comparison</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::subtraction<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116650 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">subtraction</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::subtraction<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116660 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">subtraction</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_minus<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116648 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_minus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_minus<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116658 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_minus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_plus<mce::Degree></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116647 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_plus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Degree</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>type_safe::strong_typedef_op::unary_plus<mce::Radian></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 116657 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">type_safe</span><span class="o">::</span><span class="n">strong_typedef_op</span><span class="o">::</span><span class="n">unary_plus</span><span class="o">&lt;</span><span class="n">mce</span><span class="o">::</span><span class="n">Radian</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<CommandRegistry></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 1500 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">CommandRegistry</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<ContextAccessor></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 421007 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">ContextAccessor</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<IDefinitionInstance></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 48664 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">IDefinitionInstance</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>typeid_t<ScriptBinderComponent></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 99878 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">typeid_t</span><span class="o">&lt;</span><span class="n">ScriptBinderComponent</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

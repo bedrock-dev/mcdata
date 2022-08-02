@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>Facing</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 31928 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Facing</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Facing::Plane</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 431490 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Facing</span><span class="o">::</span><span class="n">Plane</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::AbstractFeatureHolder</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19717 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">AbstractFeatureHolder</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<AggregateFeature\<PlaceType::Arbitrary> ></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19887 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Arbitrary</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Arbitrary</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<AggregateFeature\<PlaceType::Sequential> ></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 20932 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Sequential</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Sequential</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<OreFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 21616 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">OreFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">OreFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<ScatterFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 22300 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">ScatterFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ScatterFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<SingleBlockFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 22984 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">SingleBlockFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">SingleBlockFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<StructureTemplateFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 23668 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">StructureTemplateFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">StructureTemplateFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<WeightedRandomFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 24352 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">WeightedRandomFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">WeightedRandomFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::FeatureRootParseContext</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19890 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">FeatureRootParseContext</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFeatureName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="n">IWorldRegistriesProvider</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRegistryProvider</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FeatureLoading</span><span class="o">::</span><span class="n">AbstractFeatureHolder</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFeatureHolder</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureRefTraits</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 31079 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureRefTraits</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19368 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">IFeature</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mFeatureRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OwnerPtrT</span><span class="o">&lt;</span><span class="n">FeatureRefTraits</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mFeatureSlots</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">StringKey</span><span class="p">,</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFeatureLookupMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureToggles</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77440 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureToggles</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FeatureToggles</span><span class="o">::</span><span class="n">FeatureTogglesArray</span><span class="w"> </span><span class="n">mFeatures</span><span class="p">;</span><span class="w"></span>
+<span class="n">Core</span><span class="o">::</span><span class="n">HeapPathBuffer</span><span class="w"> </span><span class="n">mFilePath</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureToggles::FeatureToggle</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 75154 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureToggles</span><span class="o">::</span><span class="n">FeatureToggle</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FeatureOptionID</span><span class="w"> </span><span class="n">featureID</span><span class="p">;</span><span class="w"></span>
+<span class="n">FeatureOptionID</span><span class="w"> </span><span class="n">dependencyFeatureID</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Option</span><span class="o">&gt;</span><span class="w"> </span><span class="n">option</span><span class="p">;</span><span class="w"></span>
+<span class="n">FeatureToggles</span><span class="o">::</span><span class="n">SetupFunction</span><span class="w"> </span><span class="n">setup</span><span class="p">;</span><span class="w"></span>
+<span class="n">FeatureToggles</span><span class="o">::</span><span class="n">LockFunction</span><span class="w"> </span><span class="n">lock</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureTypeFactory</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 31213 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureTypeFactory</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">JsonUtil</span><span class="o">::</span><span class="n">JsonSchemaRoot</span><span class="o">&lt;</span><span class="n">FeatureLoading</span><span class="o">::</span><span class="n">FeatureRootParseContext</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSchema</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeedItem</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55144 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeedItem</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="o">*</span><span class="n">mItem</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FeedItem</span><span class="o">::</span><span class="n">Effect</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEffects</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeedItem::Effect</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 53850 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeedItem</span><span class="o">::</span><span class="n">Effect</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">descriptionId</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">amplifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">chance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileAccessTransforms</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 422390 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileAccessTransforms</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$FileAccessTransforms</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileArchiver::Result</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 103114 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileArchiver</span><span class="o">::</span><span class="n">Result</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FileArchiver</span><span class="o">::</span><span class="n">Outcome</span><span class="w"> </span><span class="n">outcome</span><span class="p">;</span><span class="w"></span>
+<span class="n">Core</span><span class="o">::</span><span class="n">HeapPathBuffer</span><span class="w"> </span><span class="n">fileName</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileChunk</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101640 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileChunk</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="n">FileChunkInfo</span><span class="w"> </span><span class="n">info</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileChunkInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101486 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileChunkInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">chunkID</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">startByte</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">endByte</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileChunkManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101724 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileChunkManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mTotalSize</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mChunkSize</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTotalNbChunks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRequestedChunks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mReceivedChunks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWrittenChunks</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FileChunkInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mChunkInfo</span><span class="p">;</span><span class="w"></span>
+<span class="n">MovePriorityQueue</span><span class="o">&lt;</span><span class="n">FileChunk</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">less</span><span class="o">&lt;</span><span class="n">FileChunk</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mChunkQueue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101404 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Core</span><span class="o">::</span><span class="n">HeapPathBuffer</span><span class="w"> </span><span class="n">filePath</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">fileSize</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">fileHash</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilePickerSettings</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186654 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilePickerSettings</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilePickerSettings</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onCancel</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onOperationComplete</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilePickerSettings</span><span class="o">&gt;</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="n">Core</span><span class="o">::</span><span class="n">Path</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onPick</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FilePickerSettings</span><span class="o">::</span><span class="n">FileDescription</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFileDescriptions</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mDefaultFileExtensionIndex</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilePickerSettings</span><span class="o">::</span><span class="n">PickerType</span><span class="w"> </span><span class="n">mPickerType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDefaultFileName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDefaultAlbumName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mFilePickerTitle</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilePickerSettings::FileDescription</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186675 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilePickerSettings</span><span class="o">::</span><span class="n">FileDescription</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Extension</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileUploadManager::MultiPartStreamHelper</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101405 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileUploadManager</span><span class="o">::</span><span class="n">MultiPartStreamHelper</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">needHeader</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">needTrailer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">header</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">trailer</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">currentFileByte</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">totalFileByte</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">totalStreamSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterContext</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 39405 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterContext</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="n">mHost</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="n">mSubject</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">VariantParameterList</span><span class="w"> </span><span class="o">*</span><span class="n">mParams</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">BlockSource</span><span class="w"> </span><span class="o">*</span><span class="n">mRegion</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Dimension</span><span class="w"> </span><span class="o">*</span><span class="n">mDimension</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="o">*</span><span class="n">mLevel</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Biome</span><span class="w"> </span><span class="o">*</span><span class="n">mBiome</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mPos</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="n">mBlock</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">TagRegistry</span><span class="w"> </span><span class="o">*</span><span class="n">mTagRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterGroup</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 9577 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterGroup</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$FilterGroup</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">FilterGroup</span><span class="o">::</span><span class="n">CollectionType</span><span class="w"> </span><span class="n">mCollectionType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilterGroup</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mChildren</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilterTest</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mMembers</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterInput</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114116 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterInput</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FilterParamType</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mString</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mIValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterInputDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114189 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterInputDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FilterInput</span><span class="w"> </span><span class="n">mInput</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDescription</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterInputs</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114433 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterInputs</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FilterSubject</span><span class="w"> </span><span class="n">mSubject</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilterInput</span><span class="w"> </span><span class="n">mDomain</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilterOperator</span><span class="w"> </span><span class="n">mOperator</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilterInput</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterTest::Definition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114112 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterTest</span><span class="o">::</span><span class="n">Definition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDescription</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mSubjectDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mDomainDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mOperatorDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mValueDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilterTest</span><span class="o">&gt;</span><span class="w"> </span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFactory</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilteredTransformationAttributes<LegacyPreHillsEdgeTransformation></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 10543 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilteredTransformationAttributes</span><span class="o">&lt;</span><span class="n">LegacyPreHillsEdgeTransformation</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PosibleTransformation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTransformations</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilteredTransformationAttributes<PostShoreEdgeTransformation></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 39519 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilteredTransformationAttributes</span><span class="o">&lt;</span><span class="n">PostShoreEdgeTransformation</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PosibleTransformation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTransformations</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilteredTransformationAttributes<PreHillsEdgeTransformation></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 12203 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilteredTransformationAttributes</span><span class="o">&lt;</span><span class="n">PreHillsEdgeTransformation</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PosibleTransformation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTransformations</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Fish::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 124174 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Fish</span><span class="o">::</span><span class="n">updateEntitySpecificMolangVariables</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FishingHook::_fishPosEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115606 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FishingHook</span><span class="o">::</span><span class="n">_fishPosEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FishingHook::_fishTeaseEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115608 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FishingHook</span><span class="o">::</span><span class="n">_fishTeaseEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FishingHook::_fishhookEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115607 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FishingHook</span><span class="o">::</span><span class="n">_fishhookEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FlagComponent&lt;(anonymous namespace)::IgnoreAutomaticFeatureRules&gt;;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 268525 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FlagComponent</span><span class="o">&lt;</span><span class="p">(</span><span class="n">anonymous</span><span class="w"> </span><span class="k">namespace</span><span class="p">)</span><span class="o">::</span><span class="nn">IgnoreAutomaticFeatureRules</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FlatWorldGeneratorOptions::getDefault::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 285891 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FlatWorldGeneratorOptions</span><span class="o">::</span><span class="n">getDefault</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FloatRange</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 48706 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FloatRange</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">rangeMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">rangeMax</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FlockingDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 351664 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FlockingDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mInWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mMatchVariant</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mUseCenterOfMass</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mLowFlockLimit</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mHighFlockLimit</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mGoalWeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLonerChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInfluenceRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBreachInfluence</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSeparationWeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSeparationThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCohesionWeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCohesionThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInnerCohesionThres</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockWeight</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FoliageColor</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 457465 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FoliageColor</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Font;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 122536 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Font</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FoodItemComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 173071 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FoodItemComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="o">*</span><span class="n">mOwner</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mNutrition</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSaturationModifier</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mUsingConvertsTo</span><span class="p">;</span><span class="w"></span>
+<span class="n">FoodItemComponent</span><span class="o">::</span><span class="n">OnUseAction</span><span class="w"> </span><span class="n">mOnUseAction</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mOnUseRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">CooldownType</span><span class="w"> </span><span class="n">mCoolDownType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCooldownTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanAlwaysEat</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FoodItemComponent</span><span class="o">::</span><span class="n">Effect</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEffects</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRemoveEffects</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FoodItemComponent::Effect</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 172458 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FoodItemComponent</span><span class="o">::</span><span class="n">Effect</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">descriptionId</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">amplifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">chance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FormJsonValidator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 428928 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FormJsonValidator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FrameUpdateContextBase;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 90646 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FrameUpdateContextBase</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FriendlySize</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 64313 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FriendlySize</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">bytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FullPlayerInventoryWrapper</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 424737 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FullPlayerInventoryWrapper</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">PlayerInventoryProxy</span><span class="w"> </span><span class="o">*</span><span class="n">mPlayerInventory</span><span class="p">;</span><span class="w"></span>
+<span class="n">SimpleContainer</span><span class="w"> </span><span class="o">*</span><span class="n">mArmorInventory</span><span class="p">;</span><span class="w"></span>
+<span class="n">SimpleContainer</span><span class="w"> </span><span class="o">*</span><span class="n">mHandInventory</span><span class="p">;</span><span class="w"></span>
+<span class="n">InventoryTransactionManager</span><span class="w"> </span><span class="o">*</span><span class="n">mTransactionManager</span><span class="p">;</span><span class="w"></span>
+<span class="n">Player</span><span class="w"> </span><span class="o">*</span><span class="n">mPlayer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FunctionManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 87222 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FunctionManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$FunctionManager</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">GameRule</span><span class="w"> </span><span class="o">*</span><span class="n">mGameRule</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsProcessingStack</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FunctionManager</span><span class="o">::</span><span class="n">QueuedCommand</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCommandList</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">CommandOrigin</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="n">FunctionManager</span><span class="o">::</span><span class="n">OriginMapping</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOriginMap</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ICommandDispatcher</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCommandDispatcher</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CommandOrigin</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTickOrigin</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FunctionEntry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mFunctions</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FunctionEntry</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mTickFunctions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FunctionManager::QueuedCommand</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 94529 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FunctionManager</span><span class="o">::</span><span class="n">QueuedCommand</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">IFunctionEntry</span><span class="w"> </span><span class="o">*</span><span class="n">mFunction</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">CommandOrigin</span><span class="w"> </span><span class="o">*</span><span class="n">mOrigin</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Facing</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 31928 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Facing</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Facing::Plane</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 431490 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Facing</span><span class="o">::</span><span class="n">Plane</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::AbstractFeatureHolder</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19717 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">AbstractFeatureHolder</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<AggregateFeature\<PlaceType::Arbitrary> ></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19887 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Arbitrary</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Arbitrary</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<AggregateFeature\<PlaceType::Sequential> ></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 20932 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Sequential</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">AggregateFeature</span><span class="o">&lt;</span><span class="n">PlaceType</span><span class="o">::</span><span class="n">Sequential</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<OreFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 21616 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">OreFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">OreFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<ScatterFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 22300 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">ScatterFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ScatterFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<SingleBlockFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 22984 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">SingleBlockFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">SingleBlockFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<StructureTemplateFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 23668 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">StructureTemplateFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">StructureTemplateFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::ConcreteFeatureHolder<WeightedRandomFeature></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 24352 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">ConcreteFeatureHolder</span><span class="o">&lt;</span><span class="n">WeightedRandomFeature</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">WeightedRandomFeature</span><span class="w"> </span><span class="o">*</span><span class="n">mFeaturePtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureLoading::FeatureRootParseContext</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19890 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureLoading</span><span class="o">::</span><span class="n">FeatureRootParseContext</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFeatureName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="n">IWorldRegistriesProvider</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRegistryProvider</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FeatureLoading</span><span class="o">::</span><span class="n">AbstractFeatureHolder</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFeatureHolder</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureRefTraits</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 31079 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureRefTraits</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19368 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">IFeature</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mFeatureRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OwnerPtrT</span><span class="o">&lt;</span><span class="n">FeatureRefTraits</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mFeatureSlots</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">StringKey</span><span class="p">,</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFeatureLookupMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureToggles</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77440 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureToggles</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FeatureToggles</span><span class="o">::</span><span class="n">FeatureTogglesArray</span><span class="w"> </span><span class="n">mFeatures</span><span class="p">;</span><span class="w"></span>
+<span class="n">Core</span><span class="o">::</span><span class="n">HeapPathBuffer</span><span class="w"> </span><span class="n">mFilePath</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureToggles::FeatureToggle</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 75154 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureToggles</span><span class="o">::</span><span class="n">FeatureToggle</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FeatureOptionID</span><span class="w"> </span><span class="n">featureID</span><span class="p">;</span><span class="w"></span>
+<span class="n">FeatureOptionID</span><span class="w"> </span><span class="n">dependencyFeatureID</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Option</span><span class="o">&gt;</span><span class="w"> </span><span class="n">option</span><span class="p">;</span><span class="w"></span>
+<span class="n">FeatureToggles</span><span class="o">::</span><span class="n">SetupFunction</span><span class="w"> </span><span class="n">setup</span><span class="p">;</span><span class="w"></span>
+<span class="n">FeatureToggles</span><span class="o">::</span><span class="n">LockFunction</span><span class="w"> </span><span class="n">lock</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeatureTypeFactory</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 31213 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeatureTypeFactory</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">JsonUtil</span><span class="o">::</span><span class="n">JsonSchemaRoot</span><span class="o">&lt;</span><span class="n">FeatureLoading</span><span class="o">::</span><span class="n">FeatureRootParseContext</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSchema</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeedItem</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55144 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeedItem</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="o">*</span><span class="n">mItem</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FeedItem</span><span class="o">::</span><span class="n">Effect</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEffects</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FeedItem::Effect</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 53850 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FeedItem</span><span class="o">::</span><span class="n">Effect</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">descriptionId</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">amplifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">chance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileAccessTransforms</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 422390 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileAccessTransforms</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$FileAccessTransforms</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileArchiver::Result</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 103114 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileArchiver</span><span class="o">::</span><span class="n">Result</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FileArchiver</span><span class="o">::</span><span class="n">Outcome</span><span class="w"> </span><span class="n">outcome</span><span class="p">;</span><span class="w"></span>
+<span class="n">Core</span><span class="o">::</span><span class="n">HeapPathBuffer</span><span class="w"> </span><span class="n">fileName</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileChunk</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101640 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileChunk</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="n">FileChunkInfo</span><span class="w"> </span><span class="n">info</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileChunkInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101486 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileChunkInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">chunkID</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">startByte</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">endByte</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileChunkManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101724 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileChunkManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">mTotalSize</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mChunkSize</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTotalNbChunks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRequestedChunks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mReceivedChunks</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mWrittenChunks</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FileChunkInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mChunkInfo</span><span class="p">;</span><span class="w"></span>
+<span class="n">MovePriorityQueue</span><span class="o">&lt;</span><span class="n">FileChunk</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">less</span><span class="o">&lt;</span><span class="n">FileChunk</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mChunkQueue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101404 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Core</span><span class="o">::</span><span class="n">HeapPathBuffer</span><span class="w"> </span><span class="n">filePath</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">fileSize</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">fileHash</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilePickerSettings</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186654 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilePickerSettings</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilePickerSettings</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onCancel</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onOperationComplete</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilePickerSettings</span><span class="o">&gt;</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="n">Core</span><span class="o">::</span><span class="n">Path</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onPick</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FilePickerSettings</span><span class="o">::</span><span class="n">FileDescription</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFileDescriptions</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mDefaultFileExtensionIndex</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilePickerSettings</span><span class="o">::</span><span class="n">PickerType</span><span class="w"> </span><span class="n">mPickerType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDefaultFileName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDefaultAlbumName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mFilePickerTitle</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilePickerSettings::FileDescription</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186675 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilePickerSettings</span><span class="o">::</span><span class="n">FileDescription</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Extension</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FileUploadManager::MultiPartStreamHelper</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101405 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FileUploadManager</span><span class="o">::</span><span class="n">MultiPartStreamHelper</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">needHeader</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">needTrailer</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">header</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">trailer</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">currentFileByte</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">totalFileByte</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">totalStreamSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterContext</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 39405 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterContext</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="n">mHost</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="n">mSubject</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">VariantParameterList</span><span class="w"> </span><span class="o">*</span><span class="n">mParams</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">BlockSource</span><span class="w"> </span><span class="o">*</span><span class="n">mRegion</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Dimension</span><span class="w"> </span><span class="o">*</span><span class="n">mDimension</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="o">*</span><span class="n">mLevel</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Biome</span><span class="w"> </span><span class="o">*</span><span class="n">mBiome</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mPos</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="n">mBlock</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">TagRegistry</span><span class="w"> </span><span class="o">*</span><span class="n">mTagRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterGroup</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 9577 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterGroup</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$FilterGroup</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">FilterGroup</span><span class="o">::</span><span class="n">CollectionType</span><span class="w"> </span><span class="n">mCollectionType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilterGroup</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mChildren</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilterTest</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mMembers</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterInput</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114116 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterInput</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FilterParamType</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mString</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mIValue</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mFValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterInputDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114189 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterInputDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FilterInput</span><span class="w"> </span><span class="n">mInput</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDescription</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterInputs</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114433 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterInputs</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">FilterSubject</span><span class="w"> </span><span class="n">mSubject</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilterInput</span><span class="w"> </span><span class="n">mDomain</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilterOperator</span><span class="w"> </span><span class="n">mOperator</span><span class="p">;</span><span class="w"></span>
+<span class="n">FilterInput</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilterTest::Definition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 114112 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilterTest</span><span class="o">::</span><span class="n">Definition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDescription</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mSubjectDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mDomainDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mOperatorDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">FilterParamDefinition</span><span class="w"> </span><span class="o">*</span><span class="n">mValueDefinition</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">FilterTest</span><span class="o">&gt;</span><span class="w"> </span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFactory</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilteredTransformationAttributes<LegacyPreHillsEdgeTransformation></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 10543 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilteredTransformationAttributes</span><span class="o">&lt;</span><span class="n">LegacyPreHillsEdgeTransformation</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PosibleTransformation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTransformations</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilteredTransformationAttributes<PostShoreEdgeTransformation></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 39519 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilteredTransformationAttributes</span><span class="o">&lt;</span><span class="n">PostShoreEdgeTransformation</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PosibleTransformation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTransformations</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FilteredTransformationAttributes<PreHillsEdgeTransformation></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 12203 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FilteredTransformationAttributes</span><span class="o">&lt;</span><span class="n">PreHillsEdgeTransformation</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PosibleTransformation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTransformations</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Fish::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 124174 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Fish</span><span class="o">::</span><span class="n">updateEntitySpecificMolangVariables</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FishingHook::_fishPosEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115606 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FishingHook</span><span class="o">::</span><span class="n">_fishPosEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FishingHook::_fishTeaseEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115608 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FishingHook</span><span class="o">::</span><span class="n">_fishTeaseEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FishingHook::_fishhookEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 115607 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FishingHook</span><span class="o">::</span><span class="n">_fishhookEvent</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FlagComponent&lt;(anonymous namespace)::IgnoreAutomaticFeatureRules&gt;;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 268525 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FlagComponent</span><span class="o">&lt;</span><span class="p">(</span><span class="n">anonymous</span><span class="w"> </span><span class="k">namespace</span><span class="p">)</span><span class="o">::</span><span class="nn">IgnoreAutomaticFeatureRules</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FlatWorldGeneratorOptions::getDefault::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 285891 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FlatWorldGeneratorOptions</span><span class="o">::</span><span class="n">getDefault</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FloatRange</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 48706 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FloatRange</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">rangeMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">rangeMax</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FlockingDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 351664 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FlockingDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mInWater</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mMatchVariant</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mUseCenterOfMass</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mLowFlockLimit</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mHighFlockLimit</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mGoalWeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mLonerChance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInfluenceRadius</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBreachInfluence</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSeparationWeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSeparationThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCohesionWeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mCohesionThreshold</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mInnerCohesionThres</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMinHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mMaxHeight</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockDistance</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mBlockWeight</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FoliageColor</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 457465 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FoliageColor</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Font;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 122536 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Font</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FoodItemComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 173071 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FoodItemComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="o">*</span><span class="n">mOwner</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mNutrition</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mSaturationModifier</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mUsingConvertsTo</span><span class="p">;</span><span class="w"></span>
+<span class="n">FoodItemComponent</span><span class="o">::</span><span class="n">OnUseAction</span><span class="w"> </span><span class="n">mOnUseAction</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mOnUseRange</span><span class="p">;</span><span class="w"></span>
+<span class="n">CooldownType</span><span class="w"> </span><span class="n">mCoolDownType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mCooldownTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mCanAlwaysEat</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FoodItemComponent</span><span class="o">::</span><span class="n">Effect</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEffects</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRemoveEffects</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FoodItemComponent::Effect</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 172458 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FoodItemComponent</span><span class="o">::</span><span class="n">Effect</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">descriptionId</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">amplifier</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">chance</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FormJsonValidator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 428928 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FormJsonValidator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FrameUpdateContextBase;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 90646 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FrameUpdateContextBase</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FriendlySize</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 64313 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FriendlySize</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">bytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FullPlayerInventoryWrapper</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 424737 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FullPlayerInventoryWrapper</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">PlayerInventoryProxy</span><span class="w"> </span><span class="o">*</span><span class="n">mPlayerInventory</span><span class="p">;</span><span class="w"></span>
+<span class="n">SimpleContainer</span><span class="w"> </span><span class="o">*</span><span class="n">mArmorInventory</span><span class="p">;</span><span class="w"></span>
+<span class="n">SimpleContainer</span><span class="w"> </span><span class="o">*</span><span class="n">mHandInventory</span><span class="p">;</span><span class="w"></span>
+<span class="n">InventoryTransactionManager</span><span class="w"> </span><span class="o">*</span><span class="n">mTransactionManager</span><span class="p">;</span><span class="w"></span>
+<span class="n">Player</span><span class="w"> </span><span class="o">*</span><span class="n">mPlayer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FunctionManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 87222 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FunctionManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$FunctionManager</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">GameRule</span><span class="w"> </span><span class="o">*</span><span class="n">mGameRule</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsProcessingStack</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FunctionManager</span><span class="o">::</span><span class="n">QueuedCommand</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCommandList</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">CommandOrigin</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="n">FunctionManager</span><span class="o">::</span><span class="n">OriginMapping</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOriginMap</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ICommandDispatcher</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCommandDispatcher</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CommandOrigin</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTickOrigin</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FunctionEntry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mFunctions</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">FunctionEntry</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mTickFunctions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>FunctionManager::QueuedCommand</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 94529 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">FunctionManager</span><span class="o">::</span><span class="n">QueuedCommand</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">IFunctionEntry</span><span class="w"> </span><span class="o">*</span><span class="n">mFunction</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">CommandOrigin</span><span class="w"> </span><span class="o">*</span><span class="n">mOrigin</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

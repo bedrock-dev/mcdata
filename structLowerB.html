@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>batch_control;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486931 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">batch_control</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Actor *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35029 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Actor *>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186239 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<ActorUniqueID>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 238403 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">ActorUniqueID</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<BlockID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35024 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">BlockID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">BlockID</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">BlockID</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<BlockID>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186038 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">BlockID</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<ChunkPos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37037 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ChunkPos</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ChunkPos</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<ChunkPos>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37038 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ChunkPos</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<DBChunkStorage *>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 462857 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">DBChunkStorage</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<NibblePair></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35025 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">NibblePair</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">NibblePair</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">NibblePair</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<NibblePair>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35027 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">NibblePair</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Pos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 36714 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Pos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Pos>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 252366 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Pos</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<SubChunk></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35016 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<SubChunk>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35017 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<WorkerPool *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 82011 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">WorkerPool</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">WorkerPool</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="n">WorkerPool</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<WorkerPool *>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484577 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">WorkerPool</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<bool></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45350 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<bool>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484920 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<const Block *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35015 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<const Block *>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37035 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<int></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45351 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<int>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484922 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<unsigned int>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78786 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<Actor *>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186240 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<BlockID>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186039 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">BlockID</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<ChunkPos>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37039 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<NibblePair>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35028 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">NibblePair</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<Pos>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 252367 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">Pos</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<SubChunk></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35018 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<SubChunk>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35019 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<WorkerPool *>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484578 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">WorkerPool</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<bool>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484921 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<const Block *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35011 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<const Block *>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35013 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<int>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484923 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<long></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35014 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<long>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37033 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<unsigned int></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78787 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<unsigned int>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 183200 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>batch_control;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486931 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">batch_control</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Actor *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35029 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Actor *>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186239 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Actor</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<ActorUniqueID>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 238403 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">ActorUniqueID</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<BlockID></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35024 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">BlockID</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">BlockID</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">BlockID</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<BlockID>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186038 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">BlockID</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<ChunkPos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37037 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ChunkPos</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ChunkPos</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<ChunkPos>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37038 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ChunkPos</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<DBChunkStorage *>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 462857 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">DBChunkStorage</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<NibblePair></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35025 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">NibblePair</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">NibblePair</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">NibblePair</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<NibblePair>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35027 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">NibblePair</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Pos></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 36714 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Pos</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<Pos>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 252366 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">Pos</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<SubChunk></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35016 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<SubChunk>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35017 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<WorkerPool *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 82011 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">WorkerPool</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">WorkerPool</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="n">WorkerPool</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<WorkerPool *>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484577 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="n">WorkerPool</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<bool></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45350 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<bool>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484920 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<const Block *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35015 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<const Block *>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37035 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<int></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45351 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<int>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484922 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span<unsigned int>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78786 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<Actor *>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186240 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">Actor</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<BlockID>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 186039 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">BlockID</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<ChunkPos>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37039 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">ChunkPos</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<NibblePair>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35028 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">NibblePair</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<Pos>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 252367 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">Pos</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<SubChunk></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35018 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<SubChunk>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35019 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">SubChunk</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">SubChunk</span><span class="w"> </span><span class="o">*</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<WorkerPool *>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484578 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="n">WorkerPool</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<bool>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484921 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<const Block *></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35011 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<const Block *>::iterator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35013 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*&gt;::</span><span class="n">iterator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">**</span><span class="n">mPtr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<int>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484923 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<long></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35014 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int64</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<long>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37033 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<unsigned int></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 78787 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mBegin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">mEnd</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>buffer_span_mut<unsigned int>::iterator;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 183200 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">buffer_span_mut</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

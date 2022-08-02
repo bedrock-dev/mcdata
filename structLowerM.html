@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>MCData</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h4>mce::Blob</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 74244 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Blob</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mBlob</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::Image</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 74240 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Image</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageFormat</span><span class="w"> </span><span class="n">imageFormat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageUsage</span><span class="w"> </span><span class="n">mUsage</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">Image</span><span class="o">::</span><span class="n">Storage</span><span class="w"> </span><span class="n">mImageBytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::Image_0</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 173107 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Image_0</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageFormat</span><span class="w"> </span><span class="n">imageFormat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageUsage_0</span><span class="w"> </span><span class="n">mUsage</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">Image</span><span class="o">::</span><span class="n">Storage</span><span class="w"> </span><span class="n">mImageBytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::MaterialPtr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 47749 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">MaterialPtr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::Math</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5915 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Math</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::MathUtility</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483068 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">MathUtility</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::UUID</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 2174 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">UUID</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">Data</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::`anonymous namespace'::MathInitializer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483064 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="err">`</span><span class="n">anonymous</span><span class="w"> </span><span class="k">namespace</span><span class="err">&#39;</span><span class="o">::</span><span class="nn">MathInitializer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mclc::ConversionReport;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45359 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mclc</span><span class="o">::</span><span class="n">ConversionReport</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mcontext_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485607 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mcontext_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">gregset_t</span><span class="w"> </span><span class="n">gregs</span><span class="p">;</span><span class="w"></span>
+<span class="n">fpregset_t</span><span class="w"> </span><span class="n">fpregs</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">__reserved1</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::ConcurrentQueueDefaultTraits</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7019 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">ConcurrentQueueDefaultTraits</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::ConsumerToken</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7020 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">ConsumerToken</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">initialOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">lastKnownGlobalOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">itemsConsumedFromCurrent</span><span class="p">;</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">currentProducer</span><span class="p">;</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">desiredProducer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::ProducerToken</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6850 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">ProducerToken</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">producer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::details::ConcurrentQueueProducerTypelessBase</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6849 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">atomic</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inactive</span><span class="p">;</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">ProducerToken</span><span class="w"> </span><span class="o">*</span><span class="n">token</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::details::_hash_32_or_64<true></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8624 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">_hash_32_or_64</span><span class="o">&lt;</span><span class="nb">true</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::details::thread_id_converter<unsigned long></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8625 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">thread_id_converter</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>msghdr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486711 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">msghdr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">msg_name</span><span class="p">;</span><span class="w"></span>
+<span class="kt">socklen_t</span><span class="w"> </span><span class="n">msg_namelen</span><span class="p">;</span><span class="w"></span>
+<span class="n">iovec</span><span class="w"> </span><span class="o">*</span><span class="n">msg_iov</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">msg_iovlen</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">msg_control</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">msg_controllen</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">msg_flags</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::Blob</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 74244 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Blob</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mBlob</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mSize</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::Image</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 74240 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Image</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageFormat</span><span class="w"> </span><span class="n">imageFormat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageUsage</span><span class="w"> </span><span class="n">mUsage</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">Image</span><span class="o">::</span><span class="n">Storage</span><span class="w"> </span><span class="n">mImageBytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::Image_0</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 173107 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Image_0</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageFormat</span><span class="w"> </span><span class="n">imageFormat</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">ImageUsage_0</span><span class="w"> </span><span class="n">mUsage</span><span class="p">;</span><span class="w"></span>
+<span class="n">mce</span><span class="o">::</span><span class="n">Image</span><span class="o">::</span><span class="n">Storage</span><span class="w"> </span><span class="n">mImageBytes</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::MaterialPtr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 47749 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">MaterialPtr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::Math</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5915 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">Math</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::MathUtility</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483068 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">MathUtility</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::UUID</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 2174 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="n">UUID</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint64_t</span><span class="w"> </span><span class="n">Data</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mce::`anonymous namespace'::MathInitializer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 483064 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mce</span><span class="o">::</span><span class="err">`</span><span class="n">anonymous</span><span class="w"> </span><span class="k">namespace</span><span class="err">&#39;</span><span class="o">::</span><span class="nn">MathInitializer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mclc::ConversionReport;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45359 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mclc</span><span class="o">::</span><span class="n">ConversionReport</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>mcontext_t</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 485607 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mcontext_t</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">gregset_t</span><span class="w"> </span><span class="n">gregs</span><span class="p">;</span><span class="w"></span>
+<span class="n">fpregset_t</span><span class="w"> </span><span class="n">fpregs</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kr">__int64</span><span class="w"> </span><span class="n">__reserved1</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::ConcurrentQueueDefaultTraits</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7019 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">ConcurrentQueueDefaultTraits</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::ConsumerToken</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 7020 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">ConsumerToken</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">initialOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">lastKnownGlobalOffset</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">itemsConsumedFromCurrent</span><span class="p">;</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">currentProducer</span><span class="p">;</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">desiredProducer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::ProducerToken</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6850 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">ProducerToken</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">producer</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::details::ConcurrentQueueProducerTypelessBase</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6849 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">ConcurrentQueueProducerTypelessBase</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">atomic</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inactive</span><span class="p">;</span><span class="w"></span>
+<span class="n">moodycamel</span><span class="o">::</span><span class="n">ProducerToken</span><span class="w"> </span><span class="o">*</span><span class="n">token</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::details::_hash_32_or_64<true></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8624 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">_hash_32_or_64</span><span class="o">&lt;</span><span class="nb">true</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>moodycamel::details::thread_id_converter<unsigned long></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 8625 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">moodycamel</span><span class="o">::</span><span class="n">details</span><span class="o">::</span><span class="n">thread_id_converter</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>msghdr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486711 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">msghdr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">msg_name</span><span class="p">;</span><span class="w"></span>
+<span class="kt">socklen_t</span><span class="w"> </span><span class="n">msg_namelen</span><span class="p">;</span><span class="w"></span>
+<span class="n">iovec</span><span class="w"> </span><span class="o">*</span><span class="n">msg_iov</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">msg_iovlen</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">msg_control</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">msg_controllen</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">msg_flags</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
+</html>

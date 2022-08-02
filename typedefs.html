@@ -16,7 +16,590 @@
 
 <body>
     <article class="content">
-        <h1>typedefs</h1>
+        <h4>typedef ActorFlagComponent<BurnsInDaylightFlag> BurnsInDaylightComponent;</h4>
+<h4>typedef AppPlatformListener AppPlatform::Listener;</h4>
+<h4>typedef AutomaticID<Dimension,int> AutomaticID<Dimension,int>::SELF;</h4>
+<h4>typedef AutomaticID<Dimension,int> DimensionType;</h4>
+<h4>typedef Bedrock::Threading::LockGuard<Bedrock::Threading::Mutex> LockGuard;</h4>
+<h4>typedef Bedrock::Threading::LockGuard<Bedrock::Threading::RecursiveMutex> Blacklist::LockGuard;</h4>
+<h4>typedef Bedrock::Threading::LockGuard<Bedrock::Threading::RecursiveMutex> RakNetServerLocator::ScopeLock;</h4>
+<h4>typedef Bedrock::Threading::SharedLock<Bedrock::Threading::SharedMutex> SharedLock;</h4>
+<h4>typedef Bedrock::Threading::SharedMutex SharedMutex;</h4>
+<h4>typedef Bedrock::Threading::UniqueLock<Bedrock::Threading::Mutex> ScopedLock;</h4>
+<h4>typedef Bedrock::Threading::UniqueLock<Bedrock::Threading::SharedMutex> UniqueLock;</h4>
+<h4>typedef BiomeDecorationAttributes<ListedFeatures> ListedFeaturesDecorationAttributes;</h4>
+<h4>typedef BlockSourceListener BlockSource::Listener;</h4>
+<h4>typedef BoolOption detail::OptionTypeHelper<bool>::option_type;</h4>
+<h4>typedef Byte Bytef;</h4>
+<h4>typedef CommandLexer::TokenType CommandRegistry::HardTerminal;</h4>
+<h4>typedef CommandRegistry::ParseFunction CommandParameterData::ParseFunction;</h4>
+<h4>typedef CommandRegistry::Symbol CommandRegistry::NonTerminal;</h4>
+<h4>typedef CommandRegistry::Symbol CommandRegistry::Terminal;</h4>
+<h4>typedef CommandSelector<Actor> ActorSelector;</h4>
+<h4>typedef CommandSelector<Player> PlayerSelector;</h4>
+<h4>typedef CompoundTag BlockSerializationId;</h4>
+<h4>typedef Core::FileSize Core::FilePosition;</h4>
+<h4>typedef Core::PathBuffer<Core::StackString\<char,1024> > Core::StackPathBuffer;</h4>
+<h4>typedef Core::PathPart Core::PathExtensionWithDotPart;</h4>
+<h4>typedef Core::PathPart Core::PathFileNamePart;</h4>
+<h4>typedef Core::SplitPathT&lt;1024,64&gt; Core::SplitPath;</h4>
+<h4>typedef Core::Subject<Core::FileStorageAreaObserver,Core::SingleThreadedLock> Core::Observer<Core::FileStorageAreaObserver,Core::SingleThreadedLock>::SubjectType;</h4>
+<h4>typedef Core::Subject<Social::MultiplayerServiceObserver,Core::SingleThreadedLock> Core::Observer<Social::MultiplayerServiceObserver,Core::SingleThreadedLock>::SubjectType;</h4>
+<h4>typedef Core::Subject<Social::XboxLiveUserObserver,Core::SingleThreadedLock> Core::Observer<Social::XboxLiveUserObserver,Core::SingleThreadedLock>::SubjectType;</h4>
+<h4>typedef Core::Subject<WebviewObserver,Core::SingleThreadedLock> Core::Observer<WebviewObserver,Core::SingleThreadedLock>::SubjectType;</h4>
+<h4>typedef DataItem::ID SynchedActorData::ID;</h4>
+<h4>typedef Elf32_Ehdr google_breakpad::ElfClass32::Ehdr;</h4>
+<h4>typedef Elf32_Nhdr google_breakpad::ElfClass32::Nhdr;</h4>
+<h4>typedef Elf32_Off google_breakpad::ElfClass32::Off;</h4>
+<h4>typedef Elf32_Phdr google_breakpad::ElfClass32::Phdr;</h4>
+<h4>typedef Elf32_Shdr google_breakpad::ElfClass32::Shdr;</h4>
+<h4>typedef Elf32_Word google_breakpad::ElfClass32::Word;</h4>
+<h4>typedef Elf64_Ehdr google_breakpad::ElfClass64::Ehdr;</h4>
+<h4>typedef Elf64_Nhdr google_breakpad::ElfClass64::Nhdr;</h4>
+<h4>typedef Elf64_Off google_breakpad::ElfClass64::Off;</h4>
+<h4>typedef Elf64_Phdr google_breakpad::ElfClass64::Phdr;</h4>
+<h4>typedef Elf64_Shdr google_breakpad::ElfClass64::Shdr;</h4>
+<h4>typedef Elf64_Word google_breakpad::ElfClass64::Word;</h4>
+<h4>typedef Elf64_auxv_t google_breakpad::elf_aux_entry;</h4>
+<h4>typedef EntityContext EntityRefTraits::StackRef;</h4>
+<h4>typedef EntityRefTraits::OwnerStackRef OwnerPtrT<EntityRefTraits>::OwnerStackRef;</h4>
+<h4>typedef EntityRefTraits::StackRef EntityRefTraits::OwnerStackRef;</h4>
+<h4>typedef EntityRefTraits::StackRef StackRefResultT<EntityRefTraits>::StackRef;</h4>
+<h4>typedef EntityRegistry EntityRegistryRefTraits::StackRef;</h4>
+<h4>typedef EntityRegistryOwned EntityRegistryRefTraits::OwnerStackRef;</h4>
+<h4>typedef EntityRegistryRefTraits::OwnerStackRef OwnerPtrT<EntityRegistryRefTraits>::OwnerStackRef;</h4>
+<h4>typedef EntityRegistryRefTraits::StackRef StackRefResultT<EntityRegistryRefTraits>::StackRef;</h4>
+<h4>typedef FeatureRefTraits::OwnerStackRef OwnerPtrT<FeatureRefTraits>::OwnerStackRef;</h4>
+<h4>typedef FeatureRefTraits::StackRef FeatureRefTraits::OwnerStackRef;</h4>
+<h4>typedef FeatureRefTraits::StackRef StackRefResultT<FeatureRefTraits>::StackRef;</h4>
+<h4>typedef FilteredTransformationAttributes<LegacyPreHillsEdgeTransformation> LegacyPreHillsEdgeAttributes;</h4>
+<h4>typedef FilteredTransformationAttributes<PostShoreEdgeTransformation> PostShoreEdgeAttributes;</h4>
+<h4>typedef FilteredTransformationAttributes<PreHillsEdgeTransformation> PreHillsEdgeAttributes;</h4>
+<h4>typedef FlagComponent<ActorTickedFlag> ActorTickedComponent;</h4>
+<h4>typedef IDType<TagIDType> TagID;</h4>
+<h4>typedef IDType<TagSetIDType> TagSetID;</h4>
+<h4>typedef IFeature FeatureRefTraits::StackRef;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,0,0> FilterLayer<LayerFilters::RareBiomeSpot>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,0,0> FilterLayer<LayerFilters::RiverInit>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,0,0> LayerFilters::FilterBase&lt;1,1,Biome <em>,Biome </em>&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,0,0> LayerFilters::FilterBase&lt;1,1,int,Biome *&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::AddBiomeIsland>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::AddMushroomIsland>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::FilteredTransformation\<FilteredTransformationAttributes\<LegacyPreHillsEdgeTransformation> > >::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::FilteredTransformation\<FilteredTransformationAttributes\<PostShoreEdgeTransformation> > >::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::FilteredTransformation\<FilteredTransformationAttributes\<PreHillsEdgeTransformation> > >::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::PromoteCenter>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::Shore>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> FilterLayer<LayerFilters::Smooth\<Biome *> >::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<Biome *,1,1> LayerFilters::FilterBase&lt;3,3,Biome <em>,Biome </em>&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<BiomeTemperatureCategory,1,1> FilterLayer<LayerFilters::AddOceanEdge>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<BiomeTemperatureCategory,1,1> LayerFilters::FilterBase&lt;3,3,BiomeTemperatureCategory,BiomeTemperatureCategory&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,0,0> FilterLayer<LayerFilters::AddEdgeSpecial>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,0,0> FilterLayer<LayerFilters::BiomeInit>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,0,0> LayerFilters::FilterBase&lt;1,1,Biome *,LayerValues::PreBiome&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,0,0> LayerFilters::FilterBase&lt;1,1,LayerValues::PreBiome,LayerValues::PreBiome&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,1,1> FilterLayer<LayerFilters::AddEdgeCoolWarm>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,1,1> FilterLayer<LayerFilters::AddEdgeHeatIce>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,1,1> FilterLayer<LayerFilters::AddIslandWithTemperature>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::PreBiome,1,1> LayerFilters::FilterBase&lt;3,3,LayerValues::PreBiome,LayerValues::PreBiome&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::Terrain,0,0> FilterLayer<LayerFilters::AddSnow>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::Terrain,0,0> LayerFilters::FilterBase&lt;1,1,LayerValues::PreBiome,LayerValues::Terrain&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::Terrain,1,1> FilterLayer<LayerFilters::AddIsland>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::Terrain,1,1> FilterLayer<LayerFilters::RemoveTooMuchOcean>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<LayerValues::Terrain,1,1> LayerFilters::FilterBase&lt;3,3,LayerValues::Terrain,LayerValues::Terrain&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<bool,1,1> FilterLayer<LayerFilters::Smooth\<bool> >::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<bool,1,1> LayerFilters::FilterBase&lt;3,3,bool,bool&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<int,1,1> FilterLayer<LayerFilters::River>::ReaderType;</h4>
+<h4>typedef LayerDetails::NeighborhoodReader<int,1,1> LayerFilters::FilterBase&lt;3,3,bool,int&gt;::ReaderType;</h4>
+<h4>typedef LayerDetails::RandomProvider Layer<Biome *>::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider Layer<BiomeTemperatureCategory>::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider Layer<LayerValues::Terrain>::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;1,1,Biome <em>,Biome </em>&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;1,1,Biome *,LayerValues::PreBiome&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;1,1,LayerValues::PreBiome,LayerValues::PreBiome&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;1,1,LayerValues::PreBiome,LayerValues::Terrain&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;1,1,int,Biome *&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;3,3,Biome <em>,Biome </em>&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;3,3,LayerValues::PreBiome,LayerValues::PreBiome&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;3,3,LayerValues::Terrain,LayerValues::Terrain&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProvider LayerFilters::FilterBase&lt;3,3,bool,bool&gt;::RandomProvider;</h4>
+<h4>typedef LayerDetails::RandomProviderT&lt;(lambda at _Minecraftpe_handheld_project_dedicated_server<strong><em>_</em></strong>src_common_world_level_newbiome_LayerDetails_h:221:34)&gt; LayerDetails::RandomProvider;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::AddBiomeIsland>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::AddMushroomIsland>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::FilteredTransformation\<FilteredTransformationAttributes\<LegacyPreHillsEdgeTransformation> > >::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::FilteredTransformation\<FilteredTransformationAttributes\<PostShoreEdgeTransformation> > >::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::FilteredTransformation\<FilteredTransformationAttributes\<PreHillsEdgeTransformation> > >::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::PromoteCenter>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::RareBiomeSpot>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::Shore>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> FilterLayer<LayerFilters::Smooth\<Biome *> >::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> MixerLayer<Biome *,Biome *,BiomeTemperatureCategory>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> MixerLayer<Biome *,Biome *,bool>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> MixerLayer<Biome *,Biome *>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> ZoomLayerCommon<Biome *,LayerZooms::Zoom2x>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,Biome *> ZoomLayerCommon<Biome *,LayerZooms::Zoom4xVoronoi>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,LayerValues::PreBiome> FilterLayer<LayerFilters::BiomeInit>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<Biome *,LayerValues::PreBiome> MixerLayer<Biome *,LayerValues::PreBiome>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<BiomeTemperatureCategory,BiomeTemperatureCategory> FilterLayer<LayerFilters::AddOceanEdge>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<BiomeTemperatureCategory,BiomeTemperatureCategory> MixerLayer<BiomeTemperatureCategory,BiomeTemperatureCategory>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<BiomeTemperatureCategory,BiomeTemperatureCategory> ZoomLayerCommon<BiomeTemperatureCategory,LayerZooms::Zoom2x>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<BiomeTemperatureCategory,char> RootLayer<BiomeTemperatureCategory>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::PreBiome> FilterLayer<LayerFilters::AddEdgeCoolWarm>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::PreBiome> FilterLayer<LayerFilters::AddEdgeHeatIce>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::PreBiome> FilterLayer<LayerFilters::AddEdgeSpecial>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::PreBiome> FilterLayer<LayerFilters::AddIslandWithTemperature>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::PreBiome> MixerLayer<LayerValues::PreBiome,LayerValues::PreBiome>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::PreBiome> ZoomLayerCommon<LayerValues::PreBiome,LayerZooms::Zoom2x>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::Terrain> FilterLayer<LayerFilters::AddSnow>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::PreBiome,LayerValues::Terrain> MixerLayer<LayerValues::PreBiome,LayerValues::Terrain>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::Terrain,LayerValues::Terrain> FilterLayer<LayerFilters::AddIsland>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::Terrain,LayerValues::Terrain> FilterLayer<LayerFilters::RemoveTooMuchOcean>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::Terrain,LayerValues::Terrain> MixerLayer<LayerValues::Terrain,LayerValues::Terrain>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::Terrain,LayerValues::Terrain> ZoomLayerCommon<LayerValues::Terrain,LayerZooms::Zoom2x>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::Terrain,LayerValues::Terrain> ZoomLayerCommon<LayerValues::Terrain,LayerZooms::Zoom2xFuzzy>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<LayerValues::Terrain,char> RootLayer<LayerValues::Terrain>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<bool,bool> FilterLayer<LayerFilters::Smooth\<bool> >::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<bool,bool> MixerLayer<bool,bool>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<bool,int> FilterLayer<LayerFilters::River>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<bool,int> MixerLayer<bool,int>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<int,Biome *> FilterLayer<LayerFilters::RiverInit>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<int,Biome *> MixerLayer<int,Biome *>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<int,int> MixerLayer<int,int>::LayerData;</h4>
+<h4>typedef LayerDetails::WorkingData<int,int> ZoomLayerCommon<int,LayerZooms::Zoom2x>::LayerData;</h4>
+<h4>typedef LayerResult<BiomeTemperatureCategory> OceanMixerLayer::OceanData;</h4>
+<h4>typedef LayerResult<bool> ShouldTransformData;</h4>
+<h4>typedef MDGUID GUID;</h4>
+<h4>typedef MDRawContextAMD64 google_breakpad::RawContextCPU;</h4>
+<h4>typedef MDRawLinkMap64 google_breakpad::MDTypeHelper&lt;8&gt;::MDRawLinkMap;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<Biome *,Biome *>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename AddBiomeIsland::OutputType,typename AddBiomeIsland::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename AddMushroomIsland::OutputType,typename AddMushroomIsland::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename FilteredTransformation\<FilteredTransformationAttributes\<LegacyPreHillsEdgeTransformation> >::OutputType,typename FilteredTransformation\<FilteredTransformationAttributes\<LegacyPreHillsEdgeTransformation> >::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename FilteredTransformation\<FilteredTransformationAttributes\<PostShoreEdgeTransformation> >::OutputType,typename FilteredTransformation\<FilteredTransformationAttributes\<PostShoreEdgeTransformation> >::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename FilteredTransformation\<FilteredTransformationAttributes\<PreHillsEdgeTransformation> >::OutputType,typename FilteredTransformation\<FilteredTransformationAttributes\<PreHillsEdgeTransformation> >::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename PromoteCenter::OutputType,typename PromoteCenter::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename RareBiomeSpot::OutputType,typename RareBiomeSpot::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename Shore::OutputType,typename Shore::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,Biome *> UnaryLayer<typename Smooth\<Biome *>::OutputType,typename Smooth\<Biome *>::InputType>;</h4>
+<h4>typedef MixerLayer<Biome *,LayerValues::PreBiome> UnaryLayer<typename BiomeInit::OutputType,typename BiomeInit::InputType>;</h4>
+<h4>typedef MixerLayer<BiomeTemperatureCategory,BiomeTemperatureCategory> UnaryLayer<BiomeTemperatureCategory,BiomeTemperatureCategory>;</h4>
+<h4>typedef MixerLayer<BiomeTemperatureCategory,BiomeTemperatureCategory> UnaryLayer<typename AddOceanEdge::OutputType,typename AddOceanEdge::InputType>;</h4>
+<h4>typedef MixerLayer<LayerValues::PreBiome,LayerValues::PreBiome> UnaryLayer<LayerValues::PreBiome,LayerValues::PreBiome>;</h4>
+<h4>typedef MixerLayer<LayerValues::PreBiome,LayerValues::PreBiome> UnaryLayer<typename AddEdgeCoolWarm::OutputType,typename AddEdgeCoolWarm::InputType>;</h4>
+<h4>typedef MixerLayer<LayerValues::PreBiome,LayerValues::PreBiome> UnaryLayer<typename AddEdgeHeatIce::OutputType,typename AddEdgeHeatIce::InputType>;</h4>
+<h4>typedef MixerLayer<LayerValues::PreBiome,LayerValues::PreBiome> UnaryLayer<typename AddEdgeSpecial::OutputType,typename AddEdgeSpecial::InputType>;</h4>
+<h4>typedef MixerLayer<LayerValues::PreBiome,LayerValues::PreBiome> UnaryLayer<typename AddIslandWithTemperature::OutputType,typename AddIslandWithTemperature::InputType>;</h4>
+<h4>typedef MixerLayer<LayerValues::PreBiome,LayerValues::Terrain> UnaryLayer<typename AddSnow::OutputType,typename AddSnow::InputType>;</h4>
+<h4>typedef MixerLayer<LayerValues::Terrain,LayerValues::Terrain> UnaryLayer<LayerValues::Terrain,LayerValues::Terrain>;</h4>
+<h4>typedef MixerLayer<LayerValues::Terrain,LayerValues::Terrain> UnaryLayer<typename AddIsland::OutputType,typename AddIsland::InputType>;</h4>
+<h4>typedef MixerLayer<LayerValues::Terrain,LayerValues::Terrain> UnaryLayer<typename RemoveTooMuchOcean::OutputType,typename RemoveTooMuchOcean::InputType>;</h4>
+<h4>typedef MixerLayer<bool,bool> UnaryLayer<typename Smooth\<bool>::OutputType,typename Smooth\<bool>::InputType>;</h4>
+<h4>typedef MixerLayer<bool,int> UnaryLayer<typename River::OutputType,typename River::InputType>;</h4>
+<h4>typedef MixerLayer<int,Biome *> UnaryLayer<typename RiverInit::OutputType,typename RiverInit::InputType>;</h4>
+<h4>typedef MixerLayer<int,int> UnaryLayer<int,int>;</h4>
+<h4>typedef OwnerPtrT<EntityRefTraits> OwnerPtr<EntityId>;</h4>
+<h4>typedef OwnerPtrT<EntityRegistryRefTraits> OwnerPtr<EntityRegistry>;</h4>
+<h4>typedef OwnerPtrT<SharePtrRefTraits\<PerlinSimplexNoise> > OwnerPtr<PerlinSimplexNoise>;</h4>
+<h4>typedef OwnerStorageEntity EntityRefTraits::OwnerStorage;</h4>
+<h4>typedef OwnerStorageFeature FeatureRefTraits::OwnerStorage;</h4>
+<h4>typedef OwnerStorageSharePtr<EntityRegistryOwned> EntityRegistryRefTraits::OwnerStorage;</h4>
+<h4>typedef OwnerStorageSharePtr<PerlinSimplexNoise> SharePtrRefTraits<PerlinSimplexNoise>::OwnerStorage;</h4>
+<h4>typedef PerlinSimplexNoise SharePtrRefTraits<PerlinSimplexNoise>::StackRef;</h4>
+<h4>typedef RakNet::MessageNumberType RakNet::OrderingIndexType;</h4>
+<h4>typedef RakNet::TimeUS CCTimeType;</h4>
+<h4>typedef RakNet::TimeUS RakNet::RemoteSystemTimeType;</h4>
+<h4>typedef RakNet::uint24_t DatagramSequenceNumberType;</h4>
+<h4>typedef RakNet::uint24_t RakNet::MessageNumberType;</h4>
+<h4>typedef SaplingType Sapling::Type;</h4>
+<h4>typedef ScriptTemplateFactory<ScriptServerContext>::Component ScriptServerComponent;</h4>
+<h4>typedef ScriptTemplateFactory<ScriptServerContext>::Entity ScriptServerEntity;</h4>
+<h4>typedef ScriptTemplateFactory<ScriptServerContext>::ReceivedEvent ScriptServerReceiveEvent;</h4>
+<h4>typedef SharePtrRefTraits<PerlinSimplexNoise>::OwnerStackRef OwnerPtrT<SharePtrRefTraits\<PerlinSimplexNoise> >::OwnerStackRef;</h4>
+<h4>typedef SharePtrRefTraits<PerlinSimplexNoise>::StackRef SharePtrRefTraits<PerlinSimplexNoise>::OwnerStackRef;</h4>
+<h4>typedef SharePtrRefTraits<PerlinSimplexNoise>::StackRef StackRefResultT<SharePtrRefTraits\<PerlinSimplexNoise> >::StackRef;</h4>
+<h4>typedef SmallSet<Actor *> AutonomousActorList;</h4>
+<h4>typedef SmallSet<Actor *> GlobalActorList;</h4>
+<h4>typedef StackRefResultT<EntityRefTraits> StackRefResult<EntityId>;</h4>
+<h4>typedef StackRefResultT<FeatureRefTraits> StackRefResult<IFeature>;</h4>
+<h4>typedef StackResultStorageEntity EntityRefTraits::StackResultStorage;</h4>
+<h4>typedef StackResultStorageFeature FeatureRefTraits::StackResultStorage;</h4>
+<h4>typedef StackResultStorageSharePtr<EntityRegistry> EntityRegistryRefTraits::StackResultStorage;</h4>
+<h4>typedef StackResultStorageSharePtr<PerlinSimplexNoise> SharePtrRefTraits<PerlinSimplexNoise>::StackResultStorage;</h4>
+<h4>typedef SubChunkBrightnessStorage::LightPair SubChunkRelighter::LightPair;</h4>
+<h4>typedef Unique<Actor> (<em>ActorFactoryFunction)(ActorDefinitionGroup </em>, const ActorDefinitionIdentifier *);</h4>
+<h4>typedef Vec3 SynchedActorData::TypeVec3;</h4>
+<h4>typedef VideoStreamConnectPacket::Action VideoStreamServerCommand::Action;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,ActorFlagComponent\<EnvironmentSensorFlag> > ViewedEntityContext<ActorTickedComponent,ActorComponent,EnvironmentSensorComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,AgeableComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,AgeableComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,AgentCommandComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,AgentCommandComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,AreaAttackComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,AreaAttackComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,BlockBreakSensorComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,BlockBreakSensorComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,BreakBlocksComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,BreakBlocksComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,BreathableComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,BreathableComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,CommandBlockComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,CommandBlockComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,DamageOverTimeComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,DamageOverTimeComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,ExplodeComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,ExplodeComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,GoalSelectorComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,GoalSelectorComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,HurtOnConditionComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,HurtOnConditionComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,LeashableComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,LeashableComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,ProjectileComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,ProjectileComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,SpawnActorComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,SpawnActorComponent>;</h4>
+<h4>typedef ViewedEntityContextT<EntityContext,FlagComponent\<ActorTickedFlag>,ActorComponent,TransformationComponent> ViewedEntityContext<ActorTickedComponent,ActorComponent,TransformationComponent>;</h4>
+<h4>typedef WeakRefT<EntityRefTraits> WeakRef<EntityId>;</h4>
+<h4>typedef WeakRefT<FeatureRefTraits> WeakRef<IFeature>;</h4>
+<h4>typedef WeakRefT<SharePtrRefTraits\<PerlinSimplexNoise> > WeakRef<PerlinSimplexNoise>;</h4>
+<h4>typedef WeakStorageEntity EntityRefTraits::WeakStorage;</h4>
+<h4>typedef WeakStorageFeature FeatureRefTraits::WeakStorage;</h4>
+<h4>typedef WeakStorageSharePtr<EntityRegistry> EntityRegistryRefTraits::WeakStorage;</h4>
+<h4>typedef WeakStorageSharePtr<PerlinSimplexNoise> SharePtrRefTraits<PerlinSimplexNoise>::WeakStorage;</h4>
+<h4>typedef WeightedBiomeAttributes<HillsTransformation> HillsTransformationAttributes;</h4>
+<h4>typedef WeightedBiomeAttributes<MutateBiomeTransformation> MutateTransformationAttributes;</h4>
+<h4>typedef WeightedBiomeAttributes<RiverTransformation> RiverTransformationAttributes;</h4>
+<h4>typedef WeightedBiomeAttributes<ShoreTransformation> ShoreAttributes;</h4>
+<h4>typedef WildcardCommandSelector<Actor> WildcardActorSelector;</h4>
+<h4>typedef ZPOS64_T (*tell64_file_func)(voidpf, voidpf);</h4>
+<h4>typedef _IO_FILE FILE;</h4>
+<h4>typedef _IO_FILE __FILE;</h4>
+<h4>typedef _Unwind_Sword __guard;</h4>
+<h4>typedef __builtin_va_list __gnuc_va_list;</h4>
+<h4>typedef __clock_t clock_t;</h4>
+<h4>typedef __gnuc_va_list va_list;</h4>
+<h4>typedef __int16 SynchedActorData::TypeShort;</h4>
+<h4>typedef __int16 __int16_t;</h4>
+<h4>typedef __int16 int_least16_t;</h4>
+<h4>typedef __int16_t int16_t;</h4>
+<h4>typedef __int32_t int32_t;</h4>
+<h4>typedef __int64 (*seek64_file_func)(voidpf, voidpf, ZPOS64_T, int);</h4>
+<h4>typedef __int64 (*seek_file_func)(voidpf, voidpf, uLong, int);</h4>
+<h4>typedef __int64 (*tell_file_func)(voidpf, voidpf);</h4>
+<h4>typedef __int64 NewType<long>::Raw;</h4>
+<h4>typedef __int64 __blkcnt_t;</h4>
+<h4>typedef __int64 __blksize_t;</h4>
+<h4>typedef __int64 __clock_t;</h4>
+<h4>typedef __int64 __fd_mask;</h4>
+<h4>typedef __int64 __int64_t;</h4>
+<h4>typedef __int64 __intmax_t;</h4>
+<h4>typedef __int64 __intptr_t;</h4>
+<h4>typedef __int64 __kernel_long_t;</h4>
+<h4>typedef __int64 __off64_t;</h4>
+<h4>typedef __int64 __off_t;</h4>
+<h4>typedef __int64 __ssize_t;</h4>
+<h4>typedef __int64 __suseconds_t;</h4>
+<h4>typedef __int64 __syscall_slong_t;</h4>
+<h4>typedef __int64 __time_t;</h4>
+<h4>typedef __int64 greg_t;</h4>
+<h4>typedef __int64 int_fast16_t;</h4>
+<h4>typedef __int64 int_fast32_t;</h4>
+<h4>typedef __int64 int_fast64_t;</h4>
+<h4>typedef __int64 int_least64_t;</h4>
+<h4>typedef __int64 intptr_t;</h4>
+<h4>typedef __int64 ptrdiff_t;</h4>
+<h4>typedef __int64_t int64_t;</h4>
+<h4>typedef __int8_t int8_t;</h4>
+<h4>typedef __intmax_t intmax_t;</h4>
+<h4>typedef __intptr_t intptr_t_0;</h4>
+<h4>typedef __mbstate_t mbstate_t;</h4>
+<h4>typedef __node_base *__bucket_type;</h4>
+<h4>typedef __off_t off_t;</h4>
+<h4>typedef __pid_t pid_t;</h4>
+<h4>typedef __pthread_internal_list __pthread_list_t;</h4>
+<h4>typedef __sigset_t sigset_t;</h4>
+<h4>typedef __socklen_t socklen_t;</h4>
+<h4>typedef __ssize_t ssize_t;</h4>
+<h4>typedef __time_t time_t;</h4>
+<h4>typedef __uint16_t uint16_t;</h4>
+<h4>typedef __uint32_t uint32_t;</h4>
+<h4>typedef __uint64_t uint64_t;</h4>
+<h4>typedef __uint8_t uint8_t;</h4>
+<h4>typedef __uintmax_t uintmax_t;</h4>
+<h4>typedef __va_list_tag __builtin_va_list[1];</h4>
+<h4>typedef _libc_fpstate *fpregset_t;</h4>
+<h4>typedef _libc_fpstate google_breakpad::fpstate_t;</h4>
+<h4>typedef bool (<em>AssertHandlerPtr)(const char </em>, const char <em>, const char </em>, bool, int, const char <em>, const char </em>, bool);</h4>
+<h4>typedef bool (<em>NavigationUtility::ConditionSet)(const Mob </em>, BlockSource *, int, int, int);</h4>
+<h4>typedef bool (<em>google_breakpad::ExceptionHandler::FilterCallback)(void </em>);</h4>
+<h4>typedef bool (<em>google_breakpad::ExceptionHandler::HandlerCallback)(const void </em>, size_t, void *);</h4>
+<h4>typedef bool (<em>google_breakpad::ExceptionHandler::MinidumpCallback)(const google_breakpad::MinidumpDescriptor </em>, void *, bool);</h4>
+<h4>typedef bool const_reference;</h4>
+<h4>typedef char *__caddr_t;</h4>
+<h4>typedef char __int8_t;</h4>
+<h4>typedef char int_fast8_t;</h4>
+<h4>typedef char int_least8_t;</h4>
+<h4>typedef const Block *ISubChunkBlockStoragePaletted::PaletteEntry;</h4>
+<h4>typedef const __int32_t *wctrans_t;</h4>
+<h4>typedef const char *zipcharpc;</h4>
+<h4>typedef const void *const_void_pointer;</h4>
+<h4>typedef double BytesPerMicrosecond;</h4>
+<h4>typedef double double_t;</h4>
+<h4>typedef epoll_data epoll_data_t;</h4>
+<h4>typedef float SynchedActorData::TypeFloat;</h4>
+<h4>typedef float float_t;</h4>
+<h4>typedef float glm::tmat3x3<float,glm::packed_highp>::value_type;</h4>
+<h4>typedef float glm::tmat4x4<float,glm::packed_highp>::value_type;</h4>
+<h4>typedef float type_safe::underlying_type<mce::Degree>;</h4>
+<h4>typedef glm::detail::storage<float,16,false>::type glm::detail::storage<float,16,false>::type_0;</h4>
+<h4>typedef glm::highp_ivec3 glm::ivec3;</h4>
+<h4>typedef glm::highp_mat3x3 glm::mat3x3;</h4>
+<h4>typedef glm::highp_mat4x4 glm::mat4x4;</h4>
+<h4>typedef glm::highp_quat glm::quat;</h4>
+<h4>typedef glm::highp_vec2 glm::vec2;</h4>
+<h4>typedef glm::highp_vec3 glm::vec3;</h4>
+<h4>typedef glm::highp_vec4 glm::vec4;</h4>
+<h4>typedef glm::length_t length_type;</h4>
+<h4>typedef glm::mat4x4 glm::mat4;</h4>
+<h4>typedef glm::tmat3x3<float,glm::packed_highp> glm::highp_mat3x3;</h4>
+<h4>typedef glm::tmat4x4<float,glm::packed_highp> glm::highp_mat4x4;</h4>
+<h4>typedef glm::tmat4x4<float,glm::packed_highp> glm::tmat4x4<float,glm::packed_highp>::transpose_type;</h4>
+<h4>typedef glm::tquat<float,glm::packed_highp> glm::highp_quat;</h4>
+<h4>typedef glm::tvec2<float,glm::packed_highp> glm::highp_vec2;</h4>
+<h4>typedef glm::tvec3<float,glm::packed_highp> glm::highp_vec3;</h4>
+<h4>typedef glm::tvec3<float,glm::packed_highp> glm::tmat3x3<float,glm::packed_highp>::col_type;</h4>
+<h4>typedef glm::tvec3<int,glm::packed_highp> glm::highp_ivec3;</h4>
+<h4>typedef glm::tvec4<float,glm::packed_highp> glm::highp_vec4;</h4>
+<h4>typedef glm::tvec4<float,glm::packed_highp> glm::tmat4x4<float,glm::packed_highp>::col_type;</h4>
+<h4>typedef glm::tvec4<float,glm::packed_highp> glm::tmat4x4<float,glm::packed_highp>::row_type;</h4>
+<h4>typedef google_breakpad::ElfClass32::Ehdr google_breakpad::`anonymous namespace'::FindElfClassSection<google_breakpad::ElfClass32>::Ehdr;</h4>
+<h4>typedef google_breakpad::ElfClass32::Ehdr google_breakpad::`anonymous namespace'::FindElfClassSegment<google_breakpad::ElfClass32>::Ehdr;</h4>
+<h4>typedef google_breakpad::ElfClass32::Nhdr google_breakpad::ElfClassBuildIDNoteIdentifier<google_breakpad::ElfClass32>::Nhdr;</h4>
+<h4>typedef google_breakpad::ElfClass32::Phdr google_breakpad::`anonymous namespace'::FindElfClassSegment<google_breakpad::ElfClass32>::Phdr;</h4>
+<h4>typedef google_breakpad::ElfClass32::Shdr google_breakpad::`anonymous namespace'::FindElfClassSection<google_breakpad::ElfClass32>::Shdr;</h4>
+<h4>typedef google_breakpad::ElfClass64::Ehdr google_breakpad::`anonymous namespace'::FindElfClassSection<google_breakpad::ElfClass64>::Ehdr;</h4>
+<h4>typedef google_breakpad::ElfClass64::Ehdr google_breakpad::`anonymous namespace'::FindElfClassSegment<google_breakpad::ElfClass64>::Ehdr;</h4>
+<h4>typedef google_breakpad::ElfClass64::Nhdr google_breakpad::ElfClassBuildIDNoteIdentifier<google_breakpad::ElfClass64>::Nhdr;</h4>
+<h4>typedef google_breakpad::ElfClass64::Phdr google_breakpad::`anonymous namespace'::FindElfClassSegment<google_breakpad::ElfClass64>::Phdr;</h4>
+<h4>typedef google_breakpad::ElfClass64::Shdr google_breakpad::`anonymous namespace'::FindElfClassSection<google_breakpad::ElfClass64>::Shdr;</h4>
+<h4>typedef google_breakpad::MDTypeHelper&lt;8&gt;::MDRawLinkMap `anonymous namespace'::MDRawLinkMap;</h4>
+<h4>typedef google_breakpad::PageStdAllocator<MDMemoryDescriptor> google_breakpad::PageStdAllocator<MDMemoryDescriptor>::rebind<MDMemoryDescriptor>::other;</h4>
+<h4>typedef google_breakpad::PageStdAllocator<char> google_breakpad::PageStdAllocator<char>::rebind<char>::other;</h4>
+<h4>typedef google_breakpad::PageStdAllocator<google_breakpad::MappingInfo *> google_breakpad::PageStdAllocator<google_breakpad::MappingInfo *>::rebind<google_breakpad::MappingInfo *>::other;</h4>
+<h4>typedef google_breakpad::PageStdAllocator<int> google_breakpad::PageStdAllocator<int>::rebind<int>::other;</h4>
+<h4>typedef google_breakpad::PageStdAllocator<unsigned char> google_breakpad::PageStdAllocator<unsigned char>::rebind<unsigned char>::other;</h4>
+<h4>typedef google_breakpad::PageStdAllocator<unsigned long> google_breakpad::PageStdAllocator<unsigned long>::rebind<unsigned long>::other;</h4>
+<h4>typedef gpr_timespec gpr_timespec_0;</h4>
+<h4>typedef greg_t gregset_t[23];</h4>
+<h4>typedef grpc_byte_buffer grpc_byte_buffer_0;</h4>
+<h4>typedef grpc_byte_buffer_reader grpc_byte_buffer_reader_0;</h4>
+<h4>typedef grpc_completion_queue_attributes grpc_completion_queue_attributes_0;</h4>
+<h4>typedef grpc_completion_type grpc_completion_type_0;</h4>
+<h4>typedef grpc_experimental_completion_queue_functor grpc_experimental_completion_queue_functor_0;</h4>
+<h4>typedef grpc_metadata grpc_metadata_0;</h4>
+<h4>typedef grpc_op grpc_op_0;</h4>
+<h4>typedef grpc_slice grpc_slice_0;</h4>
+<h4>typedef grpc_slice_buffer grpc_slice_buffer_0;</h4>
+<h4>typedef int (<em>__compar_fn_t)(const void </em>, const void *);</h4>
+<h4>typedef int (*close_file_func)(voidpf, voidpf);</h4>
+<h4>typedef int (*testerror_file_func)(voidpf, voidpf);</h4>
+<h4>typedef int ActorTypeSelector;</h4>
+<h4>typedef int BedrockLog::MessasgeId;</h4>
+<h4>typedef int CommandRegistry::RuleIndex;</h4>
+<h4>typedef int CompoundTagUpdaterBuilder::TagType<IntTag>::type;</h4>
+<h4>typedef int LayerValues::RiverData;</h4>
+<h4>typedef int ListenerHandle;</h4>
+<h4>typedef int MemoryTier;</h4>
+<h4>typedef int NewType<int>::Raw;</h4>
+<h4>typedef int Raid::DurationType;</h4>
+<h4>typedef int RakNet::RNS2SendResult;</h4>
+<h4>typedef int RakNet::RNS2Socket;</h4>
+<h4>typedef int SynchedActorData::TypeInt;</h4>
+<h4>typedef int _Atomic_word;</h4>
+<h4>typedef int <strong>TCPSOCKET</strong>;</h4>
+<h4>typedef int <strong>UDPSOCKET</strong>;</h4>
+<h4>typedef int __int32_t;</h4>
+<h4>typedef int __pid_t;</h4>
+<h4>typedef int glm::length_t;</h4>
+<h4>typedef int int_least32_t;</h4>
+<h4>typedef int pthread_once_t;</h4>
+<h4>typedef int wchar_t;</h4>
+<h4>typedef int16_t Height;</h4>
+<h4>typedef int16_t utf8proc_propval_t;</h4>
+<h4>typedef int32_t ScriptApi::ScriptArrayIndex_t;</h4>
+<h4>typedef int64_t AttributeMessageType;</h4>
+<h4>typedef int64_t Core::FileSizeChange;</h4>
+<h4>typedef int64_t Elf64_Sxword;</h4>
+<h4>typedef int64_t SynchedActorData::TypeInt64;</h4>
+<h4>typedef int8_t SynchedActorData::TypeInt8;</h4>
+<h4>typedef intptr_t gpr_atm;</h4>
+<h4>typedef linkedlist_data_s linkedlist_data;</h4>
+<h4>typedef linkedlist_datablock_internal_s linkedlist_datablock_internal;</h4>
+<h4>typedef long double __float128;</h4>
+<h4>typedef max_align_t moodycamel::details::std_max_align_t;</h4>
+<h4>typedef mce::Blob mce::Image::Storage;</h4>
+<h4>typedef mce::Degree Degree;</h4>
+<h4>typedef moodycamel::ConsumerToken consumer_token_t;</h4>
+<h4>typedef moodycamel::ProducerToken producer_token_t;</h4>
+<h4>typedef pthread_attr_t pthread_attr_t_0;</h4>
+<h4>typedef pthread_cond_t __gthread_cond_t;</h4>
+<h4>typedef pthread_mutex_t __gthread_mutex_t;</h4>
+<h4>typedef pthread_mutex_t __gthread_recursive_mutex_t;</h4>
+<h4>typedef pthread_once_t __gthread_once_t;</h4>
+<h4>typedef pthread_t __gthread_t;</h4>
+<h4>typedef signed __int64 _Unwind_Sword;</h4>
+<h4>typedef sigval __sigval_t;</h4>
+<h4>typedef size_t (<em>SurfaceBuilderRegistry::ScoringFunc)(EntityContext </em>);</h4>
+<h4>typedef size_t CommandRegistry::EnumValueID;</h4>
+<h4>typedef static_vector<const Block *,4096> SubChunkBlockStorage::GenericPalette;</h4>
+<h4>typedef struct Core::StorageAreaStateListener Core::StorageAreaState::Listener;</h4>
+<h4>typedef struct _G_fpos_t fpos_t;</h4>
+<h4>typedef struct __dirstream DIR;</h4>
+<h4>typedef struct grpc_call grpc_call_0;</h4>
+<h4>typedef struct grpc_completion_queue grpc_completion_queue_0;</h4>
+<h4>typedef struct gzFile_s *gzFile;</h4>
+<h4>typedef time_t Core::FileTime;</h4>
+<h4>typedef timespec __gthread_time_t;</h4>
+<h4>typedef tm_unz_s tm_unz;</h4>
+<h4>typedef tm_zip_s tm_zip;</h4>
+<h4>typedef uLong (<em>read_file_func)(voidpf, voidpf, void </em>, uLong);</h4>
+<h4>typedef uLong (<em>write_file_func)(voidpf, voidpf, const void </em>, uLong);</h4>
+<h4>typedef ucontext_t ucontext_t_0;</h4>
+<h4>typedef uint16_t BedrockEngine::IslandId;</h4>
+<h4>typedef uint16_t DataID;</h4>
+<h4>typedef uint16_t DataItem::ID;</h4>
+<h4>typedef uint16_t Elf32_Half;</h4>
+<h4>typedef uint16_t Elf64_Half;</h4>
+<h4>typedef uint16_t RakNet::SplitPacketIdType;</h4>
+<h4>typedef uint16_t in_port_t;</h4>
+<h4>typedef uint32_t AutoCompleteOption::CursorPos;</h4>
+<h4>typedef uint32_t BlockRuntimeId;</h4>
+<h4>typedef uint32_t CommandRegistry::ConstrainedValueID;</h4>
+<h4>typedef uint32_t CommandRegistry::EnumID;</h4>
+<h4>typedef uint32_t Core::Random::result_type;</h4>
+<h4>typedef uint32_t Elf32_Addr;</h4>
+<h4>typedef uint32_t Elf32_Off;</h4>
+<h4>typedef uint32_t Elf32_Word;</h4>
+<h4>typedef uint32_t Elf64_Word;</h4>
+<h4>typedef uint32_t MDRVA;</h4>
+<h4>typedef uint32_t OverloadSyntaxInformation::CursorPos;</h4>
+<h4>typedef uint32_t PACKED_WORD;</h4>
+<h4>typedef uint32_t RakNet::BitSize_t;</h4>
+<h4>typedef uint32_t RakNet::SplitPacketIndexType;</h4>
+<h4>typedef uint32_t RakNet::TimeMS;</h4>
+<h4>typedef uint32_t Random::result_type;</h4>
+<h4>typedef uint32_t RandomSeed_0;</h4>
+<h4>typedef uint32_t ScriptCommandId;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;1,SubChunkBlockStorage::Type::Paletted1&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;16,SubChunkBlockStorage::Type::Paletted16&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;2,SubChunkBlockStorage::Type::Paletted2&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;3,SubChunkBlockStorage::Type::Paletted3&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;4,SubChunkBlockStorage::Type::Paletted4&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;5,SubChunkBlockStorage::Type::Paletted5&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;6,SubChunkBlockStorage::Type::Paletted6&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t SubChunkBlockStoragePaletted&lt;8,SubChunkBlockStorage::Type::Paletted8&gt;::PACKED_WORD;</h4>
+<h4>typedef uint32_t U32;</h4>
+<h4>typedef uint32_t google_breakpad::CpuSet::MaskWordType;</h4>
+<h4>typedef uint32_t in_addr_t;</h4>
+<h4>typedef uint64_t ClassID::IDType;</h4>
+<h4>typedef uint64_t ClientBlobCache::BlobId;</h4>
+<h4>typedef uint64_t CommandRegistry::ValueTypeID;</h4>
+<h4>typedef uint64_t Core::FileSize;</h4>
+<h4>typedef uint64_t Elf64_Addr;</h4>
+<h4>typedef uint64_t Elf64_Off;</h4>
+<h4>typedef uint64_t Elf64_Xword;</h4>
+<h4>typedef uint64_t HashType64;</h4>
+<h4>typedef uint64_t LoopingSoundHandle;</h4>
+<h4>typedef uint64_t MicroProfileToken;</h4>
+<h4>typedef uint64_t Raid::CallbackCallCountType;</h4>
+<h4>typedef uint64_t RakNet::NetworkID;</h4>
+<h4>typedef uint64_t RakNet::Time;</h4>
+<h4>typedef uint64_t RakNet::TimeUS;</h4>
+<h4>typedef uint64_t RakNet::reliabilityHeapWeightType;</h4>
+<h4>typedef uint64_t SoundHandle;</h4>
+<h4>typedef uint64_t U64;</h4>
+<h4>typedef uint64_t Util::XXHash::Digest;</h4>
+<h4>typedef uint8_t *mce::Blob::iterator_type;</h4>
+<h4>typedef uint8_t BYTE;</h4>
+<h4>typedef uint8_t CommandRegistry::SemanticConstraintID;</h4>
+<h4>typedef uint8_t CompoundTagUpdaterBuilder::TagType<ByteTag>::type;</h4>
+<h4>typedef uint8_t FacingID;</h4>
+<h4>typedef uint8_t Raid::FailureCountType;</h4>
+<h4>typedef uint8_t Raid::GroupNumberType;</h4>
+<h4>typedef uint8_t Raid::RaiderCountType;</h4>
+<h4>typedef uint8_t SubChunk::Layer;</h4>
+<h4>typedef uint8_t SubClientId;</h4>
+<h4>typedef uint8_t byte_0;</h4>
+<h4>typedef uint8_t glm::detail::uint8;</h4>
+<h4>typedef uintptr_t moodycamel::details::thread_id_t;</h4>
+<h4>typedef unsigned __int16 NewType<unsigned short>::Raw;</h4>
+<h4>typedef unsigned __int16 RakNet::SystemIndex;</h4>
+<h4>typedef unsigned __int16 UTF16;</h4>
+<h4>typedef unsigned __int16 __u16;</h4>
+<h4>typedef unsigned __int16 __uint16_t;</h4>
+<h4>typedef unsigned __int16 sa_family_t;</h4>
+<h4>typedef unsigned __int16 uint_least16_t;</h4>
+<h4>typedef unsigned __int16 web::http::status_code;</h4>
+<h4>typedef unsigned __int64 UTF32;</h4>
+<h4>typedef unsigned __int64 ZPOS64_T;</h4>
+<h4>typedef unsigned __int64 _Unwind_Exception_Class;</h4>
+<h4>typedef unsigned __int64 _Unwind_Internal_Ptr;</h4>
+<h4>typedef unsigned __int64 _Unwind_Ptr;</h4>
+<h4>typedef unsigned __int64 _Unwind_Word;</h4>
+<h4>typedef unsigned __int64 _WordT;</h4>
+<h4>typedef unsigned __int64 __dev_t;</h4>
+<h4>typedef unsigned __int64 __fsblkcnt_t;</h4>
+<h4>typedef unsigned __int64 __fsfilcnt_t;</h4>
+<h4>typedef unsigned __int64 __ino_t;</h4>
+<h4>typedef unsigned __int64 __kernel_ulong_t;</h4>
+<h4>typedef unsigned __int64 __nlink_t;</h4>
+<h4>typedef unsigned __int64 __uint64_t;</h4>
+<h4>typedef unsigned __int64 __uintmax_t;</h4>
+<h4>typedef unsigned __int64 google_breakpad::debugreg_t;</h4>
+<h4>typedef unsigned __int64 moodycamel::details::thread_id_converter<unsigned long>::thread_id_hash_t;</h4>
+<h4>typedef unsigned __int64 pthread_t;</h4>
+<h4>typedef unsigned __int64 size_t;</h4>
+<h4>typedef unsigned __int64 sizetype;</h4>
+<h4>typedef unsigned __int64 uLong;</h4>
+<h4>typedef unsigned __int64 uint_fast16_t;</h4>
+<h4>typedef unsigned __int64 uint_fast32_t;</h4>
+<h4>typedef unsigned __int64 uint_fast64_t;</h4>
+<h4>typedef unsigned __int64 uint_least64_t;</h4>
+<h4>typedef unsigned __int64 uintptr_t;</h4>
+<h4>typedef unsigned __int64 wctype_t;</h4>
+<h4>typedef unsigned __int8 Boolean;</h4>
+<h4>typedef unsigned __int8 Byte;</h4>
+<h4>typedef unsigned __int8 NewType<unsigned char>::Raw;</h4>
+<h4>typedef unsigned __int8 RakNet::MessageID;</h4>
+<h4>typedef unsigned __int8 StringTableType;</h4>
+<h4>typedef unsigned __int8 UTF8;</h4>
+<h4>typedef unsigned __int8 Util::Byte;</h4>
+<h4>typedef unsigned __int8 __uint8_t;</h4>
+<h4>typedef unsigned __int8 byte;</h4>
+<h4>typedef unsigned __int8 uint_fast8_t;</h4>
+<h4>typedef unsigned __int8 uint_least8_t;</h4>
+<h4>typedef unsigned int RandomSeed;</h4>
+<h4>typedef unsigned int Social::LocalUserId;</h4>
+<h4>typedef unsigned int __gid_t;</h4>
+<h4>typedef unsigned int __mode_t;</h4>
+<h4>typedef unsigned int __socklen_t;</h4>
+<h4>typedef unsigned int __u32;</h4>
+<h4>typedef unsigned int __uid_t;</h4>
+<h4>typedef unsigned int __uint32_t;</h4>
+<h4>typedef unsigned int pthread_key_t;</h4>
+<h4>typedef unsigned int uInt;</h4>
+<h4>typedef unsigned int uint_least32_t;</h4>
+<h4>typedef unsigned int wint_t;</h4>
+<h4>typedef unz64_file_pos_s unz64_file_pos;</h4>
+<h4>typedef unz_file_info64_internal_s unz_file_info64_internal;</h4>
+<h4>typedef unz_file_info64_s unz_file_info64;</h4>
+<h4>typedef unz_file_info_s unz_file_info;</h4>
+<h4>typedef unz_file_pos_s unz_file_pos;</h4>
+<h4>typedef unz_global_info64_s unz_global_info64;</h4>
+<h4>typedef unz_global_info_s unz_global_info;</h4>
+<h4>typedef utf8proc_property_struct utf8proc_property_t;</h4>
+<h4>typedef void (*__sighandler_t)(int);</h4>
+<h4>typedef void (*free_func)(voidpf, voidpf);</h4>
+<h4>typedef void *FilePtr;</h4>
+<h4>typedef void *voidp;</h4>
+<h4>typedef void *voidpf;</h4>
+<h4>typedef void CURL;</h4>
+<h4>typedef void _IO_lock_t;</h4>
+<h4>typedef voidp unzFile;</h4>
+<h4>typedef voidp zipFile;</h4>
+<h4>typedef voidpf (*alloc_func)(voidpf, uInt, uInt);</h4>
+<h4>typedef voidpf (<em>open64_file_func)(voidpf, const void </em>, int);</h4>
+<h4>typedef voidpf (<em>open_file_func)(voidpf, const char </em>, int);</h4>
+<h4>typedef z_stream_s z_stream;</h4>
+<h4>typedef zlib_filefunc64_32_def_s zlib_filefunc64_32_def;</h4>
+<h4>typedef zlib_filefunc64_def_s zlib_filefunc64_def;</h4>
+<h4>typedef zlib_filefunc_def_s zlib_filefunc_def;</h4>
 <h4>typedef ActorFlagComponent<BurnsInDaylightFlag> BurnsInDaylightComponent;</h4>
 <h4>typedef AppPlatformListener AppPlatform::Listener;</h4>
 <h4>typedef AutomaticID<Dimension,int> AutomaticID<Dimension,int>::SELF;</h4>
