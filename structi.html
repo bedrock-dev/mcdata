@@ -1,669 +1,864 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>structi | MC data</title>
-    <meta name="generator" content="VuePress 1.9.7">
-    
-    <meta name="description" content="MC data">
-    
-    <link rel="preload" href="/mcdata/assets/css/0.styles.98230a9d.css" as="style"><link rel="preload" href="/mcdata/assets/js/app.9eb6ed31.js" as="script"><link rel="preload" href="/mcdata/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mcdata/assets/js/32.ba10d254.js" as="script"><link rel="prefetch" href="/mcdata/assets/js/10.015c72c0.js"><link rel="prefetch" href="/mcdata/assets/js/11.25b90920.js"><link rel="prefetch" href="/mcdata/assets/js/12.de21ddf7.js"><link rel="prefetch" href="/mcdata/assets/js/13.2457908e.js"><link rel="prefetch" href="/mcdata/assets/js/14.69ecf76b.js"><link rel="prefetch" href="/mcdata/assets/js/15.58d4dcf8.js"><link rel="prefetch" href="/mcdata/assets/js/16.17822182.js"><link rel="prefetch" href="/mcdata/assets/js/17.4bc400ac.js"><link rel="prefetch" href="/mcdata/assets/js/18.58728642.js"><link rel="prefetch" href="/mcdata/assets/js/19.6e55ee66.js"><link rel="prefetch" href="/mcdata/assets/js/20.772daac8.js"><link rel="prefetch" href="/mcdata/assets/js/21.4f3ae83b.js"><link rel="prefetch" href="/mcdata/assets/js/22.a77a016d.js"><link rel="prefetch" href="/mcdata/assets/js/23.721b6487.js"><link rel="prefetch" href="/mcdata/assets/js/24.63e63395.js"><link rel="prefetch" href="/mcdata/assets/js/25.b3d24322.js"><link rel="prefetch" href="/mcdata/assets/js/26.f7f77649.js"><link rel="prefetch" href="/mcdata/assets/js/27.82db09f5.js"><link rel="prefetch" href="/mcdata/assets/js/28.d04e19ab.js"><link rel="prefetch" href="/mcdata/assets/js/29.ffd25a52.js"><link rel="prefetch" href="/mcdata/assets/js/3.2b49072b.js"><link rel="prefetch" href="/mcdata/assets/js/30.47e1287e.js"><link rel="prefetch" href="/mcdata/assets/js/31.a17bc943.js"><link rel="prefetch" href="/mcdata/assets/js/33.3f5e2189.js"><link rel="prefetch" href="/mcdata/assets/js/34.e3353c01.js"><link rel="prefetch" href="/mcdata/assets/js/35.8dff4eb1.js"><link rel="prefetch" href="/mcdata/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mcdata/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mcdata/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mcdata/assets/js/7.d269aad6.js"><link rel="prefetch" href="/mcdata/assets/js/8.992dfcec.js"><link rel="prefetch" href="/mcdata/assets/js/9.4a33021d.js">
-    <link rel="stylesheet" href="/mcdata/assets/css/0.styles.98230a9d.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mcdata/" class="home-link router-link-active"><!----> <span class="site-name">MC data</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="structi"><a href="#structi" class="header-anchor">#</a> structi</h1> <h4 id="ifaddrs"><a href="#ifaddrs" class="header-anchor">#</a> ifaddrs</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 478104 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ifaddrs</span>
-<span class="token punctuation">{</span>
-ifaddrs <span class="token operator">*</span>ifa_next<span class="token punctuation">;</span>
-<span class="token keyword">char</span> <span class="token operator">*</span>ifa_name<span class="token punctuation">;</span>
-<span class="token keyword">unsigned</span> <span class="token keyword">int</span> ifa_flags<span class="token punctuation">;</span>
-sockaddr <span class="token operator">*</span>ifa_addr<span class="token punctuation">;</span>
-sockaddr <span class="token operator">*</span>ifa_netmask<span class="token punctuation">;</span>
-ifaddrs<span class="token double-colon punctuation">::</span>$<span class="token number">84E426</span>BE247030D232EE932B77F5CBF6 ifa_ifu<span class="token punctuation">;</span>
-<span class="token keyword">void</span> <span class="token operator">*</span>ifa_data<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifconf"><a href="#ifconf" class="header-anchor">#</a> ifconf</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 294343 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ifconf</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> ifc_len<span class="token punctuation">;</span>
-ifconf<span class="token double-colon punctuation">::</span>$CB4E2310AA03783056CB5D3719B31C2A ifc_ifcu<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifreq"><a href="#ifreq" class="header-anchor">#</a> ifreq</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 294346 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ifreq</span>
-<span class="token punctuation">{</span>
-ifreq<span class="token double-colon punctuation">::</span>$EC3FB77B1F5CBB3C6B6AB4B4CE5B261D ifr_ifrn<span class="token punctuation">;</span>
-ifreq<span class="token double-colon punctuation">::</span>$<span class="token number">3766</span>CEB1D20AE6FB37CD7F05C4AF9C4E ifr_ifru<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="in6-addr"><a href="#in6-addr" class="header-anchor">#</a> in6_addr</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 4273 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">in6_addr</span>
-<span class="token punctuation">{</span>
-in6_addr<span class="token double-colon punctuation">::</span>$FA2BBAF2C6BC03A9E0081A5D902744A5 __in6_u<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="in-addr"><a href="#in-addr" class="header-anchor">#</a> in_addr</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 4276 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">in_addr</span>
-<span class="token punctuation">{</span>
-in_addr_t s_addr<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="internal-state"><a href="#internal-state" class="header-anchor">#</a> internal_state;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 479217 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">internal_state</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="iovec"><a href="#iovec" class="header-anchor">#</a> iovec</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 486228 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">iovec</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">void</span> <span class="token operator">*</span>iov_base<span class="token punctuation">;</span>
-size_t iov_len<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ipv6-mreq"><a href="#ipv6-mreq" class="header-anchor">#</a> ipv6_mreq</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 478153 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ipv6_mreq</span>
-<span class="token punctuation">{</span>
-in6_addr ipv6mr_multiaddr<span class="token punctuation">;</span>
-<span class="token keyword">unsigned</span> <span class="token keyword">int</span> ipv6mr_interface<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h1 id="structi-2"><a href="#structi-2" class="header-anchor">#</a> structI</h1> <h4 id="i18n"><a href="#i18n" class="header-anchor">#</a> I18n</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 60731 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">I18n</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="i18n-languagechangedlistener"><a href="#i18n-languagechangedlistener" class="header-anchor">#</a> I18n::LanguageChangedListener</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 60359 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">I18n</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">LanguageChangedListener</span></span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span><span class="token keyword">bool</span><span class="token operator">&gt;</span> mWeakTracker<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string <span class="token operator">&amp;</span><span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> mCallback<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="iappplatform"><a href="#iappplatform" class="header-anchor">#</a> IAppPlatform</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 6883 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IAppPlatform</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IAppPlatform<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="iblockplacementtarget"><a href="#iblockplacementtarget" class="header-anchor">#</a> IBlockPlacementTarget</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 37061 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IBlockPlacementTarget</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IBlockPlacementTarget<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="iclientinstance"><a href="#iclientinstance" class="header-anchor">#</a> IClientInstance;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13197 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IClientInstance</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="icommanddispatcher"><a href="#icommanddispatcher" class="header-anchor">#</a> ICommandDispatcher</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 87558 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ICommandDispatcher</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ICommandDispatcher<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="icontainermanager"><a href="#icontainermanager" class="header-anchor">#</a> IContainerManager</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 76093 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IContainerManager</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IContainerManager<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="icontentkeyprovider"><a href="#icontentkeyprovider" class="header-anchor">#</a> IContentKeyProvider</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 2905 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IContentKeyProvider</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IContentKeyProvider<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="idtype"><a href="#idtype" class="header-anchor">#</a> IDType<TagIDType></TagIDType></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 38332 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IDType</span><span class="token operator">&lt;</span>TagIDType<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-size_t mID<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="idtype-2"><a href="#idtype-2" class="header-anchor">#</a> IDType<TagSetIDType></TagSetIDType></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 38396 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IDType</span><span class="token operator">&lt;</span>TagSetIDType<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-size_t mID<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="idatainput"><a href="#idatainput" class="header-anchor">#</a> IDataInput</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33518 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IDataInput</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IDataInput<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="idataoutput"><a href="#idataoutput" class="header-anchor">#</a> IDataOutput</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33517 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IDataOutput</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IDataOutput<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="idefinitionserializer"><a href="#idefinitionserializer" class="header-anchor">#</a> IDefinitionSerializer</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 9966 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IDefinitionSerializer</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IDefinitionSerializer<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mName<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ientitlementmanager"><a href="#ientitlementmanager" class="header-anchor">#</a> IEntitlementManager;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5778 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IEntitlementManager</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ientitycomponent"><a href="#ientitycomponent" class="header-anchor">#</a> IEntityComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 44848 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IEntityComponent</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ientityinitializer"><a href="#ientityinitializer" class="header-anchor">#</a> IEntityInitializer;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 10300 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IEntityInitializer</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ientityregistryowner"><a href="#ientityregistryowner" class="header-anchor">#</a> IEntityRegistryOwner</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 77490 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IEntityRegistryOwner</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IEntityRegistryOwner<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifeature"><a href="#ifeature" class="header-anchor">#</a> IFeature</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 19389 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IFeature</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IFeature<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifileaccess"><a href="#ifileaccess" class="header-anchor">#</a> IFileAccess</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 6929 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IFileAccess</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IFileAccess<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifilechunkuploader"><a href="#ifilechunkuploader" class="header-anchor">#</a> IFileChunkUploader</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 101419 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IFileChunkUploader</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IFileChunkUploader<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifilepicker"><a href="#ifilepicker" class="header-anchor">#</a> IFilePicker</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 101413 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IFilePicker</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IFilePicker<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifilereadaccess"><a href="#ifilereadaccess" class="header-anchor">#</a> IFileReadAccess</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 482307 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IFileReadAccess</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IFileReadAccess<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifilewriteaccess"><a href="#ifilewriteaccess" class="header-anchor">#</a> IFileWriteAccess</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 482309 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IFileWriteAccess</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IFileWriteAccess<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ifunctionentry"><a href="#ifunctionentry" class="header-anchor">#</a> IFunctionEntry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 94530 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IFunctionEntry</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IFunctionEntry<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="igamemoduledocumentation"><a href="#igamemoduledocumentation" class="header-anchor">#</a> IGameModuleDocumentation;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13220 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IGameModuleDocumentation</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="igamemoduleshared"><a href="#igamemoduleshared" class="header-anchor">#</a> IGameModuleShared</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 587 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IGameModuleShared</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IGameModuleShared<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="iinpackagepacks-metadata"><a href="#iinpackagepacks-metadata" class="header-anchor">#</a> IInPackagePacks::MetaData</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 9455 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IInPackagePacks</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">MetaData</span></span>
-<span class="token punctuation">{</span>
-Core<span class="token double-colon punctuation">::</span>HeapPathBuffer mPath<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mIsHidden<span class="token punctuation">;</span>
-PackCategory mPackCategory<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ijsonserializable"><a href="#ijsonserializable" class="header-anchor">#</a> IJsonSerializable</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 6817 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IJsonSerializable</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IJsonSerializable<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="iminecraftapp"><a href="#iminecraftapp" class="header-anchor">#</a> IMinecraftApp</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5024 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IMinecraftApp</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IMinecraftApp<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ipacktelemetry"><a href="#ipacktelemetry" class="header-anchor">#</a> IPackTelemetry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5703 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IPackTelemetry</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IPackTelemetry<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ipackethandlerdispatcher"><a href="#ipackethandlerdispatcher" class="header-anchor">#</a> IPacketHandlerDispatcher;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 64315 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IPacketHandlerDispatcher</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="istructureconstraint"><a href="#istructureconstraint" class="header-anchor">#</a> IStructureConstraint</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 280050 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IStructureConstraint</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IStructureConstraint<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="istructurepoolactorpredicate"><a href="#istructurepoolactorpredicate" class="header-anchor">#</a> IStructurePoolActorPredicate</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 35475 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IStructurePoolActorPredicate</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IStructurePoolActorPredicate<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="istructurepoolblockpredicate"><a href="#istructurepoolblockpredicate" class="header-anchor">#</a> IStructurePoolBlockPredicate</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 35659 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IStructurePoolBlockPredicate</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IStructurePoolBlockPredicate<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="istructurepoolblocktagpredicate"><a href="#istructurepoolblocktagpredicate" class="header-anchor">#</a> IStructurePoolBlockTagPredicate</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 35916 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IStructurePoolBlockTagPredicate</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IStructurePoolBlockTagPredicate<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="isurfacebuilder"><a href="#isurfacebuilder" class="header-anchor">#</a> ISurfaceBuilder</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 88443 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ISurfaceBuilder</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ISurfaceBuilder<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itaskexecutioncontext"><a href="#itaskexecutioncontext" class="header-anchor">#</a> ITaskExecutionContext</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 484302 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ITaskExecutionContext</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ITaskExecutionContext<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itaskgroup"><a href="#itaskgroup" class="header-anchor">#</a> ITaskGroup</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 484164 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ITaskGroup</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ITaskGroup<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itextobject"><a href="#itextobject" class="header-anchor">#</a> ITextObject</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 100841 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ITextObject</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ITextObject<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itickingarea"><a href="#itickingarea" class="header-anchor">#</a> ITickingArea</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 34650 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ITickingArea</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ITickingArea<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itickingareaview"><a href="#itickingareaview" class="header-anchor">#</a> ITickingAreaView</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 99961 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ITickingAreaView</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ITickingAreaView<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itickingsystem"><a href="#itickingsystem" class="header-anchor">#</a> ITickingSystem</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 10238 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ITickingSystem</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ITickingSystem<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="iworldregistriesprovider"><a href="#iworldregistriesprovider" class="header-anchor">#</a> IWorldRegistriesProvider</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13149 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IWorldRegistriesProvider</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$IWorldRegistriesProvider<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="identifierresult"><a href="#identifierresult" class="header-anchor">#</a> IdentifierResult</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 99960 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IdentifierResult</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">bool</span> mValid<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mIdentifier<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mNamespace<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="identitydictionary"><a href="#identitydictionary" class="header-anchor">#</a> IdentityDictionary</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 293972 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IdentityDictionary</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>PlayerScoreboardId<span class="token punctuation">,</span>ScoreboardId<span class="token operator">&gt;</span> mPlayers<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>ActorUniqueID<span class="token punctuation">,</span>ScoreboardId<span class="token operator">&gt;</span> mEntities<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span>ScoreboardId<span class="token operator">&gt;</span> mFakes<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>ScoreboardId<span class="token punctuation">,</span>IdentityDefinition<span class="token operator">&gt;</span> mIdentityDefs<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="ignoreautomaticfeaturerules"><a href="#ignoreautomaticfeaturerules" class="header-anchor">#</a> IgnoreAutomaticFeatureRules;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 198709 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IgnoreAutomaticFeatureRules</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="implicitfeatures"><a href="#implicitfeatures" class="header-anchor">#</a> ImplicitFeatures;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 222962 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ImplicitFeatures</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="improvednoise"><a href="#improvednoise" class="header-anchor">#</a> ImprovedNoise</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 36175 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ImprovedNoise</span>
-<span class="token punctuation">{</span>
-Vec3 mOrigin<span class="token punctuation">;</span>
-<span class="token keyword">int</span> mNoiseMap<span class="token punctuation">[</span><span class="token number">512</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inmemoryfilestorage"><a href="#inmemoryfilestorage" class="header-anchor">#</a> InMemoryFileStorage</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 463112 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InMemoryFileStorage</span>
-<span class="token punctuation">{</span>
-leveldb<span class="token double-colon punctuation">::</span>Env <span class="token operator">*</span>mEnvironment<span class="token punctuation">;</span>
-Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mMutex<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>InMemoryFile<span class="token operator">&gt;&gt;</span> mInMemoryFiles<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> mDiskFilesToDelete<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="indexset"><a href="#indexset" class="header-anchor">#</a> IndexSet</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 38296 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IndexSet</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">unsigned</span> <span class="token keyword">long</span><span class="token operator">&gt;</span> mPacked<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">unsigned</span> <span class="token keyword">long</span><span class="token operator">&gt;</span> mSparse<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inheritancetreebiomeregistry-biomeparent"><a href="#inheritancetreebiomeregistry-biomeparent" class="header-anchor">#</a> InheritanceTree<a href="BiomeRegistry::BiomeParent">BiomeRegistry::BiomeParent</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 221980 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InheritanceTree</span><span class="token operator">&lt;</span>BiomeRegistry<span class="token double-colon punctuation">::</span>BiomeParent<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span>InheritanceTree<span class="token operator">&lt;</span>BiomeRegistry<span class="token double-colon punctuation">::</span>BiomeParent<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>InheritanceTreeNode<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>hash<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span><span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>equal_to<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string <span class="token operator">&gt;</span><span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>allocator<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span>InheritanceTree<span class="token operator">&lt;</span>BiomeRegistry<span class="token double-colon punctuation">::</span>BiomeParent<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>InheritanceTreeNode<span class="token operator">&gt;</span> <span class="token operator">&gt;</span> <span class="token operator">&gt;</span> mNodes<span class="token punctuation">;</span>
-Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mNodeLock<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inputhandler"><a href="#inputhandler" class="header-anchor">#</a> InputHandler;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 421169 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InputHandler</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="insomniacomponent"><a href="#insomniacomponent" class="header-anchor">#</a> InsomniaComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 56273 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InsomniaComponent</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> mTimeSinceRest<span class="token punctuation">;</span>
-<span class="token keyword">float</span> mDaysUntilInsomnia<span class="token punctuation">;</span>
-<span class="token keyword">int</span> mTicksUntilInsomnia<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="insomniadefinition"><a href="#insomniadefinition" class="header-anchor">#</a> InsomniaDefinition</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 107848 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InsomniaDefinition</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">float</span> mDaysUntilInsomnia<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="intoption-validate-7ef7c94beab75c6cef4adfb99b570420"><a href="#intoption-validate-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> IntOption::_validate::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 81832 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IntOption</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>_validate<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="intrange"><a href="#intrange" class="header-anchor">#</a> IntRange</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 48707 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IntRange</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> rangeMin<span class="token punctuation">;</span>
-<span class="token keyword">int</span> rangeMax<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="interactcomponent"><a href="#interactcomponent" class="header-anchor">#</a> InteractComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 54342 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InteractComponent</span>
-<span class="token punctuation">{</span>
-__int16 mCoolDownCounter<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="interactdefinition"><a href="#interactdefinition" class="header-anchor">#</a> InteractDefinition</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 55040 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InteractDefinition</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>Interaction<span class="token operator">&gt;</span> mInteractions<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="interaction"><a href="#interaction" class="header-anchor">#</a> Interaction</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 55041 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Interaction</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> mRequiresCoolDown<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mSwing<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mUseItem<span class="token punctuation">;</span>
-<span class="token keyword">int</span> mHurtItem<span class="token punctuation">;</span>
-ItemDefinition mTransformItem<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mInteractText<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mAddItemsTable<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mSpawnItemsTable<span class="token punctuation">;</span>
-ParticleType mParticleOnStartType<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mParticleOffsetTowardsInteractor<span class="token punctuation">;</span>
-<span class="token keyword">float</span> mParticleOffsetY<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>LevelSoundEvent<span class="token operator">&gt;</span> mPlaySounds<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>ActorDefinitionIdentifier<span class="token operator">&gt;</span> mSpawnEntities<span class="token punctuation">;</span>
-DefinitionTrigger mOnInteraction<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="invalidpacksfiltergroup"><a href="#invalidpacksfiltergroup" class="header-anchor">#</a> InvalidPacksFilterGroup</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5786 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InvalidPacksFilterGroup</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>PackType<span class="token operator">&gt;</span> packFilters<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inventoryaction"><a href="#inventoryaction" class="header-anchor">#</a> InventoryAction</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33288 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InventoryAction</span>
-<span class="token punctuation">{</span>
-InventorySource mSource<span class="token punctuation">;</span>
-<span class="token keyword">uint32_t</span> mSlot<span class="token punctuation">;</span>
-ItemStack mFromItem<span class="token punctuation">;</span>
-ItemStack mToItem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inventoryactionpacket"><a href="#inventoryactionpacket" class="header-anchor">#</a> InventoryActionPacket;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 77412 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InventoryActionPacket</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inventorysource"><a href="#inventorysource" class="header-anchor">#</a> InventorySource</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33265 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InventorySource</span>
-<span class="token punctuation">{</span>
-InventorySourceType mType<span class="token punctuation">;</span>
-ContainerID mContainerId<span class="token punctuation">;</span>
-InventorySource<span class="token double-colon punctuation">::</span>InventorySourceFlags mFlags<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inventorytransaction"><a href="#inventorytransaction" class="header-anchor">#</a> InventoryTransaction</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33190 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InventoryTransaction</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>InventorySource<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>InventoryAction<span class="token operator">&gt;&gt;</span> mActions<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>InventoryTransactionItemGroup<span class="token operator">&gt;</span> mContents<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="inventorytransactionmanager"><a href="#inventorytransactionmanager" class="header-anchor">#</a> InventoryTransactionManager</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33521 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">InventoryTransactionManager</span>
-<span class="token punctuation">{</span>
-Player <span class="token operator">*</span>mPlayer<span class="token punctuation">;</span>
-Unique<span class="token operator">&lt;</span>InventoryTransaction<span class="token operator">&gt;</span> mCurrentTransaction<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>InventoryAction<span class="token operator">&gt;</span> mExpectedActions<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="irongolem-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420"><a href="#irongolem-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> IronGolem::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 124186 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IronGolem</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>updateEntitySpecificMolangVariables<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="isplayer"><a href="#isplayer" class="header-anchor">#</a> IsPlayer<Actor></Actor></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 93884 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IsPlayer</span><span class="token operator">&lt;</span>Actor<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="isplayer-2"><a href="#isplayer-2" class="header-anchor">#</a> IsPlayer<Player></Player></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 93885 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IsPlayer</span><span class="token operator">&lt;</span>Player<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="isotropicfacedata"><a href="#isotropicfacedata" class="header-anchor">#</a> IsotropicFaceData</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 45379 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">IsotropicFaceData</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">unsigned</span> <span class="token keyword">int</span> mFaceTextureIsotropic<span class="token punctuation">;</span>
-<span class="token keyword">unsigned</span> <span class="token keyword">int</span> mIsotropicFaceEnabled<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="item"><a href="#item" class="header-anchor">#</a> Item</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13203 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Item</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$Item<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-byte m_maxStackSize<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string m_textureAtlasFile<span class="token punctuation">;</span>
-<span class="token keyword">int</span> m_frameCount<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> m_animatesInToolbar<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mIsMirroredArt<span class="token punctuation">;</span>
-UseAnimation mUseAnim<span class="token punctuation">;</span>
-<span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string <span class="token operator">*</span>mHoverTextColorFormat<span class="token punctuation">;</span>
-<span class="token keyword">const</span> TextureUVCoordinateSet <span class="token operator">*</span>mIconTexture<span class="token punctuation">;</span>
-<span class="token keyword">const</span> TextureAtlasItem <span class="token operator">*</span>mIconAtlas<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mUsesRenderingAdjustment<span class="token punctuation">;</span>
-Vec3 mRenderingAdjTrans<span class="token punctuation">;</span>
-Vec3 mRenderingAdjRot<span class="token punctuation">;</span>
-<span class="token keyword">float</span> mRenderingAdjScale<span class="token punctuation">;</span>
-__int16 mId<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mDescriptionId<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mRawNameId<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mNamespace<span class="token punctuation">;</span>
-HashedString mFullName<span class="token punctuation">;</span>
-__int16 mMaxDamage<span class="token punctuation">;</span>
-__int8 mIsGlint <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mHandEquipped <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mIsStackedByData <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mRequiresWorldBuilder <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mExplodable <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mShouldDespawn <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mAllowOffhand <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mIgnoresPermissions <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-__int8 mExperimental <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> mMaxUseDuration<span class="token punctuation">;</span>
-BaseGameVersion mMinRequiredBaseGameVersion<span class="token punctuation">;</span>
-WeakPtr<span class="token operator">&lt;</span>BlockLegacy<span class="token operator">&gt;</span> mLegacyBlock<span class="token punctuation">;</span>
-CreativeItemCategory mCreativeCategory<span class="token punctuation">;</span>
-Item <span class="token operator">*</span>mCraftingRemainingItem<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span>FoodItemComponent<span class="token operator">&gt;</span> mFoodComponent<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span>SeedItemComponent<span class="token operator">&gt;</span> mSeedComponent<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span>CameraItemComponent<span class="token operator">&gt;</span> mCameraComponent<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&gt;&gt;</span> mOnResetBAIcallbacks<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="item-tier"><a href="#item-tier" class="header-anchor">#</a> Item::Tier</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 183748 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Item</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">Tier</span></span>
-<span class="token punctuation">{</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> mLevel<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> mUses<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">float</span> mSpeed<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> mDamage<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> mEnchantmentValue<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemacquisitionmethodmap"><a href="#itemacquisitionmethodmap" class="header-anchor">#</a> ItemAcquisitionMethodMap</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 182541 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemAcquisitionMethodMap</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemdefinition"><a href="#itemdefinition" class="header-anchor">#</a> ItemDefinition</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 48709 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemDefinition</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> itemId<span class="token punctuation">;</span>
-<span class="token keyword">int</span> auxValue<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemenchants"><a href="#itemenchants" class="header-anchor">#</a> ItemEnchants</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13210 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemEnchants</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> mSlot<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>EnchantmentInstance<span class="token operator">&gt;</span> mItemEnchants<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemeventlistener"><a href="#itemeventlistener" class="header-anchor">#</a> ItemEventListener;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 88289 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemEventListener</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemlistserializer"><a href="#itemlistserializer" class="header-anchor">#</a> ItemListSerializer</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 428929 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemListSerializer</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itempack"><a href="#itempack" class="header-anchor">#</a> ItemPack</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 184673 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemPack</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>ItemDescriptor<span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span>ItemPack<span class="token double-colon punctuation">::</span>KeyHasher<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>equal_to<span class="token operator">&lt;</span>ItemDescriptor<span class="token operator">&gt;</span><span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>allocator<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span><span class="token keyword">const</span> ItemDescriptor<span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token operator">&gt;</span> <span class="token operator">&gt;</span> mIngredients<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itempack-keyhasher"><a href="#itempack-keyhasher" class="header-anchor">#</a> ItemPack::KeyHasher</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 184548 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemPack</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">KeyHasher</span></span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemregistry"><a href="#itemregistry" class="header-anchor">#</a> ItemRegistry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 180759 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemRegistry</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemstackbase"><a href="#itemstackbase" class="header-anchor">#</a> ItemStackBase</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33289 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemStackBase</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ItemStackBase<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-WeakPtr<span class="token operator">&lt;</span>Item<span class="token operator">&gt;</span> mItem<span class="token punctuation">;</span>
-Unique<span class="token operator">&lt;</span>CompoundTag<span class="token operator">&gt;</span> mUserData<span class="token punctuation">;</span>
-<span class="token keyword">const</span> Block <span class="token operator">*</span>mBlock<span class="token punctuation">;</span>
-__int16 mAuxValue<span class="token punctuation">;</span>
-byte mCount<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mValid<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>_V2<span class="token double-colon punctuation">::</span>steady_clock<span class="token double-colon punctuation">::</span>time_point mPickupTime<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mShowPickUp<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">const</span> BlockLegacy <span class="token operator">*</span><span class="token operator">&gt;</span> mCanPlaceOn<span class="token punctuation">;</span>
-size_t mCanPlaceOnHash<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">const</span> BlockLegacy <span class="token operator">*</span><span class="token operator">&gt;</span> mCanDestroy<span class="token punctuation">;</span>
-size_t mCanDestroyHash<span class="token punctuation">;</span>
-Tick mBlockingTick<span class="token punctuation">;</span>
-Unique<span class="token operator">&lt;</span>ItemInstance<span class="token operator">&gt;</span> mChargedItem<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemstackbase-loadcomponents-7ef7c94beab75c6cef4adfb99b570420"><a href="#itemstackbase-loadcomponents-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> ItemStackBase::_loadComponents::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 183002 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemStackBase</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>_loadComponents<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemstate"><a href="#itemstate" class="header-anchor">#</a> ItemState</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 27965 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemState</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$ItemState<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> size_t mID<span class="token punctuation">;</span>
-<span class="token keyword">const</span> size_t mVariationCount<span class="token punctuation">;</span>
-<span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string mName<span class="token punctuation">;</span>
-ItemState<span class="token double-colon punctuation">::</span>StateListNode mNode<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemstate-statelistnode"><a href="#itemstate-statelistnode" class="header-anchor">#</a> ItemState::StateListNode</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 226295 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemState</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">StateListNode</span></span>
-<span class="token punctuation">{</span>
-ItemState<span class="token double-colon punctuation">::</span>StateListNode <span class="token operator">*</span>mNext<span class="token punctuation">;</span>
-ItemState<span class="token double-colon punctuation">::</span>StateListNode <span class="token operator">*</span>mPrev<span class="token punctuation">;</span>
-ItemState <span class="token operator">*</span>mState<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemstateinstance"><a href="#itemstateinstance" class="header-anchor">#</a> ItemStateInstance</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 27964 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemStateInstance</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">const</span> <span class="token keyword">unsigned</span> <span class="token keyword">int</span> mMaxBits<span class="token punctuation">;</span>
-<span class="token keyword">uint32_t</span> mStartBit<span class="token punctuation">;</span>
-<span class="token keyword">uint32_t</span> mNumBits<span class="token punctuation">;</span>
-<span class="token keyword">uint32_t</span> mVariationCount<span class="token punctuation">;</span>
-<span class="token keyword">uint32_t</span> mMask<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
-<span class="token keyword">const</span> ItemState <span class="token operator">*</span>mState<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemuseinventorytransaction-resendblocksaroundarea-aaed32d802a7a0d4b8cda03b8d4f5ba0"><a href="#itemuseinventorytransaction-resendblocksaroundarea-aaed32d802a7a0d4b8cda03b8d4f5ba0" class="header-anchor">#</a> ItemUseInventoryTransaction::resendBlocksAroundArea::$AAED32D802A7A0D4B8CDA03B8D4F5BA0</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 180616 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemUseInventoryTransaction</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>resendBlocksAroundArea<span class="token double-colon punctuation">::</span>$<span class="token class-name">AAED32D802A7A0D4B8CDA03B8D4F5BA0</span></span>
-<span class="token punctuation">{</span>
-Player <span class="token operator">*</span>player<span class="token punctuation">;</span>
-BlockSource <span class="token operator">*</span>region<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div><h4 id="itemusemethodmap"><a href="#itemusemethodmap" class="header-anchor">#</a> ItemUseMethodMap</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 182507 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">ItemUseMethodMap</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/mcdata/assets/js/app.9eb6ed31.js" defer></script><script src="/mcdata/assets/js/2.2defd20b.js" defer></script><script src="/mcdata/assets/js/32.ba10d254.js" defer></script>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
+
+    <title>Welcome to hhhxiao's blog</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <article class="content">
+        <h1>structi</h1>
+<h4>ifaddrs</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478104 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifaddrs</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ifaddrs</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_next</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_name</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ifa_flags</span><span class="p">;</span><span class="w"></span>
+<span class="n">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_addr</span><span class="p">;</span><span class="w"></span>
+<span class="n">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_netmask</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifaddrs</span><span class="o">::</span><span class="n">$84E426BE247030D232EE932B77F5CBF6</span><span class="w"> </span><span class="n">ifa_ifu</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ifa_data</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ifconf</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294343 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifconf</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ifc_len</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifconf</span><span class="o">::</span><span class="n">$CB4E2310AA03783056CB5D3719B31C2A</span><span class="w"> </span><span class="n">ifc_ifcu</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ifreq</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 294346 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ifreq</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ifreq</span><span class="o">::</span><span class="n">$EC3FB77B1F5CBB3C6B6AB4B4CE5B261D</span><span class="w"> </span><span class="n">ifr_ifrn</span><span class="p">;</span><span class="w"></span>
+<span class="n">ifreq</span><span class="o">::</span><span class="n">$3766CEB1D20AE6FB37CD7F05C4AF9C4E</span><span class="w"> </span><span class="n">ifr_ifru</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>in6_addr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4273 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">in6_addr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="o">::</span><span class="n">$FA2BBAF2C6BC03A9E0081A5D902744A5</span><span class="w"> </span><span class="n">__in6_u</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>in_addr</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 4276 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">in_addr</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in_addr_t</span><span class="w"> </span><span class="n">s_addr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>internal_state;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 479217 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">internal_state</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>iovec</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 486228 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">iovec</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">iov_base</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">iov_len</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ipv6_mreq</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 478153 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ipv6_mreq</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">in6_addr</span><span class="w"> </span><span class="n">ipv6mr_multiaddr</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ipv6mr_interface</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h1>structI</h1>
+<h4>I18n</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 60731 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">I18n</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>I18n::LanguageChangedListener</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 60359 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">I18n</span><span class="o">::</span><span class="n">LanguageChangedListener</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mWeakTracker</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span><span class="kt">bool</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCallback</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IAppPlatform</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6883 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IAppPlatform</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IAppPlatform</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IBlockPlacementTarget</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 37061 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IBlockPlacementTarget</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IBlockPlacementTarget</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IClientInstance;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13197 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IClientInstance</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ICommandDispatcher</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 87558 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ICommandDispatcher</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ICommandDispatcher</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IContainerManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 76093 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IContainerManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IContainerManager</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IContentKeyProvider</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 2905 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IContentKeyProvider</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IContentKeyProvider</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IDType<TagIDType></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 38332 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IDType</span><span class="o">&lt;</span><span class="n">TagIDType</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IDType<TagSetIDType></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 38396 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IDType</span><span class="o">&lt;</span><span class="n">TagSetIDType</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IDataInput</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 33518 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IDataInput</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IDataInput</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IDataOutput</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 33517 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IDataOutput</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IDataOutput</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IDefinitionSerializer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 9966 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IDefinitionSerializer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IDefinitionSerializer</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IEntitlementManager;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5778 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IEntitlementManager</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IEntityComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 44848 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IEntityComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IEntityInitializer;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 10300 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IEntityInitializer</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IEntityRegistryOwner</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77490 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IEntityRegistryOwner</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IEntityRegistryOwner</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IFeature</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19389 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IFeature</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IFeature</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IFileAccess</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6929 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IFileAccess</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IFileAccess</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IFileChunkUploader</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101419 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IFileChunkUploader</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IFileChunkUploader</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IFilePicker</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 101413 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IFilePicker</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IFilePicker</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IFileReadAccess</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482307 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IFileReadAccess</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IFileReadAccess</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IFileWriteAccess</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 482309 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IFileWriteAccess</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IFileWriteAccess</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IFunctionEntry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 94530 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IFunctionEntry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IFunctionEntry</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IGameModuleDocumentation;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13220 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IGameModuleDocumentation</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IGameModuleShared</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 587 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IGameModuleShared</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IGameModuleShared</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IInPackagePacks::MetaData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 9455 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IInPackagePacks</span><span class="o">::</span><span class="n">MetaData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Core</span><span class="o">::</span><span class="n">HeapPathBuffer</span><span class="w"> </span><span class="n">mPath</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsHidden</span><span class="p">;</span><span class="w"></span>
+<span class="n">PackCategory</span><span class="w"> </span><span class="n">mPackCategory</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IJsonSerializable</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 6817 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IJsonSerializable</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IJsonSerializable</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IMinecraftApp</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5024 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IMinecraftApp</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IMinecraftApp</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IPackTelemetry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5703 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IPackTelemetry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IPackTelemetry</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IPacketHandlerDispatcher;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 64315 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IPacketHandlerDispatcher</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IStructureConstraint</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 280050 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IStructureConstraint</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IStructureConstraint</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IStructurePoolActorPredicate</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35475 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IStructurePoolActorPredicate</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IStructurePoolActorPredicate</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IStructurePoolBlockPredicate</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35659 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IStructurePoolBlockPredicate</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IStructurePoolBlockPredicate</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IStructurePoolBlockTagPredicate</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 35916 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IStructurePoolBlockTagPredicate</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IStructurePoolBlockTagPredicate</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ISurfaceBuilder</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 88443 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ISurfaceBuilder</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ISurfaceBuilder</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ITaskExecutionContext</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484302 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ITaskExecutionContext</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ITaskExecutionContext</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ITaskGroup</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 484164 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ITaskGroup</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ITaskGroup</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ITextObject</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 100841 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ITextObject</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ITextObject</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ITickingArea</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 34650 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ITickingArea</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ITickingArea</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ITickingAreaView</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 99961 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ITickingAreaView</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ITickingAreaView</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ITickingSystem</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 10238 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ITickingSystem</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ITickingSystem</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IWorldRegistriesProvider</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13149 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IWorldRegistriesProvider</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$IWorldRegistriesProvider</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IdentifierResult</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 99960 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IdentifierResult</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mValid</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mIdentifier</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mNamespace</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IdentityDictionary</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 293972 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IdentityDictionary</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">PlayerScoreboardId</span><span class="p">,</span><span class="n">ScoreboardId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPlayers</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ActorUniqueID</span><span class="p">,</span><span class="n">ScoreboardId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mEntities</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="n">ScoreboardId</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFakes</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ScoreboardId</span><span class="p">,</span><span class="n">IdentityDefinition</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mIdentityDefs</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IgnoreAutomaticFeatureRules;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198709 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IgnoreAutomaticFeatureRules</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ImplicitFeatures;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 222962 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ImplicitFeatures</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ImprovedNoise</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 36175 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ImprovedNoise</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mOrigin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mNoiseMap</span><span class="p">[</span><span class="mi">512</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InMemoryFileStorage</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 463112 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InMemoryFileStorage</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">leveldb</span><span class="o">::</span><span class="n">Env</span><span class="w"> </span><span class="o">*</span><span class="n">mEnvironment</span><span class="p">;</span><span class="w"></span>
+<span class="n">Bedrock</span><span class="o">::</span><span class="n">Threading</span><span class="o">::</span><span class="n">Mutex</span><span class="w"> </span><span class="n">mMutex</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">InMemoryFile</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mInMemoryFiles</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mDiskFilesToDelete</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IndexSet</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 38296 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IndexSet</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPacked</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSparse</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InheritanceTree<BiomeRegistry::BiomeParent></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 221980 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InheritanceTree</span><span class="o">&lt;</span><span class="n">BiomeRegistry</span><span class="o">::</span><span class="n">BiomeParent</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="n">InheritanceTree</span><span class="o">&lt;</span><span class="n">BiomeRegistry</span><span class="o">::</span><span class="n">BiomeParent</span><span class="o">&gt;::</span><span class="n">InheritanceTreeNode</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">hash</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">equal_to</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="n">InheritanceTree</span><span class="o">&lt;</span><span class="n">BiomeRegistry</span><span class="o">::</span><span class="n">BiomeParent</span><span class="o">&gt;::</span><span class="n">InheritanceTreeNode</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNodes</span><span class="p">;</span><span class="w"></span>
+<span class="n">Bedrock</span><span class="o">::</span><span class="n">Threading</span><span class="o">::</span><span class="n">Mutex</span><span class="w"> </span><span class="n">mNodeLock</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InputHandler;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 421169 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InputHandler</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InsomniaComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 56273 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InsomniaComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTimeSinceRest</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDaysUntilInsomnia</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mTicksUntilInsomnia</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InsomniaDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 107848 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InsomniaDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDaysUntilInsomnia</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IntOption::_validate::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81832 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IntOption</span><span class="o">::</span><span class="n">_validate</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IntRange</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 48707 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IntRange</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">rangeMin</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">rangeMax</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InteractComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 54342 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InteractComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int16</span><span class="w"> </span><span class="n">mCoolDownCounter</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InteractDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55040 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InteractDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Interaction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mInteractions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Interaction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 55041 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Interaction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mRequiresCoolDown</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mSwing</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mUseItem</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mHurtItem</span><span class="p">;</span><span class="w"></span>
+<span class="n">ItemDefinition</span><span class="w"> </span><span class="n">mTransformItem</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mInteractText</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mAddItemsTable</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mSpawnItemsTable</span><span class="p">;</span><span class="w"></span>
+<span class="n">ParticleType</span><span class="w"> </span><span class="n">mParticleOnStartType</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mParticleOffsetTowardsInteractor</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mParticleOffsetY</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">LevelSoundEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPlaySounds</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ActorDefinitionIdentifier</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSpawnEntities</span><span class="p">;</span><span class="w"></span>
+<span class="n">DefinitionTrigger</span><span class="w"> </span><span class="n">mOnInteraction</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InvalidPacksFilterGroup</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 5786 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InvalidPacksFilterGroup</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PackType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">packFilters</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InventoryAction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 33288 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InventoryAction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">InventorySource</span><span class="w"> </span><span class="n">mSource</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mSlot</span><span class="p">;</span><span class="w"></span>
+<span class="n">ItemStack</span><span class="w"> </span><span class="n">mFromItem</span><span class="p">;</span><span class="w"></span>
+<span class="n">ItemStack</span><span class="w"> </span><span class="n">mToItem</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InventoryActionPacket;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 77412 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InventoryActionPacket</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InventorySource</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 33265 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InventorySource</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">InventorySourceType</span><span class="w"> </span><span class="n">mType</span><span class="p">;</span><span class="w"></span>
+<span class="n">ContainerID</span><span class="w"> </span><span class="n">mContainerId</span><span class="p">;</span><span class="w"></span>
+<span class="n">InventorySource</span><span class="o">::</span><span class="n">InventorySourceFlags</span><span class="w"> </span><span class="n">mFlags</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InventoryTransaction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 33190 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InventoryTransaction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">InventorySource</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">InventoryAction</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mActions</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">InventoryTransactionItemGroup</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mContents</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>InventoryTransactionManager</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 33521 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">InventoryTransactionManager</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Player</span><span class="w"> </span><span class="o">*</span><span class="n">mPlayer</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">InventoryTransaction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCurrentTransaction</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">InventoryAction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mExpectedActions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IronGolem::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 124186 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IronGolem</span><span class="o">::</span><span class="n">updateEntitySpecificMolangVariables</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IsPlayer<Actor></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 93884 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IsPlayer</span><span class="o">&lt;</span><span class="n">Actor</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IsPlayer<Player></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 93885 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IsPlayer</span><span class="o">&lt;</span><span class="n">Player</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>IsotropicFaceData</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45379 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">IsotropicFaceData</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mFaceTextureIsotropic</span><span class="p">;</span><span class="w"></span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mIsotropicFaceEnabled</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Item</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13203 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Item</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$Item</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">m_maxStackSize</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">m_textureAtlasFile</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">m_frameCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">m_animatesInToolbar</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsMirroredArt</span><span class="p">;</span><span class="w"></span>
+<span class="n">UseAnimation</span><span class="w"> </span><span class="n">mUseAnim</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">*</span><span class="n">mHoverTextColorFormat</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">TextureUVCoordinateSet</span><span class="w"> </span><span class="o">*</span><span class="n">mIconTexture</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">TextureAtlasItem</span><span class="w"> </span><span class="o">*</span><span class="n">mIconAtlas</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mUsesRenderingAdjustment</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mRenderingAdjTrans</span><span class="p">;</span><span class="w"></span>
+<span class="n">Vec3</span><span class="w"> </span><span class="n">mRenderingAdjRot</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mRenderingAdjScale</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int16</span><span class="w"> </span><span class="n">mId</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDescriptionId</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mRawNameId</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mNamespace</span><span class="p">;</span><span class="w"></span>
+<span class="n">HashedString</span><span class="w"> </span><span class="n">mFullName</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int16</span><span class="w"> </span><span class="n">mMaxDamage</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mIsGlint</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mHandEquipped</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mIsStackedByData</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mRequiresWorldBuilder</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mExplodable</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mShouldDespawn</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mAllowOffhand</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mIgnoresPermissions</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">mExperimental</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mMaxUseDuration</span><span class="p">;</span><span class="w"></span>
+<span class="n">BaseGameVersion</span><span class="w"> </span><span class="n">mMinRequiredBaseGameVersion</span><span class="p">;</span><span class="w"></span>
+<span class="n">WeakPtr</span><span class="o">&lt;</span><span class="n">BlockLegacy</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mLegacyBlock</span><span class="p">;</span><span class="w"></span>
+<span class="n">CreativeItemCategory</span><span class="w"> </span><span class="n">mCreativeCategory</span><span class="p">;</span><span class="w"></span>
+<span class="n">Item</span><span class="w"> </span><span class="o">*</span><span class="n">mCraftingRemainingItem</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FoodItemComponent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mFoodComponent</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SeedItemComponent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSeedComponent</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CameraItemComponent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCameraComponent</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">()</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mOnResetBAIcallbacks</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>Item::Tier</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 183748 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Item</span><span class="o">::</span><span class="n">Tier</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mLevel</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mUses</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">mSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mDamage</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mEnchantmentValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemAcquisitionMethodMap</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 182541 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemAcquisitionMethodMap</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemDefinition</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 48709 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemDefinition</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">itemId</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">auxValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemEnchants</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13210 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemEnchants</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mSlot</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">EnchantmentInstance</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mItemEnchants</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemEventListener;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 88289 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemEventListener</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemListSerializer</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 428929 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemListSerializer</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemPack</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 184673 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemPack</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ItemDescriptor</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="n">ItemPack</span><span class="o">::</span><span class="n">KeyHasher</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">equal_to</span><span class="o">&lt;</span><span class="n">ItemDescriptor</span><span class="o">&gt;</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">ItemDescriptor</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mIngredients</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemPack::KeyHasher</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 184548 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemPack</span><span class="o">::</span><span class="n">KeyHasher</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 180759 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemStackBase</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 33289 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemStackBase</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ItemStackBase</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">WeakPtr</span><span class="o">&lt;</span><span class="n">Item</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mItem</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">CompoundTag</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mUserData</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="n">mBlock</span><span class="p">;</span><span class="w"></span>
+<span class="kr">__int16</span><span class="w"> </span><span class="n">mAuxValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">mCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mValid</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">_V2</span><span class="o">::</span><span class="n">steady_clock</span><span class="o">::</span><span class="n">time_point</span><span class="w"> </span><span class="n">mPickupTime</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mShowPickUp</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">BlockLegacy</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mCanPlaceOn</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mCanPlaceOnHash</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">BlockLegacy</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">mCanDestroy</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mCanDestroyHash</span><span class="p">;</span><span class="w"></span>
+<span class="n">Tick</span><span class="w"> </span><span class="n">mBlockingTick</span><span class="p">;</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">ItemInstance</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mChargedItem</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemStackBase::_loadComponents::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 183002 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemStackBase</span><span class="o">::</span><span class="n">_loadComponents</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemState</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 27965 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemState</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$ItemState</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">mVariationCount</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="n">ItemState</span><span class="o">::</span><span class="n">StateListNode</span><span class="w"> </span><span class="n">mNode</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemState::StateListNode</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 226295 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemState</span><span class="o">::</span><span class="n">StateListNode</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">ItemState</span><span class="o">::</span><span class="n">StateListNode</span><span class="w"> </span><span class="o">*</span><span class="n">mNext</span><span class="p">;</span><span class="w"></span>
+<span class="n">ItemState</span><span class="o">::</span><span class="n">StateListNode</span><span class="w"> </span><span class="o">*</span><span class="n">mPrev</span><span class="p">;</span><span class="w"></span>
+<span class="n">ItemState</span><span class="w"> </span><span class="o">*</span><span class="n">mState</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemStateInstance</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 27964 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemStateInstance</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mMaxBits</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mStartBit</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mNumBits</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mVariationCount</span><span class="p">;</span><span class="w"></span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">mMask</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mInitialized</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ItemState</span><span class="w"> </span><span class="o">*</span><span class="n">mState</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemUseInventoryTransaction::resendBlocksAroundArea::$AAED32D802A7A0D4B8CDA03B8D4F5BA0</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 180616 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemUseInventoryTransaction</span><span class="o">::</span><span class="n">resendBlocksAroundArea</span><span class="o">::</span><span class="n">$AAED32D802A7A0D4B8CDA03B8D4F5BA0</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">Player</span><span class="w"> </span><span class="o">*</span><span class="n">player</span><span class="p">;</span><span class="w"></span>
+<span class="n">BlockSource</span><span class="w"> </span><span class="o">*</span><span class="n">region</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>ItemUseMethodMap</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 182507 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">ItemUseMethodMap</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
 </html>

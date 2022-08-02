@@ -1,155 +1,204 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>structO | MC data</title>
-    <meta name="generator" content="VuePress 1.9.7">
-    
-    <meta name="description" content="MC data">
-    
-    <link rel="preload" href="/mcdata/assets/css/0.styles.98230a9d.css" as="style"><link rel="preload" href="/mcdata/assets/js/app.9eb6ed31.js" as="script"><link rel="preload" href="/mcdata/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mcdata/assets/js/21.4f3ae83b.js" as="script"><link rel="prefetch" href="/mcdata/assets/js/10.015c72c0.js"><link rel="prefetch" href="/mcdata/assets/js/11.25b90920.js"><link rel="prefetch" href="/mcdata/assets/js/12.de21ddf7.js"><link rel="prefetch" href="/mcdata/assets/js/13.2457908e.js"><link rel="prefetch" href="/mcdata/assets/js/14.69ecf76b.js"><link rel="prefetch" href="/mcdata/assets/js/15.58d4dcf8.js"><link rel="prefetch" href="/mcdata/assets/js/16.17822182.js"><link rel="prefetch" href="/mcdata/assets/js/17.4bc400ac.js"><link rel="prefetch" href="/mcdata/assets/js/18.58728642.js"><link rel="prefetch" href="/mcdata/assets/js/19.6e55ee66.js"><link rel="prefetch" href="/mcdata/assets/js/20.772daac8.js"><link rel="prefetch" href="/mcdata/assets/js/22.a77a016d.js"><link rel="prefetch" href="/mcdata/assets/js/23.721b6487.js"><link rel="prefetch" href="/mcdata/assets/js/24.63e63395.js"><link rel="prefetch" href="/mcdata/assets/js/25.b3d24322.js"><link rel="prefetch" href="/mcdata/assets/js/26.f7f77649.js"><link rel="prefetch" href="/mcdata/assets/js/27.82db09f5.js"><link rel="prefetch" href="/mcdata/assets/js/28.d04e19ab.js"><link rel="prefetch" href="/mcdata/assets/js/29.ffd25a52.js"><link rel="prefetch" href="/mcdata/assets/js/3.2b49072b.js"><link rel="prefetch" href="/mcdata/assets/js/30.47e1287e.js"><link rel="prefetch" href="/mcdata/assets/js/31.a17bc943.js"><link rel="prefetch" href="/mcdata/assets/js/32.ba10d254.js"><link rel="prefetch" href="/mcdata/assets/js/33.3f5e2189.js"><link rel="prefetch" href="/mcdata/assets/js/34.e3353c01.js"><link rel="prefetch" href="/mcdata/assets/js/35.8dff4eb1.js"><link rel="prefetch" href="/mcdata/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mcdata/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mcdata/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mcdata/assets/js/7.d269aad6.js"><link rel="prefetch" href="/mcdata/assets/js/8.992dfcec.js"><link rel="prefetch" href="/mcdata/assets/js/9.4a33021d.js">
-    <link rel="stylesheet" href="/mcdata/assets/css/0.styles.98230a9d.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mcdata/" class="home-link router-link-active"><!----> <span class="site-name">MC data</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="structo"><a href="#structo" class="header-anchor">#</a> structO</h1> <h4 id="objective"><a href="#objective" class="header-anchor">#</a> Objective</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 80244 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Objective</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>ScoreboardId<span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span> mScores<span class="token punctuation">;</span>
-<span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string mName<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mDisplayName<span class="token punctuation">;</span>
-<span class="token keyword">const</span> ObjectiveCriteria <span class="token operator">*</span>mCriteria<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<html lang="en">
 
-</code></pre></div><h4 id="oceanfrozenbiomesurface"><a href="#oceanfrozenbiomesurface" class="header-anchor">#</a> OceanFrozenBiomeSurface;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 198712 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OceanFrozenBiomeSurface</span><span class="token punctuation">;</span>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
 
-</code></pre></div><h4 id="oceanruinconfiguration"><a href="#oceanruinconfiguration" class="header-anchor">#</a> OceanRuinConfiguration</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 41638 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OceanRuinConfiguration</span>
-<span class="token punctuation">{</span>
-OceanTempCategory type<span class="token punctuation">;</span>
-<span class="token keyword">float</span> largeProbability<span class="token punctuation">;</span>
-<span class="token keyword">float</span> clusterProbability<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <title>Welcome to hhhxiao's blog</title>
+    <style>
 
-</code></pre></div><h4 id="oceanruinpieces"><a href="#oceanruinpieces" class="header-anchor">#</a> OceanRuinPieces</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 42258 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OceanRuinPieces</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    </style>
+</head>
 
-</code></pre></div><h4 id="ocelot-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420"><a href="#ocelot-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> Ocelot::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 124189 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Ocelot</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>updateEntitySpecificMolangVariables<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<body>
+    <article class="content">
+        <h1>structO</h1>
+<h4>Objective</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 80244 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Objective</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ScoreboardId</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mScores</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDisplayName</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">ObjectiveCriteria</span><span class="w"> </span><span class="o">*</span><span class="n">mCriteria</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="offer"><a href="#offer" class="header-anchor">#</a> Offer;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 45317 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Offer</span><span class="token punctuation">;</span>
+<h4>OceanFrozenBiomeSurface;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 198712 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OceanFrozenBiomeSurface</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="onhitsubcomponent"><a href="#onhitsubcomponent" class="header-anchor">#</a> OnHitSubcomponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 57961 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OnHitSubcomponent</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$OnHitSubcomponent<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OceanRuinConfiguration</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 41638 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OceanRuinConfiguration</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">OceanTempCategory</span><span class="w"> </span><span class="n">type</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">largeProbability</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">clusterProbability</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="opendoorannotationcomponent"><a href="#opendoorannotationcomponent" class="header-anchor">#</a> OpenDoorAnnotationComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 57685 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OpenDoorAnnotationComponent</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>queue<span class="token operator">&lt;</span>BlockPos<span class="token operator">&gt;</span> mPassedDoorPositions<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OceanRuinPieces</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 42258 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OceanRuinPieces</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="option"><a href="#option" class="header-anchor">#</a> Option</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 45329 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Option</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$Option<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span>OptionLock<span class="token operator">&gt;</span> mLock<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>OptionObserver<span class="token operator">&gt;</span> mObservers<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mSaveTag<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mTelemetryProperty<span class="token punctuation">;</span>
-<span class="token keyword">const</span> OptionID mID<span class="token punctuation">;</span>
-<span class="token keyword">const</span> OptionOwnerType mOwnerType<span class="token punctuation">;</span>
-OptionType mOptionType<span class="token punctuation">;</span>
-<span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string mCaptionId<span class="token punctuation">;</span>
-<span class="token keyword">const</span> OptionResetFlags mOptionResetFlags<span class="token punctuation">;</span>
-Option <span class="token operator">*</span>mOverrideSource<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token keyword">bool</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> mRequestSaveCallback<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>Ocelot::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 124189 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Ocelot</span><span class="o">::</span><span class="n">updateEntitySpecificMolangVariables</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="optionlock"><a href="#optionlock" class="header-anchor">#</a> OptionLock</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 81365 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OptionLock</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">bool</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> isModifiableCondition<span class="token punctuation">;</span>
-<span class="token keyword">void</span> <span class="token operator">*</span>mToken<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>Offer;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45317 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Offer</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="optionobserver"><a href="#optionobserver" class="header-anchor">#</a> OptionObserver</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 81355 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OptionObserver</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">void</span> <span class="token operator">*</span>mToken<span class="token punctuation">;</span>
-ValueChangedCallback mOnValueChangeCallback<span class="token punctuation">;</span>
-InputModeValueChangedCallback mOnInputModeValueChangeCallback<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OnHitSubcomponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 57961 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OnHitSubcomponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$OnHitSubcomponent</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="optionalstring"><a href="#optionalstring" class="header-anchor">#</a> OptionalString</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 60801 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OptionalString</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">bool</span> valid<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string string<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OpenDoorAnnotationComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 57685 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OpenDoorAnnotationComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="n">BlockPos</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mPassedDoorPositions</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="options"><a href="#options" class="header-anchor">#</a> Options;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 43587 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">Options</span><span class="token punctuation">;</span>
+<h4>Option</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 45329 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Option</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">**</span><span class="n">_vptr$Option</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">OptionLock</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mLock</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">OptionObserver</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mObservers</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mSaveTag</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mTelemetryProperty</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">OptionID</span><span class="w"> </span><span class="n">mID</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">OptionOwnerType</span><span class="w"> </span><span class="n">mOwnerType</span><span class="p">;</span><span class="w"></span>
+<span class="n">OptionType</span><span class="w"> </span><span class="n">mOptionType</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mCaptionId</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">OptionResetFlags</span><span class="w"> </span><span class="n">mOptionResetFlags</span><span class="p">;</span><span class="w"></span>
+<span class="n">Option</span><span class="w"> </span><span class="o">*</span><span class="n">mOverrideSource</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRequestSaveCallback</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="overloadsyntaxinformation"><a href="#overloadsyntaxinformation" class="header-anchor">#</a> OverloadSyntaxInformation</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 92014 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OverloadSyntaxInformation</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>string text<span class="token punctuation">;</span>
-OverloadSyntaxInformation<span class="token double-colon punctuation">::</span>CursorPos start<span class="token punctuation">;</span>
-OverloadSyntaxInformation<span class="token double-colon punctuation">::</span>CursorPos length<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OptionLock</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81365 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OptionLock</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">bool</span><span class="w"> </span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isModifiableCondition</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">mToken</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="overworldgenerator-makelayers-2867ea52f754a99bbf15cbcdf29df3e2"><a href="#overworldgenerator-makelayers-2867ea52f754a99bbf15cbcdf29df3e2" class="header-anchor">#</a> OverworldGenerator::_makeLayers::$2867EA52F754A99BBF15CBCDF29DF3E2</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 40684 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OverworldGenerator</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>_makeLayers<span class="token double-colon punctuation">::</span>$<span class="token number">2867</span><span class="token class-name">EA52F754A99BBF15CBCDF29DF3E2</span></span>
-<span class="token punctuation">{</span>
-<span class="token keyword">const</span> BiomeRegistry <span class="token operator">*</span>biomeRegistry<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OptionObserver</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 81355 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OptionObserver</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">mToken</span><span class="p">;</span><span class="w"></span>
+<span class="n">ValueChangedCallback</span><span class="w"> </span><span class="n">mOnValueChangeCallback</span><span class="p">;</span><span class="w"></span>
+<span class="n">InputModeValueChangedCallback</span><span class="w"> </span><span class="n">mOnInputModeValueChangeCallback</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="overworldheightattributes"><a href="#overworldheightattributes" class="header-anchor">#</a> OverworldHeightAttributes</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 193575 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OverworldHeightAttributes</span>
-<span class="token punctuation">{</span>
-BiomeHeight mHeightParams<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OptionalString</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 60801 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OptionalString</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">valid</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">string</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="ownerstoragefeature"><a href="#ownerstoragefeature" class="header-anchor">#</a> OwnerStorageFeature</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 19404 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OwnerStorageFeature</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>optional<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>reference_wrapper<span class="token operator">&lt;</span>FeatureRegistry<span class="token operator">&gt;</span> <span class="token operator">&gt;</span> mRegistry<span class="token punctuation">;</span>
-size_t mIndex<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>Options;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 43587 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Options</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="ownerstorageshareptr"><a href="#ownerstorageshareptr" class="header-anchor">#</a> OwnerStorageSharePtr<EntityRegistry>;</EntityRegistry></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13164 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OwnerStorageSharePtr</span><span class="token operator">&lt;</span>EntityRegistry<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<h4>OverloadSyntaxInformation</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 92014 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OverloadSyntaxInformation</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">text</span><span class="p">;</span><span class="w"></span>
+<span class="n">OverloadSyntaxInformation</span><span class="o">::</span><span class="n">CursorPos</span><span class="w"> </span><span class="n">start</span><span class="p">;</span><span class="w"></span>
+<span class="n">OverloadSyntaxInformation</span><span class="o">::</span><span class="n">CursorPos</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="ownerstorageshareptr-2"><a href="#ownerstorageshareptr-2" class="header-anchor">#</a> OwnerStorageSharePtr<EntityRegistryOwned></EntityRegistryOwned></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13160 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OwnerStorageSharePtr</span><span class="token operator">&lt;</span>EntityRegistryOwned<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>EntityRegistryOwned<span class="token operator">&gt;</span> mValue<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OverworldGenerator::_makeLayers::$2867EA52F754A99BBF15CBCDF29DF3E2</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 40684 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OverworldGenerator</span><span class="o">::</span><span class="n">_makeLayers</span><span class="o">::</span><span class="n">$2867EA52F754A99BBF15CBCDF29DF3E2</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">BiomeRegistry</span><span class="w"> </span><span class="o">*</span><span class="n">biomeRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="ownerstorageshareptr-3"><a href="#ownerstorageshareptr-3" class="header-anchor">#</a> OwnerStorageSharePtr<PerlinSimplexNoise></PerlinSimplexNoise></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 191375 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">OwnerStorageSharePtr</span><span class="token operator">&lt;</span>PerlinSimplexNoise<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>PerlinSimplexNoise<span class="token operator">&gt;</span> mValue<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OverworldHeightAttributes</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 193575 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OverworldHeightAttributes</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">BiomeHeight</span><span class="w"> </span><span class="n">mHeightParams</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h1 id="structo-2"><a href="#structo-2" class="header-anchor">#</a> structo</h1> <h4 id="optional-ref"><a href="#optional-ref" class="header-anchor">#</a> optional_ref<const Localization=""></const></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 60809 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">optional_ref</span><span class="token operator">&lt;</span><span class="token keyword">const</span> Localization<span class="token operator">&gt;</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">const</span> Localization <span class="token operator">*</span>ptr<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>OwnerStorageFeature</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 19404 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OwnerStorageFeature</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">reference_wrapper</span><span class="o">&lt;</span><span class="n">FeatureRegistry</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">mIndex</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/mcdata/assets/js/app.9eb6ed31.js" defer></script><script src="/mcdata/assets/js/2.2defd20b.js" defer></script><script src="/mcdata/assets/js/21.4f3ae83b.js" defer></script>
-  </body>
+<h4>OwnerStorageSharePtr<EntityRegistry>;</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13164 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OwnerStorageSharePtr</span><span class="o">&lt;</span><span class="n">EntityRegistry</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+
+<h4>OwnerStorageSharePtr<EntityRegistryOwned></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 13160 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OwnerStorageSharePtr</span><span class="o">&lt;</span><span class="n">EntityRegistryOwned</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">EntityRegistryOwned</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>OwnerStorageSharePtr<PerlinSimplexNoise></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 191375 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">OwnerStorageSharePtr</span><span class="o">&lt;</span><span class="n">PerlinSimplexNoise</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PerlinSimplexNoise</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h1>structo</h1>
+<h4>optional_ref<const Localization></h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 60809 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">optional_ref</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Localization</span><span class="o">&gt;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Localization</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+    </article>
+</body>
+<hr>
+
+
 </html>

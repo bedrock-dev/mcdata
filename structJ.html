@@ -1,137 +1,173 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>structJ | MC data</title>
-    <meta name="generator" content="VuePress 1.9.7">
-    
-    <meta name="description" content="MC data">
-    
-    <link rel="preload" href="/mcdata/assets/css/0.styles.98230a9d.css" as="style"><link rel="preload" href="/mcdata/assets/js/app.9eb6ed31.js" as="script"><link rel="preload" href="/mcdata/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mcdata/assets/js/17.4bc400ac.js" as="script"><link rel="prefetch" href="/mcdata/assets/js/10.015c72c0.js"><link rel="prefetch" href="/mcdata/assets/js/11.25b90920.js"><link rel="prefetch" href="/mcdata/assets/js/12.de21ddf7.js"><link rel="prefetch" href="/mcdata/assets/js/13.2457908e.js"><link rel="prefetch" href="/mcdata/assets/js/14.69ecf76b.js"><link rel="prefetch" href="/mcdata/assets/js/15.58d4dcf8.js"><link rel="prefetch" href="/mcdata/assets/js/16.17822182.js"><link rel="prefetch" href="/mcdata/assets/js/18.58728642.js"><link rel="prefetch" href="/mcdata/assets/js/19.6e55ee66.js"><link rel="prefetch" href="/mcdata/assets/js/20.772daac8.js"><link rel="prefetch" href="/mcdata/assets/js/21.4f3ae83b.js"><link rel="prefetch" href="/mcdata/assets/js/22.a77a016d.js"><link rel="prefetch" href="/mcdata/assets/js/23.721b6487.js"><link rel="prefetch" href="/mcdata/assets/js/24.63e63395.js"><link rel="prefetch" href="/mcdata/assets/js/25.b3d24322.js"><link rel="prefetch" href="/mcdata/assets/js/26.f7f77649.js"><link rel="prefetch" href="/mcdata/assets/js/27.82db09f5.js"><link rel="prefetch" href="/mcdata/assets/js/28.d04e19ab.js"><link rel="prefetch" href="/mcdata/assets/js/29.ffd25a52.js"><link rel="prefetch" href="/mcdata/assets/js/3.2b49072b.js"><link rel="prefetch" href="/mcdata/assets/js/30.47e1287e.js"><link rel="prefetch" href="/mcdata/assets/js/31.a17bc943.js"><link rel="prefetch" href="/mcdata/assets/js/32.ba10d254.js"><link rel="prefetch" href="/mcdata/assets/js/33.3f5e2189.js"><link rel="prefetch" href="/mcdata/assets/js/34.e3353c01.js"><link rel="prefetch" href="/mcdata/assets/js/35.8dff4eb1.js"><link rel="prefetch" href="/mcdata/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mcdata/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mcdata/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mcdata/assets/js/7.d269aad6.js"><link rel="prefetch" href="/mcdata/assets/js/8.992dfcec.js"><link rel="prefetch" href="/mcdata/assets/js/9.4a33021d.js">
-    <link rel="stylesheet" href="/mcdata/assets/css/0.styles.98230a9d.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mcdata/" class="home-link router-link-active"><!----> <span class="site-name">MC data</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="structj"><a href="#structj" class="header-anchor">#</a> structJ</h1> <h4 id="jigsawblockinfo"><a href="#jigsawblockinfo" class="header-anchor">#</a> JigsawBlockInfo</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 287330 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JigsawBlockInfo</span>
-<span class="token punctuation">{</span>
-BlockPos mPos<span class="token punctuation">;</span>
-<span class="token keyword">const</span> Block <span class="token operator">*</span>mBlock<span class="token punctuation">;</span>
-<span class="token keyword">const</span> Block <span class="token operator">*</span>mFinalBlock<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mAttachmentType<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mTargetPool<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<html lang="en">
 
-</code></pre></div><h4 id="jigsawjunction"><a href="#jigsawjunction" class="header-anchor">#</a> JigsawJunction</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 40688 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JigsawJunction</span>
-<span class="token punctuation">{</span>
-BlockPos mSourceBlockPos<span class="token punctuation">;</span>
-<span class="token keyword">int</span> mDeltaSourceY<span class="token punctuation">;</span>
-<span class="token keyword">int</span> mDeltaTargetY<span class="token punctuation">;</span>
-Projection mSourceProjection<span class="token punctuation">;</span>
-Projection mTargetProjection<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/styles.css">
+<link rel="stylesheet" type="text/css" href="./style/custom.css">
 
-</code></pre></div><h4 id="jigsawstructureactorrulesregistry"><a href="#jigsawstructureactorrulesregistry" class="header-anchor">#</a> JigsawStructureActorRulesRegistry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 32824 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JigsawStructureActorRulesRegistry</span>
-<span class="token punctuation">{</span>
-JigsawStructureActorRulesRegistry<span class="token double-colon punctuation">::</span>ActorRulesRegistryMap mActorRulesRegistry<span class="token punctuation">;</span>
-JigsawStructureActorRulesRegistry<span class="token double-colon punctuation">::</span>ActorRulesLookupMap mActorRuleLookupMap<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <title>Welcome to hhhxiao's blog</title>
+    <style>
 
-</code></pre></div><h4 id="jigsawstructureblocktagrulesregistry"><a href="#jigsawstructureblocktagrulesregistry" class="header-anchor">#</a> JigsawStructureBlockTagRulesRegistry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 32821 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JigsawStructureBlockTagRulesRegistry</span>
-<span class="token punctuation">{</span>
-JigsawStructureBlockTagRulesRegistry<span class="token double-colon punctuation">::</span>BlockTagRulesRegistryMap mBlockTagRulesRegistry<span class="token punctuation">;</span>
-JigsawStructureBlockTagRulesRegistry<span class="token double-colon punctuation">::</span>BlockTagRulesLookupMap mBlockTagRuleLookupMap<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    </style>
+</head>
 
-</code></pre></div><h4 id="jigsawstructureelementregistry"><a href="#jigsawstructureelementregistry" class="header-anchor">#</a> JigsawStructureElementRegistry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 32827 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JigsawStructureElementRegistry</span>
-<span class="token punctuation">{</span>
-JigsawStructureElementRegistry<span class="token double-colon punctuation">::</span>StructureElementRegistry mElementRegistry<span class="token punctuation">;</span>
-JigsawStructureElementRegistry<span class="token double-colon punctuation">::</span>StructureElementLookupMap mElementLookupMap<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<body>
+    <article class="content">
+        <h1>structJ</h1>
+<h4>JigsawBlockInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 287330 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JigsawBlockInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mPos</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="n">mBlock</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Block</span><span class="w"> </span><span class="o">*</span><span class="n">mFinalBlock</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mAttachmentType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mTargetPool</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jigsawstructureregistry"><a href="#jigsawstructureregistry" class="header-anchor">#</a> JigsawStructureRegistry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 32816 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JigsawStructureRegistry</span>
-<span class="token punctuation">{</span>
-JigsawStructureRegistry<span class="token double-colon punctuation">::</span>JigsawPoolLookupMap mJigsawPoolLookupMap<span class="token punctuation">;</span>
-JigsawStructureBlockRulesRegistry mJigsawBlockRulesRegistry<span class="token punctuation">;</span>
-JigsawStructureBlockTagRulesRegistry mJigsawBlockTagRulesRegistry<span class="token punctuation">;</span>
-JigsawStructureActorRulesRegistry mJigsawActorRulesRegistry<span class="token punctuation">;</span>
-JigsawStructureElementRegistry mJigsawElementRegistry<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JigsawJunction</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 40688 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JigsawJunction</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">BlockPos</span><span class="w"> </span><span class="n">mSourceBlockPos</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mDeltaSourceY</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mDeltaTargetY</span><span class="p">;</span><span class="w"></span>
+<span class="n">Projection</span><span class="w"> </span><span class="n">mSourceProjection</span><span class="p">;</span><span class="w"></span>
+<span class="n">Projection</span><span class="w"> </span><span class="n">mTargetProjection</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jsonvalidator"><a href="#jsonvalidator" class="header-anchor">#</a> JsonValidator</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 83335 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JsonValidator</span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JigsawStructureActorRulesRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 32824 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JigsawStructureActorRulesRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">JigsawStructureActorRulesRegistry</span><span class="o">::</span><span class="n">ActorRulesRegistryMap</span><span class="w"> </span><span class="n">mActorRulesRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">JigsawStructureActorRulesRegistry</span><span class="o">::</span><span class="n">ActorRulesLookupMap</span><span class="w"> </span><span class="n">mActorRuleLookupMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jsonvalidator-property"><a href="#jsonvalidator-property" class="header-anchor">#</a> JsonValidator::Property</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 82820 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JsonValidator</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">Property</span></span>
-<span class="token punctuation">{</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>Json<span class="token double-colon punctuation">::</span>ValueType<span class="token operator">&gt;</span> mTypes<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mIsRequired<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mRequiresConditionalProperty<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string mDescription<span class="token punctuation">;</span>
-JsonValidator<span class="token double-colon punctuation">::</span>Property<span class="token double-colon punctuation">::</span>PropertyPtr mChildProperty<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span>Json<span class="token double-colon punctuation">::</span>Value<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>JsonValidator<span class="token double-colon punctuation">::</span>Property<span class="token operator">&gt;</span> <span class="token operator">&gt;&gt;</span> mConditionalPropertiesByValue<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span>Json<span class="token double-colon punctuation">::</span>ValueType<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>JsonValidator<span class="token double-colon punctuation">::</span>Property<span class="token operator">&gt;</span> <span class="token operator">&gt;&gt;</span> mConditionalPropertiesByType<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>JsonValidator<span class="token double-colon punctuation">::</span>Property<span class="token operator">&gt;&gt;</span> mPropertyMap<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JigsawStructureBlockTagRulesRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 32821 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JigsawStructureBlockTagRulesRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">JigsawStructureBlockTagRulesRegistry</span><span class="o">::</span><span class="n">BlockTagRulesRegistryMap</span><span class="w"> </span><span class="n">mBlockTagRulesRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">JigsawStructureBlockTagRulesRegistry</span><span class="o">::</span><span class="n">BlockTagRulesLookupMap</span><span class="w"> </span><span class="n">mBlockTagRuleLookupMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jsonvalidator-generatedocs-documentationstate"><a href="#jsonvalidator-generatedocs-documentationstate" class="header-anchor">#</a> JsonValidator::generateDocs::DocumentationState</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 296398 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JsonValidator</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>generateDocs<span class="token double-colon punctuation">::</span><span class="token class-name">DocumentationState</span></span>
-<span class="token punctuation">{</span>
-<span class="token keyword">const</span> JsonValidator<span class="token double-colon punctuation">::</span>Property <span class="token operator">*</span>prop<span class="token punctuation">;</span>
-Json<span class="token double-colon punctuation">::</span>Value <span class="token operator">*</span>data<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JigsawStructureElementRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 32827 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JigsawStructureElementRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">JigsawStructureElementRegistry</span><span class="o">::</span><span class="n">StructureElementRegistry</span><span class="w"> </span><span class="n">mElementRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">JigsawStructureElementRegistry</span><span class="o">::</span><span class="n">StructureElementLookupMap</span><span class="w"> </span><span class="n">mElementLookupMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jsonvalidator-validate-7ef7c94beab75c6cef4adfb99b570420"><a href="#jsonvalidator-validate-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> JsonValidator::validate::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 296594 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JsonValidator</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>validate<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JigsawStructureRegistry</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 32816 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JigsawStructureRegistry</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">JigsawStructureRegistry</span><span class="o">::</span><span class="n">JigsawPoolLookupMap</span><span class="w"> </span><span class="n">mJigsawPoolLookupMap</span><span class="p">;</span><span class="w"></span>
+<span class="n">JigsawStructureBlockRulesRegistry</span><span class="w"> </span><span class="n">mJigsawBlockRulesRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">JigsawStructureBlockTagRulesRegistry</span><span class="w"> </span><span class="n">mJigsawBlockTagRulesRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">JigsawStructureActorRulesRegistry</span><span class="w"> </span><span class="n">mJigsawActorRulesRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="n">JigsawStructureElementRegistry</span><span class="w"> </span><span class="n">mJigsawElementRegistry</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jsonvalidator-validate-validationstate"><a href="#jsonvalidator-validate-validationstate" class="header-anchor">#</a> JsonValidator::validate::ValidationState</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 296326 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JsonValidator</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>validate<span class="token double-colon punctuation">::</span><span class="token class-name">ValidationState</span></span>
-<span class="token punctuation">{</span>
-<span class="token keyword">const</span> JsonValidator<span class="token double-colon punctuation">::</span>Property <span class="token operator">*</span>prop<span class="token punctuation">;</span>
-<span class="token keyword">const</span> Json<span class="token double-colon punctuation">::</span>Value <span class="token operator">*</span>data<span class="token punctuation">;</span>
-<span class="token keyword">const</span> Json<span class="token double-colon punctuation">::</span>Value <span class="token operator">*</span>parent<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> checkType<span class="token punctuation">;</span>
-std<span class="token double-colon punctuation">::</span>string name<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JsonValidator</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 83335 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JsonValidator</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jukeboxblockactor-tick-7ef7c94beab75c6cef4adfb99b570420"><a href="#jukeboxblockactor-tick-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> JukeboxBlockActor::tick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 238028 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JukeboxBlockActor</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>tick<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
-<span class="token punctuation">{</span>
-__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JsonValidator::Property</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 82820 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JsonValidator</span><span class="o">::</span><span class="n">Property</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Json</span><span class="o">::</span><span class="n">ValueType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTypes</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mIsRequired</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mRequiresConditionalProperty</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">mDescription</span><span class="p">;</span><span class="w"></span>
+<span class="n">JsonValidator</span><span class="o">::</span><span class="n">Property</span><span class="o">::</span><span class="n">PropertyPtr</span><span class="w"> </span><span class="n">mChildProperty</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Json</span><span class="o">::</span><span class="n">Value</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">JsonValidator</span><span class="o">::</span><span class="n">Property</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mConditionalPropertiesByValue</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Json</span><span class="o">::</span><span class="n">ValueType</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">JsonValidator</span><span class="o">::</span><span class="n">Property</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mConditionalPropertiesByType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">JsonValidator</span><span class="o">::</span><span class="n">Property</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mPropertyMap</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jumpcontrolcomponent"><a href="#jumpcontrolcomponent" class="header-anchor">#</a> JumpControlComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 56476 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JumpControlComponent</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">bool</span> mJumping<span class="token punctuation">;</span>
-<span class="token keyword">bool</span> mSwimming<span class="token punctuation">;</span>
-<span class="token keyword">float</span> mJumpPower<span class="token punctuation">;</span>
-JumpType mJumpType<span class="token punctuation">;</span>
-JumpInfo mJumpInfo<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-Unique<span class="token operator">&lt;</span>JumpControl<span class="token operator">&gt;</span> mJumpControl<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JsonValidator::generateDocs::DocumentationState</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 296398 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JsonValidator</span><span class="o">::</span><span class="n">generateDocs</span><span class="o">::</span><span class="n">DocumentationState</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">JsonValidator</span><span class="o">::</span><span class="n">Property</span><span class="w"> </span><span class="o">*</span><span class="n">prop</span><span class="p">;</span><span class="w"></span>
+<span class="n">Json</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h4 id="jumpinfo"><a href="#jumpinfo" class="header-anchor">#</a> JumpInfo</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 56478 */</span>
-<span class="token keyword">struct</span> <span class="token class-name">JumpInfo</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">int</span> mAnimDuration<span class="token punctuation">;</span>
-<span class="token keyword">int</span> mJumpDelay<span class="token punctuation">;</span>
-<span class="token keyword">float</span> mDistanceScale<span class="token punctuation">;</span>
-<span class="token keyword">float</span> mHeight<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<h4>JsonValidator::validate::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 296594 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JsonValidator</span><span class="o">::</span><span class="n">validate</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
 
-</code></pre></div><h1 id="structj-2"><a href="#structj-2" class="header-anchor">#</a> structj</h1></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/mcdata/assets/js/app.9eb6ed31.js" defer></script><script src="/mcdata/assets/js/2.2defd20b.js" defer></script><script src="/mcdata/assets/js/17.4bc400ac.js" defer></script>
-  </body>
+<h4>JsonValidator::validate::ValidationState</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 296326 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JsonValidator</span><span class="o">::</span><span class="n">validate</span><span class="o">::</span><span class="n">ValidationState</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">JsonValidator</span><span class="o">::</span><span class="n">Property</span><span class="w"> </span><span class="o">*</span><span class="n">prop</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">parent</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">checkType</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>JukeboxBlockActor::tick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 238028 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JukeboxBlockActor</span><span class="o">::</span><span class="n">tick</span><span class="o">::</span><span class="n">$7EF7C94BEAB75C6CEF4ADFB99B570420</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kr">__int8</span><span class="w"> </span><span class="n">gap0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>JumpControlComponent</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 56476 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JumpControlComponent</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mJumping</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">mSwimming</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mJumpPower</span><span class="p">;</span><span class="w"></span>
+<span class="n">JumpType</span><span class="w"> </span><span class="n">mJumpType</span><span class="p">;</span><span class="w"></span>
+<span class="n">JumpInfo</span><span class="w"> </span><span class="n">mJumpInfo</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w"></span>
+<span class="n">Unique</span><span class="o">&lt;</span><span class="n">JumpControl</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mJumpControl</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h4>JumpInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="cm">/* 56478 */</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">JumpInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mAnimDuration</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">mJumpDelay</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mDistanceScale</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+
+<h1>structj</h1>
+    </article>
+</body>
+<hr>
+
+
 </html>
