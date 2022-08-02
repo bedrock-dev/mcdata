@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>structN | MC data</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="MC data">
+    
+    <link rel="preload" href="/mcdata/assets/css/0.styles.98230a9d.css" as="style"><link rel="preload" href="/mcdata/assets/js/app.9eb6ed31.js" as="script"><link rel="preload" href="/mcdata/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mcdata/assets/js/20.772daac8.js" as="script"><link rel="prefetch" href="/mcdata/assets/js/10.015c72c0.js"><link rel="prefetch" href="/mcdata/assets/js/11.25b90920.js"><link rel="prefetch" href="/mcdata/assets/js/12.de21ddf7.js"><link rel="prefetch" href="/mcdata/assets/js/13.2457908e.js"><link rel="prefetch" href="/mcdata/assets/js/14.69ecf76b.js"><link rel="prefetch" href="/mcdata/assets/js/15.58d4dcf8.js"><link rel="prefetch" href="/mcdata/assets/js/16.17822182.js"><link rel="prefetch" href="/mcdata/assets/js/17.4bc400ac.js"><link rel="prefetch" href="/mcdata/assets/js/18.58728642.js"><link rel="prefetch" href="/mcdata/assets/js/19.6e55ee66.js"><link rel="prefetch" href="/mcdata/assets/js/21.4f3ae83b.js"><link rel="prefetch" href="/mcdata/assets/js/22.a77a016d.js"><link rel="prefetch" href="/mcdata/assets/js/23.721b6487.js"><link rel="prefetch" href="/mcdata/assets/js/24.63e63395.js"><link rel="prefetch" href="/mcdata/assets/js/25.b3d24322.js"><link rel="prefetch" href="/mcdata/assets/js/26.f7f77649.js"><link rel="prefetch" href="/mcdata/assets/js/27.82db09f5.js"><link rel="prefetch" href="/mcdata/assets/js/28.d04e19ab.js"><link rel="prefetch" href="/mcdata/assets/js/29.ffd25a52.js"><link rel="prefetch" href="/mcdata/assets/js/3.2b49072b.js"><link rel="prefetch" href="/mcdata/assets/js/30.47e1287e.js"><link rel="prefetch" href="/mcdata/assets/js/31.a17bc943.js"><link rel="prefetch" href="/mcdata/assets/js/32.ba10d254.js"><link rel="prefetch" href="/mcdata/assets/js/33.3f5e2189.js"><link rel="prefetch" href="/mcdata/assets/js/34.e3353c01.js"><link rel="prefetch" href="/mcdata/assets/js/35.8dff4eb1.js"><link rel="prefetch" href="/mcdata/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mcdata/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mcdata/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mcdata/assets/js/7.d269aad6.js"><link rel="prefetch" href="/mcdata/assets/js/8.992dfcec.js"><link rel="prefetch" href="/mcdata/assets/js/9.4a33021d.js">
+    <link rel="stylesheet" href="/mcdata/assets/css/0.styles.98230a9d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mcdata/" class="home-link router-link-active"><!----> <span class="site-name">MC data</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="structn"><a href="#structn" class="header-anchor">#</a> structN</h1> <h4 id="nameaction"><a href="#nameaction" class="header-anchor">#</a> NameAction</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 89189 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NameAction</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> mNameFilters<span class="token punctuation">;</span>
+DefinitionTrigger mOnNamed<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="nameablecomponent"><a href="#nameablecomponent" class="header-anchor">#</a> NameableComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 54594 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NameableComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> mAllowNameTagRenaming<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mAlwaysShow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="navigationcomponent"><a href="#navigationcomponent" class="header-anchor">#</a> NavigationComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 56707 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NavigationComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> mAvoidDamageBlocks<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mAvoidPortals<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mAvoidSun<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mAvoidWater<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mCanBreach<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mCanFloat<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mCanJump<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mCanOpenDoors<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mCanPassDoors<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mCanSink<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mIsAmphibious<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mIsFollowingRivers<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mHasEndPathRadius<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mHasDestination<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mTick<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mTickTimeout<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mLastStuckCheck<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mEndPathRadiusSqr<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mSpeed<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mTerminationThreshold<span class="token punctuation">;</span>
+Vec3 mLastStuckCheckPosition<span class="token punctuation">;</span>
+Vec3 mTargetOffset<span class="token punctuation">;</span>
+Unique<span class="token operator">&lt;</span>PathNavigation<span class="token operator">&gt;</span> mNavigation<span class="token punctuation">;</span>
+Unique<span class="token operator">&lt;</span>Path<span class="token operator">&gt;</span> mPath<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="nbtio"><a href="#nbtio" class="header-anchor">#</a> NbtIo</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 61751 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NbtIo</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="neteventcallback"><a href="#neteventcallback" class="header-anchor">#</a> NetEventCallback</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 63003 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetEventCallback</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$NetEventCallback<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="netherbiomesurface"><a href="#netherbiomesurface" class="header-anchor">#</a> NetherBiomeSurface;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 198713 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetherBiomeSurface</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="nethergenerator-threaddata"><a href="#nethergenerator-threaddata" class="header-anchor">#</a> NetherGenerator::ThreadData</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 36222 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetherGenerator</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">ThreadData</span></span>
+<span class="token punctuation">{</span>
+Random random<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span><span class="token keyword">long</span><span class="token punctuation">,</span><span class="token number">32768</span><span class="token operator">&gt;</span> blockBuffer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkchangeobserver"><a href="#networkchangeobserver" class="header-anchor">#</a> NetworkChangeObserver;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 6912 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkChangeObserver</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkchunkpublisher"><a href="#networkchunkpublisher" class="header-anchor">#</a> NetworkChunkPublisher</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 88549 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkChunkPublisher</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$NetworkChunkPublisher<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Level <span class="token operator">*</span>mLevel<span class="token punctuation">;</span>
+NetworkHandler <span class="token operator">*</span>mNetworkHandler<span class="token punctuation">;</span>
+NetworkIdentifier mOwner<span class="token punctuation">;</span>
+ClientBlobCache<span class="token double-colon punctuation">::</span>Server<span class="token double-colon punctuation">::</span>ActiveTransfersManager <span class="token operator">*</span>mClientCache<span class="token punctuation">;</span>
+SubClientId mSubClientId<span class="token punctuation">;</span>
+BlockPos mLastChunkUpdatePosition<span class="token punctuation">;</span>
+<span class="token keyword">uint32_t</span> mLastChunkUpdateRadius<span class="token punctuation">;</span>
+<span class="token keyword">uint32_t</span> mHandleForChunkBuildOrderUpdates<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mChunksSentSinceStart<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span>ChunkViewSource<span class="token operator">&gt;</span> mSource<span class="token punctuation">;</span>
+GridArea<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>LevelChunk<span class="token operator">&gt;</span> <span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>AddCallback mAddCallback<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>string mCacheSerializeBuffer<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>ChunkPos<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span>LevelChunk<span class="token operator">&gt;&gt;</span> mQueuedChunks<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkcomponent"><a href="#networkcomponent" class="header-anchor">#</a> NetworkComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 79612 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkComponent</span>
+<span class="token punctuation">{</span>
+EntityNetId mEntityNetId<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkdebugmanager"><a href="#networkdebugmanager" class="header-anchor">#</a> NetworkDebugManager</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 64309 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkDebugManager</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span>NetworkDebugManager<span class="token double-colon punctuation">::</span>Tracker<span class="token punctuation">,</span><span class="token number">4</span><span class="token operator">&gt;</span> mTrackers<span class="token punctuation">;</span>
+TrackerType mRenderGraphMode<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>set<span class="token operator">&lt;</span>NetworkStatistics <span class="token operator">*</span><span class="token operator">&gt;</span> mStatistics<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkhandler-connection"><a href="#networkhandler-connection" class="header-anchor">#</a> NetworkHandler::Connection</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 8335 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkHandler</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">Connection</span></span>
+<span class="token punctuation">{</span>
+NetworkIdentifier mId<span class="token punctuation">;</span>
+NetworkHandler<span class="token double-colon punctuation">::</span>Connection<span class="token double-colon punctuation">::</span>Type mType<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span>NetworkPacketRecorder<span class="token operator">&gt;</span> mNetworkPacketRecorder<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span>EncryptedNetworkPeer<span class="token operator">&gt;</span> mEncryptedPeer<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span>BatchedNetworkPeer<span class="token operator">&gt;</span> mBatchedPeer<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>NetworkPeer<span class="token operator">&gt;</span> mPeer<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>time_point<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>_V2<span class="token double-colon punctuation">::</span>steady_clock<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>duration<span class="token operator">&lt;</span><span class="token keyword">long</span><span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>ratio<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1000000000</span><span class="token operator">&gt;</span> <span class="token operator">&gt;</span> <span class="token operator">&gt;</span> mLastPacketTime<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>time_point<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>_V2<span class="token double-colon punctuation">::</span>steady_clock<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>duration<span class="token operator">&lt;</span><span class="token keyword">long</span><span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>ratio<span class="token operator">&lt;</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1000000000</span><span class="token operator">&gt;</span> <span class="token operator">&gt;</span> <span class="token operator">&gt;</span> mClosedTime<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mShouldCloseConnection<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mDisconnected<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>bitset<span class="token operator">&lt;</span><span class="token number">2</span><span class="token operator">&gt;</span> mPausedChannels<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>queue<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> mResumedPackets<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token operator">&gt;</span> mPausedPackets<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkhandler-incomingpacketqueue"><a href="#networkhandler-incomingpacketqueue" class="header-anchor">#</a> NetworkHandler::IncomingPacketQueue</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 63002 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkHandler</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">IncomingPacketQueue</span></span>
+<span class="token punctuation">{</span>
+NetEventCallback <span class="token operator">*</span>mCallbacksObj<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mMutex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkpacketeventlistener"><a href="#networkpacketeventlistener" class="header-anchor">#</a> NetworkPacketEventListener</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 63038 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkPacketEventListener</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$NetworkPacketEventListener<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkpacketrecorder"><a href="#networkpacketrecorder" class="header-anchor">#</a> NetworkPacketRecorder;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 8222 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkPacketRecorder</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkpeer"><a href="#networkpeer" class="header-anchor">#</a> NetworkPeer</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 8247 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkPeer</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$NetworkPeer<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>shared_ptr<span class="token operator">&lt;</span>NetworkPeer<span class="token operator">&gt;</span> mPeer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkpeer-networkstatus"><a href="#networkpeer-networkstatus" class="header-anchor">#</a> NetworkPeer::NetworkStatus</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 8630 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkPeer</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">NetworkStatus</span></span>
+<span class="token punctuation">{</span>
+NetworkPeer<span class="token double-colon punctuation">::</span>NetworkLoad mLoad<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mCurrentPing<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mAveragePing<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mApproximateMaxBps<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mCurrentPacketLoss<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mAveragePacketLoss<span class="token punctuation">;</span>
+<span class="token keyword">uint64_t</span> mTotalBytesReceived<span class="token punctuation">;</span>
+<span class="token keyword">uint64_t</span> mTotalBytesSent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networksettingoptions"><a href="#networksettingoptions" class="header-anchor">#</a> NetworkSettingOptions</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 72561 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkSettingOptions</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint16_t</span> mCompressionThreshold<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkstatistics-overviewstats"><a href="#networkstatistics-overviewstats" class="header-anchor">#</a> NetworkStatistics::OverviewStats</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 63800 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkStatistics</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">OverviewStats</span></span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> sentBytesUnpacked<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> sentBytesPacked<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> receivedBytesUnpacked<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> receivedBytesPacked<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="networkstatistics-packetstats"><a href="#networkstatistics-packetstats" class="header-anchor">#</a> NetworkStatistics::PacketStats</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 63835 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NetworkStatistics</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">PacketStats</span></span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> sentNum<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> sentBytes<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> receivedNum<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> receivedBytes<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="newtype"><a href="#newtype" class="header-anchor">#</a> NewType<int></int></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13185 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NewType</span><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+NewType<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Raw value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="newtype-2"><a href="#newtype-2" class="header-anchor">#</a> NewType<long></long></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 45313 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NewType</span><span class="token operator">&lt;</span><span class="token keyword">long</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+NewType<span class="token operator">&lt;</span><span class="token keyword">long</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Raw value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="newtype-3"><a href="#newtype-3" class="header-anchor">#</a> NewType<unsigned short=""></unsigned></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 13216 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NewType</span><span class="token operator">&lt;</span><span class="token keyword">unsigned</span> <span class="token keyword">short</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+NewType<span class="token operator">&lt;</span><span class="token keyword">unsigned</span> <span class="token keyword">short</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Raw value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="nibblepair"><a href="#nibblepair" class="header-anchor">#</a> NibblePair</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 35026 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NibblePair</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> __int8 first <span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int8 second <span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="noisebasedcolorpalette"><a href="#noisebasedcolorpalette" class="header-anchor">#</a> NoiseBasedColorPalette;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 198718 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NoiseBasedColorPalette</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="noisebasedtemperatureattributes"><a href="#noisebasedtemperatureattributes" class="header-anchor">#</a> NoiseBasedTemperatureAttributes</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 191330 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NoiseBasedTemperatureAttributes</span>
+<span class="token punctuation">{</span>
+TemperatureCategory mTemperatureCategory<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="noteblock-triggerevent-7ef7c94beab75c6cef4adfb99b570420"><a href="#noteblock-triggerevent-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> NoteBlock::triggerEvent::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 459573 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NoteBlock</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>triggerEvent<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="npcaction"><a href="#npcaction" class="header-anchor">#</a> NpcAction</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 45374 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NpcAction</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$NpcAction<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> NpcActionType mType<span class="token punctuation">;</span>
+NpcActionMode mMode<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>string mButtonName<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>string mEvaluatedButtonName<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>string mText<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>optional<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string <span class="token operator">&gt;</span> mEvaluatedText<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="npccomponent"><a href="#npccomponent" class="header-anchor">#</a> NpcComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 44884 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NpcComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mCurrentSkin<span class="token punctuation">;</span>
+NpcGUIOffset mPortraitOffsets<span class="token punctuation">;</span>
+NpcGUIOffset mPickerOffsets<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>SkinData<span class="token operator">&gt;</span> mNPCSkins<span class="token punctuation">;</span>
+Json<span class="token double-colon punctuation">::</span>Value mNPCData<span class="token punctuation">;</span>
+NpcActions mActions<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>optional<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string <span class="token operator">&gt;</span> mInteractText<span class="token punctuation">;</span>
+NpcComponent<span class="token double-colon punctuation">::</span>TextFilter mInteractTextFilter<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="npcguioffset"><a href="#npcguioffset" class="header-anchor">#</a> NpcGUIOffset</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 44885 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NpcGUIOffset</span>
+<span class="token punctuation">{</span>
+Vec3 mTranslation<span class="token punctuation">;</span>
+Vec3 mRotation<span class="token punctuation">;</span>
+Vec3 mScale<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="nullsoundplayer"><a href="#nullsoundplayer" class="header-anchor">#</a> NullSoundPlayer</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 86996 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">NullSoundPlayer</span>
+<span class="token punctuation">{</span>
+__int8 baseclass_0<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mcdata/assets/js/app.9eb6ed31.js" defer></script><script src="/mcdata/assets/js/2.2defd20b.js" defer></script><script src="/mcdata/assets/js/20.772daac8.js" defer></script>
+  </body>
+</html>

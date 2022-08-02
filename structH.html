@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>structH | MC data</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="MC data">
+    
+    <link rel="preload" href="/mcdata/assets/css/0.styles.98230a9d.css" as="style"><link rel="preload" href="/mcdata/assets/js/app.9eb6ed31.js" as="script"><link rel="preload" href="/mcdata/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mcdata/assets/js/16.17822182.js" as="script"><link rel="prefetch" href="/mcdata/assets/js/10.015c72c0.js"><link rel="prefetch" href="/mcdata/assets/js/11.25b90920.js"><link rel="prefetch" href="/mcdata/assets/js/12.de21ddf7.js"><link rel="prefetch" href="/mcdata/assets/js/13.2457908e.js"><link rel="prefetch" href="/mcdata/assets/js/14.69ecf76b.js"><link rel="prefetch" href="/mcdata/assets/js/15.58d4dcf8.js"><link rel="prefetch" href="/mcdata/assets/js/17.4bc400ac.js"><link rel="prefetch" href="/mcdata/assets/js/18.58728642.js"><link rel="prefetch" href="/mcdata/assets/js/19.6e55ee66.js"><link rel="prefetch" href="/mcdata/assets/js/20.772daac8.js"><link rel="prefetch" href="/mcdata/assets/js/21.4f3ae83b.js"><link rel="prefetch" href="/mcdata/assets/js/22.a77a016d.js"><link rel="prefetch" href="/mcdata/assets/js/23.721b6487.js"><link rel="prefetch" href="/mcdata/assets/js/24.63e63395.js"><link rel="prefetch" href="/mcdata/assets/js/25.b3d24322.js"><link rel="prefetch" href="/mcdata/assets/js/26.f7f77649.js"><link rel="prefetch" href="/mcdata/assets/js/27.82db09f5.js"><link rel="prefetch" href="/mcdata/assets/js/28.d04e19ab.js"><link rel="prefetch" href="/mcdata/assets/js/29.ffd25a52.js"><link rel="prefetch" href="/mcdata/assets/js/3.2b49072b.js"><link rel="prefetch" href="/mcdata/assets/js/30.47e1287e.js"><link rel="prefetch" href="/mcdata/assets/js/31.a17bc943.js"><link rel="prefetch" href="/mcdata/assets/js/32.ba10d254.js"><link rel="prefetch" href="/mcdata/assets/js/33.3f5e2189.js"><link rel="prefetch" href="/mcdata/assets/js/34.e3353c01.js"><link rel="prefetch" href="/mcdata/assets/js/35.8dff4eb1.js"><link rel="prefetch" href="/mcdata/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mcdata/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mcdata/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mcdata/assets/js/7.d269aad6.js"><link rel="prefetch" href="/mcdata/assets/js/8.992dfcec.js"><link rel="prefetch" href="/mcdata/assets/js/9.4a33021d.js">
+    <link rel="stylesheet" href="/mcdata/assets/css/0.styles.98230a9d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mcdata/" class="home-link router-link-active"><!----> <span class="site-name">MC data</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="structh"><a href="#structh" class="header-anchor">#</a> structH</h1> <h4 id="hardcodedspawnarearegistry"><a href="#hardcodedspawnarearegistry" class="header-anchor">#</a> HardcodedSpawnAreaRegistry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 36692 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HardcodedSpawnAreaRegistry</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>HardcodedSpawnAreaType<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>MobSpawnerData<span class="token operator">&gt;&gt;</span> mMap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="hashedstring-stringhasher-const-char"><a href="#hashedstring-stringhasher-const-char" class="header-anchor">#</a> HashedString::StringHasher&lt;const char *&gt;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 484062 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HashedString</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">StringHasher</span><span class="token operator">&lt;</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="healabledefinition"><a href="#healabledefinition" class="header-anchor">#</a> HealableDefinition</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 55143 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HealableDefinition</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>FeedItem<span class="token operator">&gt;</span> mHealItems<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mForceUse<span class="token punctuation">;</span>
+ActorFilterGroup mFilter<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="heavyblock-animatetick-7ef7c94beab75c6cef4adfb99b570420"><a href="#heavyblock-animatetick-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> HeavyBlock::animateTick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 226412 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HeavyBlock</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>animateTick<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="hidecomponent"><a href="#hidecomponent" class="header-anchor">#</a> HideComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 115810 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HideComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> mIsInRaid<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mReactToBell<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="hillstransformation"><a href="#hillstransformation" class="header-anchor">#</a> HillsTransformation;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 198715 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HillsTransformation</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="homecomponent"><a href="#homecomponent" class="header-anchor">#</a> HomeComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 107453 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HomeComponent</span>
+<span class="token punctuation">{</span>
+BlockPos mHomePos<span class="token punctuation">;</span>
+DimensionType mDimensionId<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="homedefinition"><a href="#homedefinition" class="header-anchor">#</a> HomeDefinition</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 107827 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HomeDefinition</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="hopper"><a href="#hopper" class="header-anchor">#</a> Hopper</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 55946 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Hopper</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mCooldownTime<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mTransferedFromChestMinecart<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mIsEntity<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mMoveItemSpeed<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="hopperdefinition"><a href="#hopperdefinition" class="header-anchor">#</a> HopperDefinition</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 388816 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HopperDefinition</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="huffmanencodingtreenode"><a href="#huffmanencodingtreenode" class="header-anchor">#</a> HuffmanEncodingTreeNode</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 478112 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HuffmanEncodingTreeNode</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> __int8 value<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> weight<span class="token punctuation">;</span>
+HuffmanEncodingTreeNode <span class="token operator">*</span>left<span class="token punctuation">;</span>
+HuffmanEncodingTreeNode <span class="token operator">*</span>right<span class="token punctuation">;</span>
+HuffmanEncodingTreeNode <span class="token operator">*</span>parent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="hurtonconditiondefinition"><a href="#hurtonconditiondefinition" class="header-anchor">#</a> HurtOnConditionDefinition</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 56177 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HurtOnConditionDefinition</span>
+<span class="token punctuation">{</span>
+DamageConditionList mDamageConditions<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="hurtonconditiondefinition-deserializedata-b7c8591b4983496a0e79d8038f2bdad9"><a href="#hurtonconditiondefinition-deserializedata-b7c8591b4983496a0e79d8038f2bdad9" class="header-anchor">#</a> HurtOnConditionDefinition::deserializeData::$B7C8591B4983496A0E79D8038F2BDAD9</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 472671 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">HurtOnConditionDefinition</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>deserializeData<span class="token double-colon punctuation">::</span>$<span class="token class-name">B7C8591B4983496A0E79D8038F2BDAD9</span></span>
+<span class="token punctuation">{</span>
+HurtOnConditionDefinition <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h1 id="structh-2"><a href="#structh-2" class="header-anchor">#</a> structh</h1></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mcdata/assets/js/app.9eb6ed31.js" defer></script><script src="/mcdata/assets/js/2.2defd20b.js" defer></script><script src="/mcdata/assets/js/16.17822182.js" defer></script>
+  </body>
+</html>

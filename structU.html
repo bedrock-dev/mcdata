@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>structU | MC data</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="MC data">
+    
+    <link rel="preload" href="/mcdata/assets/css/0.styles.98230a9d.css" as="style"><link rel="preload" href="/mcdata/assets/js/app.9eb6ed31.js" as="script"><link rel="preload" href="/mcdata/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mcdata/assets/js/25.b3d24322.js" as="script"><link rel="prefetch" href="/mcdata/assets/js/10.015c72c0.js"><link rel="prefetch" href="/mcdata/assets/js/11.25b90920.js"><link rel="prefetch" href="/mcdata/assets/js/12.de21ddf7.js"><link rel="prefetch" href="/mcdata/assets/js/13.2457908e.js"><link rel="prefetch" href="/mcdata/assets/js/14.69ecf76b.js"><link rel="prefetch" href="/mcdata/assets/js/15.58d4dcf8.js"><link rel="prefetch" href="/mcdata/assets/js/16.17822182.js"><link rel="prefetch" href="/mcdata/assets/js/17.4bc400ac.js"><link rel="prefetch" href="/mcdata/assets/js/18.58728642.js"><link rel="prefetch" href="/mcdata/assets/js/19.6e55ee66.js"><link rel="prefetch" href="/mcdata/assets/js/20.772daac8.js"><link rel="prefetch" href="/mcdata/assets/js/21.4f3ae83b.js"><link rel="prefetch" href="/mcdata/assets/js/22.a77a016d.js"><link rel="prefetch" href="/mcdata/assets/js/23.721b6487.js"><link rel="prefetch" href="/mcdata/assets/js/24.63e63395.js"><link rel="prefetch" href="/mcdata/assets/js/26.f7f77649.js"><link rel="prefetch" href="/mcdata/assets/js/27.82db09f5.js"><link rel="prefetch" href="/mcdata/assets/js/28.d04e19ab.js"><link rel="prefetch" href="/mcdata/assets/js/29.ffd25a52.js"><link rel="prefetch" href="/mcdata/assets/js/3.2b49072b.js"><link rel="prefetch" href="/mcdata/assets/js/30.47e1287e.js"><link rel="prefetch" href="/mcdata/assets/js/31.a17bc943.js"><link rel="prefetch" href="/mcdata/assets/js/32.ba10d254.js"><link rel="prefetch" href="/mcdata/assets/js/33.3f5e2189.js"><link rel="prefetch" href="/mcdata/assets/js/34.e3353c01.js"><link rel="prefetch" href="/mcdata/assets/js/35.8dff4eb1.js"><link rel="prefetch" href="/mcdata/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mcdata/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mcdata/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mcdata/assets/js/7.d269aad6.js"><link rel="prefetch" href="/mcdata/assets/js/8.992dfcec.js"><link rel="prefetch" href="/mcdata/assets/js/9.4a33021d.js">
+    <link rel="stylesheet" href="/mcdata/assets/css/0.styles.98230a9d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mcdata/" class="home-link router-link-active"><!----> <span class="site-name">MC data</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="structu"><a href="#structu" class="header-anchor">#</a> structU</h1> <h4 id="uiprofanitycontext"><a href="#uiprofanitycontext" class="header-anchor">#</a> UIProfanityContext</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 109097 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UIProfanityContext</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$UIProfanityContext<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ProfanityFilterContext mFilterMask<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span> mProfanityExactMap<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>unordered_set<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> mProfanityContainsSet<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="upnpexternalipresult"><a href="#upnpexternalipresult" class="header-anchor">#</a> UPNPExternalIPResult</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 62646 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UPNPExternalIPResult</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> bUPNPSupported<span class="token punctuation">;</span>
+<span class="token keyword">char</span> hostIPAddress<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="upnpinterface"><a href="#upnpinterface" class="header-anchor">#</a> UPNPInterface</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 62627 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UPNPInterface</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>UPNPInterface<span class="token double-colon punctuation">::</span>ConnectionStateListener <span class="token operator">*</span><span class="token operator">&gt;</span> mConnectionStateListeners<span class="token punctuation">;</span>
+UPnPResultState<span class="token operator">&lt;</span>UPNPPortMappingResult<span class="token operator">&gt;</span> mUPnPPortMappingv4<span class="token punctuation">;</span>
+UPnPResultState<span class="token operator">&lt;</span>UPNPPortMappingResult<span class="token operator">&gt;</span> mUPnPPortMappingv6<span class="token punctuation">;</span>
+UPnPResultState<span class="token operator">&lt;</span>UPNPExternalIPResult<span class="token operator">&gt;</span> mUPnPExternalIP<span class="token punctuation">;</span>
+MPMCQueue<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> <span class="token operator">&gt;</span> mCompletedQueue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="upnpinterface-connectionstatelistener"><a href="#upnpinterface-connectionstatelistener" class="header-anchor">#</a> UPNPInterface::ConnectionStateListener;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 62640 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UPNPInterface</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">ConnectionStateListener</span></span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="upnpportmappingresult"><a href="#upnpportmappingresult" class="header-anchor">#</a> UPNPPortMappingResult</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 62642 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UPNPPortMappingResult</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> bUPNPSupported<span class="token punctuation">;</span>
+<span class="token keyword">char</span> hostIPAddress<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int16 externalPort<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int16 internalPort<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="upnpresultstate"><a href="#upnpresultstate" class="header-anchor">#</a> UPnPResultState<UPNPExternalIPResult></UPNPExternalIPResult></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 62645 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UPnPResultState</span><span class="token operator">&lt;</span>UPNPExternalIPResult<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+UPNPExternalIPResult result<span class="token punctuation">;</span>
+UpnpState state<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> isValid<span class="token punctuation">;</span>
+AsyncTracker tracker<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="upnpresultstate-2"><a href="#upnpresultstate-2" class="header-anchor">#</a> UPnPResultState<UPNPPortMappingResult></UPNPPortMappingResult></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 62641 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UPnPResultState</span><span class="token operator">&lt;</span>UPNPPortMappingResult<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+UPNPPortMappingResult result<span class="token punctuation">;</span>
+UpnpState state<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> isValid<span class="token punctuation">;</span>
+AsyncTracker tracker<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="underwatertorchblock-animatetick-7ef7c94beab75c6cef4adfb99b570420"><a href="#underwatertorchblock-animatetick-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> UnderwaterTorchBlock::animateTick::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 460050 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UnderwaterTorchBlock</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>animateTick<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unverifiedcertificate"><a href="#unverifiedcertificate" class="header-anchor">#</a> UnverifiedCertificate</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 7688 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UnverifiedCertificate</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">const</span> WebToken mRawToken<span class="token punctuation">;</span>
+Unique<span class="token operator">&lt;</span>UnverifiedCertificate<span class="token operator">&gt;</span> mParentUnverifiedCertificate<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="updateattributespacket-attributedata"><a href="#updateattributespacket-attributedata" class="header-anchor">#</a> UpdateAttributesPacket::AttributeData</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 75559 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UpdateAttributesPacket</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">AttributeData</span></span>
+<span class="token punctuation">{</span>
+<span class="token keyword">float</span> mCurrentValue<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mMinValue<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mMaxValue<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mDefaultValue<span class="token punctuation">;</span>
+HashedString mName<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="updateattributespacket-attributedata-attributedata-7ef7c94beab75c6cef4adfb99b570420"><a href="#updateattributespacket-attributedata-attributedata-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> UpdateAttributesPacket::AttributeData::AttributeData::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 80981 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UpdateAttributesPacket</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>AttributeData<span class="token double-colon punctuation">::</span>AttributeData<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="updateblockpropertiespacket-updateblockpropertiespacket-5d452180f6fd32fde19ef7de5ec88d21"><a href="#updateblockpropertiespacket-updateblockpropertiespacket-5d452180f6fd32fde19ef7de5ec88d21" class="header-anchor">#</a> UpdateBlockPropertiesPacket::UpdateBlockPropertiesPacket::$5D452180F6FD32FDE19EF7DE5EC88D21</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 81087 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">UpdateBlockPropertiesPacket</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>UpdateBlockPropertiesPacket<span class="token double-colon punctuation">::</span>$<span class="token number">5</span><span class="token class-name">D452180F6FD32FDE19EF7DE5EC88D21</span></span>
+<span class="token punctuation">{</span>
+Unique<span class="token operator">&lt;</span>CompoundTag<span class="token operator">&gt;</span> <span class="token operator">*</span>defTag<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-caseinsensitivecompare"><a href="#util-caseinsensitivecompare" class="header-anchor">#</a> Util::CaseInsensitiveCompare</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 103854 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">CaseInsensitiveCompare</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-caseinsensitivehash"><a href="#util-caseinsensitivehash" class="header-anchor">#</a> Util::CaseInsensitiveHash</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 103853 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">CaseInsensitiveHash</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-hashstring"><a href="#util-hashstring" class="header-anchor">#</a> Util::HashString</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 45356 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">HashString</span></span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>string mText<span class="token punctuation">;</span>
+<span class="token keyword">uint64_t</span> mHash<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-hashstring-hashfunc"><a href="#util-hashstring-hashfunc" class="header-anchor">#</a> Util::HashString::HashFunc</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 46187 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>HashString<span class="token double-colon punctuation">::</span><span class="token class-name">HashFunc</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-loottableutils"><a href="#util-loottableutils" class="header-anchor">#</a> Util::LootTableUtils</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 428930 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">LootTableUtils</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-comparenocase-7ef7c94beab75c6cef4adfb99b570420"><a href="#util-comparenocase-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> Util::compareNoCase::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485115 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>compareNoCase<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-tolower-7ef7c94beab75c6cef4adfb99b570420"><a href="#util-tolower-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> Util::toLower::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485116 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>toLower<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-tolowerinplace-7ef7c94beab75c6cef4adfb99b570420"><a href="#util-tolowerinplace-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> Util::toLowerInPlace::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485118 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>toLowerInPlace<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-toupper-7ef7c94beab75c6cef4adfb99b570420"><a href="#util-toupper-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> Util::toUpper::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485117 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>toUpper<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="util-toupperinplace-7ef7c94beab75c6cef4adfb99b570420"><a href="#util-toupperinplace-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> Util::toUpperInPlace::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485119 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Util</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>toUpperInPlace<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h1 id="structu-2"><a href="#structu-2" class="header-anchor">#</a> structu</h1> <h4 id="ucontext-t"><a href="#ucontext-t" class="header-anchor">#</a> ucontext_t</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485605 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ucontext_t</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> __int64 uc_flags<span class="token punctuation">;</span>
+ucontext_t <span class="token operator">*</span>uc_link<span class="token punctuation">;</span>
+stack_t uc_stack<span class="token punctuation">;</span>
+mcontext_t uc_mcontext<span class="token punctuation">;</span>
+sigset_t uc_sigmask<span class="token punctuation">;</span>
+_libc_fpstate __fpregs_mem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="uint128-struct"><a href="#uint128-struct" class="header-anchor">#</a> uint128_struct</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485789 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">uint128_struct</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint64_t</span> high<span class="token punctuation">;</span>
+<span class="token keyword">uint64_t</span> low<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz64-file-pos-s"><a href="#unz64-file-pos-s" class="header-anchor">#</a> unz64_file_pos_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485430 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz64_file_pos_s</span>
+<span class="token punctuation">{</span>
+ZPOS64_T pos_in_zip_directory<span class="token punctuation">;</span>
+ZPOS64_T num_of_file<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz64-s"><a href="#unz64-s" class="header-anchor">#</a> unz64_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485420 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz64_s</span>
+<span class="token punctuation">{</span>
+zlib_filefunc64_32_def z_filefunc<span class="token punctuation">;</span>
+<span class="token keyword">int</span> is64bitOpenFunction<span class="token punctuation">;</span>
+voidpf filestream<span class="token punctuation">;</span>
+unz_global_info64 gi<span class="token punctuation">;</span>
+ZPOS64_T byte_before_the_zipfile<span class="token punctuation">;</span>
+ZPOS64_T num_file<span class="token punctuation">;</span>
+ZPOS64_T pos_in_central_dir<span class="token punctuation">;</span>
+ZPOS64_T current_file_ok<span class="token punctuation">;</span>
+ZPOS64_T central_pos<span class="token punctuation">;</span>
+ZPOS64_T size_central_dir<span class="token punctuation">;</span>
+ZPOS64_T offset_central_dir<span class="token punctuation">;</span>
+unz_file_info64 cur_file_info<span class="token punctuation">;</span>
+unz_file_info64_internal cur_file_info_internal<span class="token punctuation">;</span>
+file_in_zip64_read_info_s <span class="token operator">*</span>pfile_in_zip_read<span class="token punctuation">;</span>
+<span class="token keyword">int</span> encrypted<span class="token punctuation">;</span>
+<span class="token keyword">int</span> isZip64<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz-file-info64-internal-s"><a href="#unz-file-info64-internal-s" class="header-anchor">#</a> unz_file_info64_internal_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485425 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz_file_info64_internal_s</span>
+<span class="token punctuation">{</span>
+ZPOS64_T offset_curfile<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz-file-info64-s"><a href="#unz-file-info64-s" class="header-anchor">#</a> unz_file_info64_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485423 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz_file_info64_s</span>
+<span class="token punctuation">{</span>
+uLong version<span class="token punctuation">;</span>
+uLong version_needed<span class="token punctuation">;</span>
+uLong flag<span class="token punctuation">;</span>
+uLong compression_method<span class="token punctuation">;</span>
+uLong dosDate<span class="token punctuation">;</span>
+uLong crc<span class="token punctuation">;</span>
+ZPOS64_T compressed_size<span class="token punctuation">;</span>
+ZPOS64_T uncompressed_size<span class="token punctuation">;</span>
+uLong size_filename<span class="token punctuation">;</span>
+uLong size_file_extra<span class="token punctuation">;</span>
+uLong size_file_comment<span class="token punctuation">;</span>
+uLong disk_num_start<span class="token punctuation">;</span>
+uLong internal_fa<span class="token punctuation">;</span>
+uLong external_fa<span class="token punctuation">;</span>
+tm_unz tmu_date<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz-file-info-s"><a href="#unz-file-info-s" class="header-anchor">#</a> unz_file_info_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 482955 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz_file_info_s</span>
+<span class="token punctuation">{</span>
+uLong version<span class="token punctuation">;</span>
+uLong version_needed<span class="token punctuation">;</span>
+uLong flag<span class="token punctuation">;</span>
+uLong compression_method<span class="token punctuation">;</span>
+uLong dosDate<span class="token punctuation">;</span>
+uLong crc<span class="token punctuation">;</span>
+uLong compressed_size<span class="token punctuation">;</span>
+uLong uncompressed_size<span class="token punctuation">;</span>
+uLong size_filename<span class="token punctuation">;</span>
+uLong size_file_extra<span class="token punctuation">;</span>
+uLong size_file_comment<span class="token punctuation">;</span>
+uLong disk_num_start<span class="token punctuation">;</span>
+uLong internal_fa<span class="token punctuation">;</span>
+uLong external_fa<span class="token punctuation">;</span>
+tm_unz tmu_date<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz-file-pos-s"><a href="#unz-file-pos-s" class="header-anchor">#</a> unz_file_pos_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485432 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz_file_pos_s</span>
+<span class="token punctuation">{</span>
+uLong pos_in_zip_directory<span class="token punctuation">;</span>
+uLong num_of_file<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz-global-info64-s"><a href="#unz-global-info64-s" class="header-anchor">#</a> unz_global_info64_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 482959 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz_global_info64_s</span>
+<span class="token punctuation">{</span>
+ZPOS64_T number_entry<span class="token punctuation">;</span>
+uLong size_comment<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="unz-global-info-s"><a href="#unz-global-info-s" class="header-anchor">#</a> unz_global_info_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 483063 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">unz_global_info_s</span>
+<span class="token punctuation">{</span>
+uLong number_entry<span class="token punctuation">;</span>
+uLong size_comment<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="user-fpregs-struct"><a href="#user-fpregs-struct" class="header-anchor">#</a> user_fpregs_struct</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485830 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">user_fpregs_struct</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> __int16 cwd<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int16 swd<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int16 ftw<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int16 fop<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rip<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rdp<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> mxcsr<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> mxcr_mask<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> st_space<span class="token punctuation">[</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> xmm_space<span class="token punctuation">[</span><span class="token number">64</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> padding<span class="token punctuation">[</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="user-regs-struct"><a href="#user-regs-struct" class="header-anchor">#</a> user_regs_struct</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485829 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">user_regs_struct</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> __int64 r15<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 r14<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 r13<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 r12<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rbp<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rbx<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 r11<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 r10<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 r9<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 r8<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rax<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rcx<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rdx<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rsi<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rdi<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 orig_rax<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rip<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 cs<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 eflags<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 rsp<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 ss<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 fs_base<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 gs_base<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 ds<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 es<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 fs<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int64 gs<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="utf8proc-property-struct"><a href="#utf8proc-property-struct" class="header-anchor">#</a> utf8proc_property_struct</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485136 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">utf8proc_property_struct</span>
+<span class="token punctuation">{</span>
+utf8proc_propval_t category<span class="token punctuation">;</span>
+utf8proc_propval_t combining_class<span class="token punctuation">;</span>
+utf8proc_propval_t bidi_class<span class="token punctuation">;</span>
+utf8proc_propval_t decomp_type<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int32_t</span> <span class="token operator">*</span>decomp_mapping<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int32 bidi_mirrored <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int32_t</span> uppercase_mapping<span class="token punctuation">;</span>
+<span class="token keyword">int32_t</span> lowercase_mapping<span class="token punctuation">;</span>
+<span class="token keyword">int32_t</span> titlecase_mapping<span class="token punctuation">;</span>
+<span class="token keyword">int32_t</span> comb1st_index<span class="token punctuation">;</span>
+<span class="token keyword">int32_t</span> comb2nd_index<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int32 comp_exclusion <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int32 ignorable <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int32 control_boundary <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> __int32 extend <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int32_t</span> <span class="token operator">*</span>casefold_mapping<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="utimbuf"><a href="#utimbuf" class="header-anchor">#</a> utimbuf</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 483220 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">utimbuf</span>
+<span class="token punctuation">{</span>
+__time_t actime<span class="token punctuation">;</span>
+__time_t modtime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mcdata/assets/js/app.9eb6ed31.js" defer></script><script src="/mcdata/assets/js/2.2defd20b.js" defer></script><script src="/mcdata/assets/js/25.b3d24322.js" defer></script>
+  </body>
+</html>

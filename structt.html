@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>structt | MC data</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="MC data">
+    
+    <link rel="preload" href="/mcdata/assets/css/0.styles.98230a9d.css" as="style"><link rel="preload" href="/mcdata/assets/js/app.9eb6ed31.js" as="script"><link rel="preload" href="/mcdata/assets/js/2.2defd20b.js" as="script"><link rel="preload" href="/mcdata/assets/js/34.e3353c01.js" as="script"><link rel="prefetch" href="/mcdata/assets/js/10.015c72c0.js"><link rel="prefetch" href="/mcdata/assets/js/11.25b90920.js"><link rel="prefetch" href="/mcdata/assets/js/12.de21ddf7.js"><link rel="prefetch" href="/mcdata/assets/js/13.2457908e.js"><link rel="prefetch" href="/mcdata/assets/js/14.69ecf76b.js"><link rel="prefetch" href="/mcdata/assets/js/15.58d4dcf8.js"><link rel="prefetch" href="/mcdata/assets/js/16.17822182.js"><link rel="prefetch" href="/mcdata/assets/js/17.4bc400ac.js"><link rel="prefetch" href="/mcdata/assets/js/18.58728642.js"><link rel="prefetch" href="/mcdata/assets/js/19.6e55ee66.js"><link rel="prefetch" href="/mcdata/assets/js/20.772daac8.js"><link rel="prefetch" href="/mcdata/assets/js/21.4f3ae83b.js"><link rel="prefetch" href="/mcdata/assets/js/22.a77a016d.js"><link rel="prefetch" href="/mcdata/assets/js/23.721b6487.js"><link rel="prefetch" href="/mcdata/assets/js/24.63e63395.js"><link rel="prefetch" href="/mcdata/assets/js/25.b3d24322.js"><link rel="prefetch" href="/mcdata/assets/js/26.f7f77649.js"><link rel="prefetch" href="/mcdata/assets/js/27.82db09f5.js"><link rel="prefetch" href="/mcdata/assets/js/28.d04e19ab.js"><link rel="prefetch" href="/mcdata/assets/js/29.ffd25a52.js"><link rel="prefetch" href="/mcdata/assets/js/3.2b49072b.js"><link rel="prefetch" href="/mcdata/assets/js/30.47e1287e.js"><link rel="prefetch" href="/mcdata/assets/js/31.a17bc943.js"><link rel="prefetch" href="/mcdata/assets/js/32.ba10d254.js"><link rel="prefetch" href="/mcdata/assets/js/33.3f5e2189.js"><link rel="prefetch" href="/mcdata/assets/js/35.8dff4eb1.js"><link rel="prefetch" href="/mcdata/assets/js/4.26f73e91.js"><link rel="prefetch" href="/mcdata/assets/js/5.5dcec586.js"><link rel="prefetch" href="/mcdata/assets/js/6.f2a96706.js"><link rel="prefetch" href="/mcdata/assets/js/7.d269aad6.js"><link rel="prefetch" href="/mcdata/assets/js/8.992dfcec.js"><link rel="prefetch" href="/mcdata/assets/js/9.4a33021d.js">
+    <link rel="stylesheet" href="/mcdata/assets/css/0.styles.98230a9d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mcdata/" class="home-link router-link-active"><!----> <span class="site-name">MC data</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="structt"><a href="#structt" class="header-anchor">#</a> structt</h1> <h4 id="timespec"><a href="#timespec" class="header-anchor">#</a> timespec</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5839 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">timespec</span>
+<span class="token punctuation">{</span>
+__time_t tv_sec<span class="token punctuation">;</span>
+__syscall_slong_t tv_nsec<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="timeval"><a href="#timeval" class="header-anchor">#</a> timeval</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 477980 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">timeval</span>
+<span class="token punctuation">{</span>
+__time_t tv_sec<span class="token punctuation">;</span>
+__suseconds_t tv_usec<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tm-unz-s"><a href="#tm-unz-s" class="header-anchor">#</a> tm_unz_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 482957 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">tm_unz_s</span>
+<span class="token punctuation">{</span>
+uInt tm_sec<span class="token punctuation">;</span>
+uInt tm_min<span class="token punctuation">;</span>
+uInt tm_hour<span class="token punctuation">;</span>
+uInt tm_mday<span class="token punctuation">;</span>
+uInt tm_mon<span class="token punctuation">;</span>
+uInt tm_year<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tm-zip-s"><a href="#tm-zip-s" class="header-anchor">#</a> tm_zip_s</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 483061 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">tm_zip_s</span>
+<span class="token punctuation">{</span>
+uInt tm_sec<span class="token punctuation">;</span>
+uInt tm_min<span class="token punctuation">;</span>
+uInt tm_hour<span class="token punctuation">;</span>
+uInt tm_mday<span class="token punctuation">;</span>
+uInt tm_mon<span class="token punctuation">;</span>
+uInt tm_year<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-info"><a href="#type-info" class="header-anchor">#</a> type_info;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 486709 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_info</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedefmce-degree-float"><a href="#type-safe-strong-typedefmce-degree-float" class="header-anchor">#</a> type_safe::strong_typedef<a href="mce::Degree,float">mce::Degree,float</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116643 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">strong_typedef</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token punctuation">,</span><span class="token keyword">float</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+<span class="token keyword">float</span> value_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedefmce-radian-float"><a href="#type-safe-strong-typedefmce-radian-float" class="header-anchor">#</a> type_safe::strong_typedef<a href="mce::Radian,float">mce::Radian,float</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 115605 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">strong_typedef</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token punctuation">,</span><span class="token keyword">float</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+<span class="token keyword">float</span> value_<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-256b327ee357af9fcd813216707b60d5"><a href="#type-safe-strong-typedef-op-256b327ee357af9fcd813216707b60d5" class="header-anchor">#</a> type_safe::strong_typedef_op::$256B327EE357AF9FCD813216707B60D5</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116653 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span>$<span class="token number">256</span><span class="token class-name">B327EE357AF9FCD813216707B60D5</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-additionmce-degree"><a href="#type-safe-strong-typedef-op-additionmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::addition<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116649 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">addition</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-additionmce-radian"><a href="#type-safe-strong-typedef-op-additionmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::addition<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116659 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">addition</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-divisionmce-degree"><a href="#type-safe-strong-typedef-op-divisionmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::division<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116652 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">division</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-divisionmce-radian"><a href="#type-safe-strong-typedef-op-divisionmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::division<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116662 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">division</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-equality-comparisonmce-degree"><a href="#type-safe-strong-typedef-op-equality-comparisonmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::equality_comparison<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116644 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">equality_comparison</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-equality-comparisonmce-radian"><a href="#type-safe-strong-typedef-op-equality-comparisonmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::equality_comparison<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116654 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">equality_comparison</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-multiplicationmce-degree"><a href="#type-safe-strong-typedef-op-multiplicationmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::multiplication<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116651 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">multiplication</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-multiplicationmce-radian"><a href="#type-safe-strong-typedef-op-multiplicationmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::multiplication<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116661 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">multiplication</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-relational-comparisonmce-degree"><a href="#type-safe-strong-typedef-op-relational-comparisonmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::relational_comparison<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116645 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">relational_comparison</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-relational-comparisonmce-radian"><a href="#type-safe-strong-typedef-op-relational-comparisonmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::relational_comparison<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116655 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">relational_comparison</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-subtractionmce-degree"><a href="#type-safe-strong-typedef-op-subtractionmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::subtraction<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116650 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">subtraction</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-subtractionmce-radian"><a href="#type-safe-strong-typedef-op-subtractionmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::subtraction<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116660 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">subtraction</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-unary-minusmce-degree"><a href="#type-safe-strong-typedef-op-unary-minusmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::unary_minus<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116648 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">unary_minus</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-unary-minusmce-radian"><a href="#type-safe-strong-typedef-op-unary-minusmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::unary_minus<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116658 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">unary_minus</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-unary-plusmce-degree"><a href="#type-safe-strong-typedef-op-unary-plusmce-degree" class="header-anchor">#</a> type_safe::strong_typedef_op::unary_plus<a href="mce::Degree">mce::Degree</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116647 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">unary_plus</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Degree</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="type-safe-strong-typedef-op-unary-plusmce-radian"><a href="#type-safe-strong-typedef-op-unary-plusmce-radian" class="header-anchor">#</a> type_safe::strong_typedef_op::unary_plus<a href="mce::Radian">mce::Radian</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 116657 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">type_safe</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>strong_typedef_op<span class="token double-colon punctuation">::</span><span class="token class-name">unary_plus</span><span class="token operator">&lt;</span>mce<span class="token double-colon punctuation">::</span><span class="token class-name">Radian</span><span class="token operator">&gt;</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="typeid-t"><a href="#typeid-t" class="header-anchor">#</a> typeid_t<CommandRegistry></CommandRegistry></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 1500 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">typeid_t</span><span class="token operator">&lt;</span>CommandRegistry<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint16_t</span> mID<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="typeid-t-2"><a href="#typeid-t-2" class="header-anchor">#</a> typeid_t<ContextAccessor></ContextAccessor></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 421007 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">typeid_t</span><span class="token operator">&lt;</span>ContextAccessor<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint16_t</span> mID<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="typeid-t-3"><a href="#typeid-t-3" class="header-anchor">#</a> typeid_t<IDefinitionInstance></IDefinitionInstance></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 48664 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">typeid_t</span><span class="token operator">&lt;</span>IDefinitionInstance<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint16_t</span> mID<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="typeid-t-4"><a href="#typeid-t-4" class="header-anchor">#</a> typeid_t<ScriptBinderComponent></ScriptBinderComponent></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 99878 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">typeid_t</span><span class="token operator">&lt;</span>ScriptBinderComponent<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint16_t</span> mID<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h1 id="structt-2"><a href="#structt-2" class="header-anchor">#</a> structT</h1> <h4 id="tag"><a href="#tag" class="header-anchor">#</a> Tag</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5811 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Tag</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span>_vptr$Tag<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tagcommand-listtags-7ef7c94beab75c6cef4adfb99b570420"><a href="#tagcommand-listtags-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> TagCommand::_listTags::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 427378 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TagCommand</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>_listTags<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tagidtype"><a href="#tagidtype" class="header-anchor">#</a> TagIDType;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 40656 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TagIDType</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tagmemorychunk"><a href="#tagmemorychunk" class="header-anchor">#</a> TagMemoryChunk</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 61618 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TagMemoryChunk</span>
+<span class="token punctuation">{</span>
+size_t mElements<span class="token punctuation">;</span>
+size_t mSize<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> mBuffer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tagregistry"><a href="#tagregistry" class="header-anchor">#</a> TagRegistry</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 38394 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TagRegistry</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>StringKey<span class="token punctuation">,</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> mTagIndexMap<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> mTags<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>IndexSet<span class="token operator">&gt;</span> mSets<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> mTagsScratchpad<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>IDType<span class="token operator">&lt;</span>TagIDType<span class="token operator">&gt;&gt;</span> mTagIDScratchpad<span class="token punctuation">;</span>
+IndexSet mIndexSetScratchpad<span class="token punctuation">;</span>
+TagSetID mEmptyTagSet<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tagsetidtype"><a href="#tagsetidtype" class="header-anchor">#</a> TagSetIDType;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 40657 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TagSetIDType</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tagscomponent"><a href="#tagscomponent" class="header-anchor">#</a> TagsComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 100455 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TagsComponent</span>
+<span class="token punctuation">{</span>
+TagSetID mTagSetID<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tameablecomponent"><a href="#tameablecomponent" class="header-anchor">#</a> TameableComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 54414 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TameableComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">float</span> mChance<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>set<span class="token operator">&lt;</span><span class="token keyword">const</span> Item <span class="token operator">*</span><span class="token operator">&gt;</span> mTameItems<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="targetnearbycomponent"><a href="#targetnearbycomponent" class="header-anchor">#</a> TargetNearbyComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 59369 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TargetNearbyComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> mWasSeenLastTick<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mWasInsideRange<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mWasOutsideRange<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mPreviousDistance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="taskstartinfo"><a href="#taskstartinfo" class="header-anchor">#</a> TaskStartInfo</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 63717 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TaskStartInfo</span>
+<span class="token punctuation">{</span>
+string_span name<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>thread<span class="token double-colon punctuation">::</span>id affinity<span class="token punctuation">;</span>
+<span class="token keyword">uint32_t</span> priority<span class="token punctuation">;</span>
+<span class="token keyword">int</span> priorityBackDown<span class="token punctuation">;</span>
+TaskOptions options<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>chrono<span class="token double-colon punctuation">::</span>_V2<span class="token double-colon punctuation">::</span>steady_clock<span class="token double-colon punctuation">::</span>time_point startAtTime<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>IAsyncResult<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Handle predecessor<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="teleportcomponent"><a href="#teleportcomponent" class="header-anchor">#</a> TeleportComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 59484 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TeleportComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> mRandomTeleports<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mMinTeleportTime<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mMaxTeleportTime<span class="token punctuation">;</span>
+Vec3 mRandomTeleportCube<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mTargetDistance<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mTargetTeleportChance<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mLightTeleportChance<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mDarkTeleportChance<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mTeleportTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tessellator"><a href="#tessellator" class="header-anchor">#</a> Tessellator;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 122537 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Tessellator</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="testdedicatedservercommands"><a href="#testdedicatedservercommands" class="header-anchor">#</a> TestDedicatedServerCommands</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5842 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TestDedicatedServerCommands</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="testservercommands"><a href="#testservercommands" class="header-anchor">#</a> TestServerCommands</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 424409 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TestServerCommands</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="textfilteringprocessor"><a href="#textfilteringprocessor" class="header-anchor">#</a> TextFilteringProcessor;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 76902 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TextFilteringProcessor</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="textobjectparser"><a href="#textobjectparser" class="header-anchor">#</a> TextObjectParser</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 101045 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TextObjectParser</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="textureatlas"><a href="#textureatlas" class="header-anchor">#</a> TextureAtlas;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 459465 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TextureAtlas</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="textureatlasitem"><a href="#textureatlasitem" class="header-anchor">#</a> TextureAtlasItem</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 103920 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TextureAtlasItem</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>string mName<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mParsedNodeIndex<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>TextureUVCoordinateSet<span class="token operator">&gt;&gt;</span> mTextureUVs<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="textureitem"><a href="#textureitem" class="header-anchor">#</a> TextureItem</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 294387 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TextureItem</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>string defaultName<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>string carriedName<span class="token punctuation">;</span>
+TextureAtlasItem defaultItem<span class="token punctuation">;</span>
+TextureAtlasItem carriedItem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="textureuvcoordinateset"><a href="#textureuvcoordinateset" class="header-anchor">#</a> TextureUVCoordinateSet</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 33516 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TextureUVCoordinateSet</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">float</span> weight<span class="token punctuation">;</span>
+<span class="token keyword">float</span> _u0<span class="token punctuation">;</span>
+<span class="token keyword">float</span> _v0<span class="token punctuation">;</span>
+<span class="token keyword">float</span> _u1<span class="token punctuation">;</span>
+<span class="token keyword">float</span> _v1<span class="token punctuation">;</span>
+<span class="token keyword">uint16_t</span> _texSizeW<span class="token punctuation">;</span>
+<span class="token keyword">uint16_t</span> _texSizeH<span class="token punctuation">;</span>
+ResourceLocation sourceFileLocation<span class="token punctuation">;</span>
+IsotropicFaceData mIsotropicFaceData<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="theendbiomesurface"><a href="#theendbiomesurface" class="header-anchor">#</a> TheEndBiomeSurface;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 198714 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TheEndBiomeSurface</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="theendgenerator-threaddata"><a href="#theendgenerator-threaddata" class="header-anchor">#</a> TheEndGenerator::ThreadData</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 289518 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TheEndGenerator</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">ThreadData</span></span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span><span class="token keyword">long</span><span class="token punctuation">,</span><span class="token number">32768</span><span class="token operator">&gt;</span> blockBuffer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal-backgroundworker"><a href="#threadlocal-backgroundworker" class="header-anchor">#</a> ThreadLocal&lt;BackgroundWorker *&gt;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 485240 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>BackgroundWorker <span class="token operator">*</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>BackgroundWorker <span class="token operator">*</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>BackgroundWorker <span class="token operator">*</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocalcore-random"><a href="#threadlocalcore-random" class="header-anchor">#</a> ThreadLocal<a href="Core::Random">Core::Random</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 31217 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>Core<span class="token double-colon punctuation">::</span>Random<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>Core<span class="token double-colon punctuation">::</span>Random<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>Core<span class="token double-colon punctuation">::</span>Random<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal"><a href="#threadlocal" class="header-anchor">#</a> ThreadLocal<DBStorageWriteBatch></DBStorageWriteBatch></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 477455 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>DBStorageWriteBatch<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>DBStorageWriteBatch<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>DBStorageWriteBatch<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal-2"><a href="#threadlocal-2" class="header-anchor">#</a> ThreadLocal<EvalParams></EvalParams></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 109090 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>EvalParams<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>EvalParams<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>EvalParams<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocalnethergenerator-threaddata"><a href="#threadlocalnethergenerator-threaddata" class="header-anchor">#</a> ThreadLocal<a href="NetherGenerator::ThreadData">NetherGenerator::ThreadData</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 36890 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>NetherGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>NetherGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>NetherGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocaloverworldgenerator-threaddata"><a href="#threadlocaloverworldgenerator-threaddata" class="header-anchor">#</a> ThreadLocal<a href="OverworldGenerator::ThreadData">OverworldGenerator::ThreadData</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 40147 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>OverworldGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>OverworldGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>OverworldGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal-3"><a href="#threadlocal-3" class="header-anchor">#</a> ThreadLocal<PerfTimer></PerfTimer></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 102997 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>PerfTimer<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>PerfTimer<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>PerfTimer<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal-4"><a href="#threadlocal-4" class="header-anchor">#</a> ThreadLocal<Random></Random></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 31219 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>Random<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>Random<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>Random<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal-resourceloadmanager-resourceloadtaskgroup"><a href="#threadlocal-resourceloadmanager-resourceloadtaskgroup" class="header-anchor">#</a> ThreadLocal&lt;ResourceLoadManager::ResourceLoadTaskGroup *&gt;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 60806 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>ResourceLoadManager<span class="token double-colon punctuation">::</span>ResourceLoadTaskGroup <span class="token operator">*</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>ResourceLoadManager<span class="token double-colon punctuation">::</span>ResourceLoadTaskGroup <span class="token operator">*</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>ResourceLoadManager<span class="token double-colon punctuation">::</span>ResourceLoadTaskGroup <span class="token operator">*</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocaltheendgenerator-threaddata"><a href="#threadlocaltheendgenerator-threaddata" class="header-anchor">#</a> ThreadLocal<a href="TheEndGenerator::ThreadData">TheEndGenerator::ThreadData</a></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 289608 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>TheEndGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>TheEndGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>TheEndGenerator<span class="token double-colon punctuation">::</span>ThreadData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal-5"><a href="#threadlocal-5" class="header-anchor">#</a> ThreadLocal<ThreadSpecificData></ThreadSpecificData></h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 3052 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span>ThreadSpecificData<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span>ThreadSpecificData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span>ThreadSpecificData<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="threadlocal-bool-const-char-const-char-const-char-bool-int-const-char-const-char-bool"><a href="#threadlocal-bool-const-char-const-char-const-char-bool-int-const-char-const-char-bool" class="header-anchor">#</a> ThreadLocal&lt;bool (**)(const char *,const char *,const char *,bool,int,const char *,const char *,bool)&gt;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 480591 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ThreadLocal</span><span class="token operator">&lt;</span><span class="token keyword">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token punctuation">)</span><span class="token operator">&gt;</span>
+<span class="token punctuation">{</span>
+ThreadLocal<span class="token operator">&lt;</span><span class="token keyword">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Creator mCreator<span class="token punctuation">;</span>
+ThreadLocal<span class="token operator">&lt;</span><span class="token keyword">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">,</span><span class="token keyword">bool</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>Pool mPool<span class="token punctuation">;</span>
+Bedrock<span class="token double-colon punctuation">::</span>Threading<span class="token double-colon punctuation">::</span>Mutex mCreatorLock<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mInitialized<span class="token punctuation">;</span>
+pthread_key_t mKey<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tick"><a href="#tick" class="header-anchor">#</a> Tick</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5810 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Tick</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint64_t</span> tickID<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tickdelayblock"><a href="#tickdelayblock" class="header-anchor">#</a> TickDelayBlock</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 186308 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TickDelayBlock</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mTickDelay<span class="token punctuation">;</span>
+<span class="token keyword">const</span> Block <span class="token operator">*</span>mBlock<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tickworldcomponent"><a href="#tickworldcomponent" class="header-anchor">#</a> TickWorldComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 100527 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TickWorldComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">uint32_t</span> mChunkRadius<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mMaxDistToPlayers<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mAlwaysActive<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mChanged<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>weak_ptr<span class="token operator">&lt;</span>ITickingArea<span class="token operator">&gt;</span> mTickingArea<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tickingarealistbase"><a href="#tickingarealistbase" class="header-anchor">#</a> TickingAreaListBase</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 34631 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TickingAreaListBase</span>
+<span class="token punctuation">{</span>
+TickingAreasList mTickingAreas<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tickingareasmanager"><a href="#tickingareasmanager" class="header-anchor">#</a> TickingAreasManager</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 88095 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TickingAreasManager</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">const</span> DimensionMap <span class="token operator">*</span>mDimensions<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>AutomaticID<span class="token operator">&lt;</span>Dimension<span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>PendingArea<span class="token operator">&gt;&gt;</span> mPendingAreas<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="timestamp"><a href="#timestamp" class="header-anchor">#</a> TimeStamp</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 103885 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TimeStamp</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="timer"><a href="#timer" class="header-anchor">#</a> Timer</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 86417 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Timer</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">float</span> mTicksPerSecond<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mTicks<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mAlpha<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mTimeScale<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mPassedTime<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mFrameStepAlignmentRemainder<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mLastTimeSeconds<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mLastTimestep<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mLastMs<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mLastMsSysTime<span class="token punctuation">;</span>
+<span class="token keyword">float</span> mAdjustTime<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mSteppingTick<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> mGetTimeMSCallback<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="timercomponent"><a href="#timercomponent" class="header-anchor">#</a> TimerComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 59635 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TimerComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mTime<span class="token punctuation">;</span>
+<span class="token keyword">uint64_t</span> mTimeStamp<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mHasExecuted<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mLooping<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mStartTime<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mRandomInterval<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mMinTime<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mMaxTime<span class="token punctuation">;</span>
+DefinitionTrigger mOnTimeDown<span class="token punctuation">;</span>
+WeightedChoices<span class="token operator">&lt;</span><span class="token keyword">float</span><span class="token operator">&gt;</span> mTimeChoices<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tintmapcolor"><a href="#tintmapcolor" class="header-anchor">#</a> TintMapColor</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 73857 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TintMapColor</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>array<span class="token operator">&lt;</span>Color<span class="token punctuation">,</span><span class="token number">4</span><span class="token operator">&gt;</span> colors<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="toolrecipes"><a href="#toolrecipes" class="header-anchor">#</a> ToolRecipes</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 185263 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">ToolRecipes</span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="trackerstat"><a href="#trackerstat" class="header-anchor">#</a> TrackerStat</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 63726 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TrackerStat</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> sentCount<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> sentBytes<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> receivedCount<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> receivedBytes<span class="token punctuation">;</span>
+<span class="token keyword">uint32_t</span> sampleNum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="trade"><a href="#trade" class="header-anchor">#</a> Trade</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 46378 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Trade</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mMaxUses<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> mRewardExperience<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mWeight<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> mTraderExperience<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>TradeItem<span class="token operator">&gt;&gt;</span> mOffer<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>TradeItem<span class="token operator">&gt;&gt;</span> mReceive<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tradegroup"><a href="#tradegroup" class="header-anchor">#</a> TradeGroup</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 46366 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TradeGroup</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mNumToSelect<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>Trade<span class="token operator">&gt;</span> mTrades<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tradeitem"><a href="#tradeitem" class="header-anchor">#</a> TradeItem</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 46403 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TradeItem</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> itemId<span class="token punctuation">;</span>
+<span class="token keyword">int</span> itemAux<span class="token punctuation">;</span>
+<span class="token keyword">int</span> count_min<span class="token punctuation">;</span>
+<span class="token keyword">int</span> count_max<span class="token punctuation">;</span>
+<span class="token keyword">float</span> price_multiplier<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span>LootItemFunction<span class="token operator">&gt;&gt;</span> functions<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="traderesupplycomponent"><a href="#traderesupplycomponent" class="header-anchor">#</a> TradeResupplyComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 106683 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TradeResupplyComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">bool</span> mHasResupplied<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tradetable"><a href="#tradetable" class="header-anchor">#</a> TradeTable</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 45372 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TradeTable</span>
+<span class="token punctuation">{</span>
+Core<span class="token double-colon punctuation">::</span>HeapPathBuffer mPath<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>TradeTier<span class="token operator">&gt;</span> mTiers<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tradetables"><a href="#tradetables" class="header-anchor">#</a> TradeTables</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 48724 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TradeTables</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span>std<span class="token double-colon punctuation">::</span>unique_ptr<span class="token operator">&lt;</span>TradeTable<span class="token operator">&gt;&gt;</span> mTradeTables<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tradetier"><a href="#tradetier" class="header-anchor">#</a> TradeTier</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 46353 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TradeTier</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">int</span> mExpToUnlock<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>TradeGroup<span class="token operator">&gt;</span> mGroups<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="trailsystem-blockpositions"><a href="#trailsystem-blockpositions" class="header-anchor">#</a> TrailSystem::BlockPositions</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 59928 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TrailSystem</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">BlockPositions</span></span>
+<span class="token punctuation">{</span>
+BlockPos mBlockPos<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="transformationcomponent"><a href="#transformationcomponent" class="header-anchor">#</a> TransformationComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 59948 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TransformationComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mDelayTicks<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="treatmentservice"><a href="#treatmentservice" class="header-anchor">#</a> TreatmentService;</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 5515 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TreatmentService</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tripodcamera-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420"><a href="#tripodcamera-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> TripodCamera::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 170801 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TripodCamera</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>updateEntitySpecificMolangVariables<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tropicalfish-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420"><a href="#tropicalfish-updateentityspecificmolangvariables-7ef7c94beab75c6cef4adfb99b570420" class="header-anchor">#</a> TropicalFish::updateEntitySpecificMolangVariables::$7EF7C94BEAB75C6CEF4ADFB99B570420</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 124448 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TropicalFish</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span>updateEntitySpecificMolangVariables<span class="token double-colon punctuation">::</span>$<span class="token number">7</span><span class="token class-name">EF7C94BEAB75C6CEF4ADFB99B570420</span></span>
+<span class="token punctuation">{</span>
+__int8 gap0<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="tropicalfishinfo"><a href="#tropicalfishinfo" class="header-anchor">#</a> TropicalFishInfo</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 457003 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TropicalFishInfo</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> mColor<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mColor2<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mVariant<span class="token punctuation">;</span>
+<span class="token keyword">int</span> mMarkVariant<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>string mName<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="trustcomponent"><a href="#trustcomponent" class="header-anchor">#</a> TrustComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 105989 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TrustComponent</span>
+<span class="token punctuation">{</span>
+std<span class="token double-colon punctuation">::</span>unordered_set<span class="token operator">&lt;</span>ActorUniqueID<span class="token operator">&gt;</span> mTrustedPlayerIDs<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h4 id="trustingcomponent"><a href="#trustingcomponent" class="header-anchor">#</a> TrustingComponent</h4> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token comment">/* 54450 */</span>
+<span class="token keyword">struct</span> <span class="token class-name">TrustingComponent</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">float</span> mChance<span class="token punctuation">;</span>
+std<span class="token double-colon punctuation">::</span>set<span class="token operator">&lt;</span><span class="token keyword">const</span> Item <span class="token operator">*</span><span class="token operator">&gt;</span> mTrustItems<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/mcdata/assets/js/app.9eb6ed31.js" defer></script><script src="/mcdata/assets/js/2.2defd20b.js" defer></script><script src="/mcdata/assets/js/34.e3353c01.js" defer></script>
+  </body>
+</html>
